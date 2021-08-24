@@ -33,5 +33,16 @@ namespace SistemaHotelaria.Properties {
                 return ((string)(this["HotelMountainConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-JJG73MK\\SQLEXPRESS;Initial Catalog=HotelMountain;User ID=test" +
+            "e;Password=adm123")]
+        public string HotelMountainConnectionString1 {
+            get {
+                return ((string)(this["HotelMountainConnectionString1"]));
+            }
+        }
     }
 }

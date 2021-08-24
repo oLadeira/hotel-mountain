@@ -31,15 +31,20 @@ namespace SistemaHotelaria.forms
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.hotelMountainDataSet = new SistemaHotelaria.HotelMountainDataSet();
-            this.funcionarioLoginBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.funcionarioLoginTableAdapter = new SistemaHotelaria.HotelMountainDataSetTableAdapters.funcionarioLoginTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.loginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.senhaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.funcionarioLoginBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hotelMountainDataSet = new SistemaHotelaria.HotelMountainDataSet();
+            this.funcionarioLoginTableAdapter = new SistemaHotelaria.HotelMountainDataSetTableAdapters.funcionarioLoginTableAdapter();
+            this.hotelMountainDataSet1 = new SistemaHotelaria.HotelMountainDataSet1();
+            this.loginFuncionariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.loginFuncionariosTableAdapter = new SistemaHotelaria.HotelMountainDataSet1TableAdapters.loginFuncionariosTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hotelMountainDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioLoginBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelMountainDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelMountainDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loginFuncionariosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -50,25 +55,11 @@ namespace SistemaHotelaria.forms
             this.idDataGridViewTextBoxColumn,
             this.loginDataGridViewTextBoxColumn,
             this.senhaDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.funcionarioLoginBindingSource;
+            this.dataGridView1.DataSource = this.loginFuncionariosBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(192, 86);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(450, 215);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // hotelMountainDataSet
-            // 
-            this.hotelMountainDataSet.DataSetName = "HotelMountainDataSet";
-            this.hotelMountainDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // funcionarioLoginBindingSource
-            // 
-            this.funcionarioLoginBindingSource.DataMember = "funcionarioLogin";
-            this.funcionarioLoginBindingSource.DataSource = this.hotelMountainDataSet;
-            // 
-            // funcionarioLoginTableAdapter
-            // 
-            this.funcionarioLoginTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -89,6 +80,34 @@ namespace SistemaHotelaria.forms
             this.senhaDataGridViewTextBoxColumn.HeaderText = "senha";
             this.senhaDataGridViewTextBoxColumn.Name = "senhaDataGridViewTextBoxColumn";
             // 
+            // funcionarioLoginBindingSource
+            // 
+            this.funcionarioLoginBindingSource.DataMember = "funcionarioLogin";
+            this.funcionarioLoginBindingSource.DataSource = this.hotelMountainDataSet;
+            // 
+            // hotelMountainDataSet
+            // 
+            this.hotelMountainDataSet.DataSetName = "HotelMountainDataSet";
+            this.hotelMountainDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // funcionarioLoginTableAdapter
+            // 
+            this.funcionarioLoginTableAdapter.ClearBeforeFill = true;
+            // 
+            // hotelMountainDataSet1
+            // 
+            this.hotelMountainDataSet1.DataSetName = "HotelMountainDataSet1";
+            this.hotelMountainDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // loginFuncionariosBindingSource
+            // 
+            this.loginFuncionariosBindingSource.DataMember = "loginFuncionarios";
+            this.loginFuncionariosBindingSource.DataSource = this.hotelMountainDataSet1;
+            // 
+            // loginFuncionariosTableAdapter
+            // 
+            this.loginFuncionariosTableAdapter.ClearBeforeFill = true;
+            // 
             // testeBD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -99,8 +118,10 @@ namespace SistemaHotelaria.forms
             this.Text = "testeBD";
             this.Load += new System.EventHandler(this.testeBD_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hotelMountainDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioLoginBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelMountainDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelMountainDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loginFuncionariosBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -114,5 +135,8 @@ namespace SistemaHotelaria.forms
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn loginDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn senhaDataGridViewTextBoxColumn;
+        private HotelMountainDataSet1 hotelMountainDataSet1;
+        private System.Windows.Forms.BindingSource loginFuncionariosBindingSource;
+        private HotelMountainDataSet1TableAdapters.loginFuncionariosTableAdapter loginFuncionariosTableAdapter;
     }
 }

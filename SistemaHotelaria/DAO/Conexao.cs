@@ -13,12 +13,13 @@ namespace SistemaHotelaria.DAO
 
         public Conexao() //1 - construtor
         {
-            con.ConnectionString = @"Data Source=DESKTOP-JJG73MK\SQLEXPRESS;Initial Catalog=HotelMountain;User ID=teste;Password=***********"; //endereco do banco de dados
+            con.ConnectionString = @"Data Source=DESKTOP-JJG73MK\SQLEXPRESS;Initial Catalog=HotelMountain;User ID=teste;Password=adm123"; //endereco do banco de dados
 
         }
 
         public SqlConnection conectar() //conectar no banco de dados
         {
+            
             if (con.State == System.Data.ConnectionState.Closed) //verificando se a conexao ja não está aberta
             {
                 con.Open(); //metodo para abrir a conexao

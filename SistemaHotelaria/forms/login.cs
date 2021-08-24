@@ -32,7 +32,9 @@ namespace SistemaHotelaria
         private void btnEntrar_Click(object sender, EventArgs e)
         {
             Controle controle = new Controle();
+
             controle.acessar(txtUsuario.Text, txtSenha.Text);
+
             if (controle.mensagem.Equals("")) { 
                 if(controle.tem == true)
                 {

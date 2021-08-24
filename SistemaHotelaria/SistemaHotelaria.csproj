@@ -71,6 +71,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HotelMountainDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="HotelMountainDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HotelMountainDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Modelo\Controle.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -103,6 +108,17 @@
     </None>
     <None Include="HotelMountainDataSet.xss">
       <DependentUpon>HotelMountainDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HotelMountainDataSet1.xsc">
+      <DependentUpon>HotelMountainDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="HotelMountainDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HotelMountainDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HotelMountainDataSet1.xss">
+      <DependentUpon>HotelMountainDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

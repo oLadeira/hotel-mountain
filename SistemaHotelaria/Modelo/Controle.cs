@@ -16,7 +16,9 @@ namespace SistemaHotelaria.Modelo
         public bool acessar(String login, String senha)
         {
             LoginDaoComandos loginDao = new LoginDaoComandos(); //instanciando 
+
             tem = loginDao.verificarLogin(login, senha);
+
             if (!loginDao.mensagem.Equals(""))
             {
                 this.mensagem = loginDao.mensagem; 

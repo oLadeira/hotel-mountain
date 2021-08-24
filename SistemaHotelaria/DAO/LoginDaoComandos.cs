@@ -21,15 +21,14 @@ namespace SistemaHotelaria.DAO
         {
             //comandos sql para verificar se tem no banco
             //procurar no bd esse login e senha
-            cmd.CommandText = "SELECT * from loginFuncionarios WHERE login = @login and senha = @senha"; //query bd
+            cmd.CommandText = "select * from loginFuncionarios where login = @login and senha = @senha"; //query bd
             cmd.Parameters.AddWithValue("@login", login); //escolhendo os parametros que serão substituidos na query
             cmd.Parameters.AddWithValue("@senha", senha);
-
-            
 
             try
             {
                 cmd.Connection = con.conectar();
+                
                 dr = cmd.ExecuteReader(); //executando a query          
                 
                 if (dr.HasRows) //se dr tem linhas
