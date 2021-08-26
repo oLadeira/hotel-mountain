@@ -31,9 +31,9 @@ namespace SistemaHotelaria
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            Controle controle = new Controle();
+            Controle controle = new Controle(); //instanciando classe controle
 
-            controle.acessar(txtUsuario.Text, txtSenha.Text);
+            controle.acessar(txtUsuario.Text, txtSenha.Text); //acessando metodo acessar da classe controle passando como parametros os dados das caixas de textos
 
             if (controle.mensagem.Equals("")) { 
                 if(controle.tem == true)

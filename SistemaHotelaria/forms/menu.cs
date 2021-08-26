@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SistemaHotelaria.forms;
 
 namespace SistemaHotelaria
 {
@@ -15,6 +16,12 @@ namespace SistemaHotelaria
         public menu()
         {
             InitializeComponent();
+        }
+
+        private void tipHospedes_Click(object sender, EventArgs e)
+        {
+            opcoesHospedes TelaOpcoesHosp = new opcoesHospedes();
+            TelaOpcoesHosp.Show();
         }
     }
 }

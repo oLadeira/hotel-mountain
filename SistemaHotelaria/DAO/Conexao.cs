@@ -10,11 +10,11 @@ namespace SistemaHotelaria.DAO
     public class Conexao //criar 3 metodos
     {
         SqlConnection con = new SqlConnection(); //instanciando classe sqlconnection
-
+        
         public Conexao() //1 - construtor
         {
             con.ConnectionString = @"Data Source=DESKTOP-JJG73MK\SQLEXPRESS;Initial Catalog=HotelMountain;User ID=teste;Password=adm123"; //endereco do banco de dados
-
+                        
         }
 
         public SqlConnection conectar() //conectar no banco de dados

@@ -68,6 +68,7 @@ namespace SistemaHotelaria
             this.tipHospedes.Size = new System.Drawing.Size(68, 83);
             this.tipHospedes.Text = "Hóspedes";
             this.tipHospedes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tipHospedes.Click += new System.EventHandler(this.tipHospedes_Click);
             // 
             // toolStripButton2
             // 
@@ -140,6 +141,7 @@ namespace SistemaHotelaria
             this.ClientSize = new System.Drawing.Size(1173, 642);
             this.Controls.Add(this.toolStrip1);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hotel Mountain - Menu";

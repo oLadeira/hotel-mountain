@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SistemaHotelaria.DAO;
 
+
 namespace SistemaHotelaria.Modelo
 {
     public class Controle
@@ -24,6 +25,14 @@ namespace SistemaHotelaria.Modelo
                 this.mensagem = loginDao.mensagem; 
             }
             return tem;
+        }
+
+        public String cadastrar(String nome)
+        {
+            CadastroUsuarioDaoComandos cadastroDao = new CadastroUsuarioDaoComandos();
+            
+
+            return mensagem;
         }
 
     }

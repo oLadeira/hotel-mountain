@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
+using System.Data.SqlClient; //
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,7 +16,7 @@ namespace SistemaHotelaria.DAO
         Conexao con = new Conexao(); //instanciando objeto Conexao da classe Conexao
         SqlDataReader dr;
         public String testando = "";
-
+        
         public bool verificarLogin(String login, String senha)
         {
             //comandos sql para verificar se tem no banco
@@ -30,12 +30,14 @@ namespace SistemaHotelaria.DAO
                 cmd.Connection = con.conectar();
                 
                 dr = cmd.ExecuteReader(); //executando a query          
-                
+                           
+
                 if (dr.HasRows) //se dr tem linhas
                 {
                     tem = true; //variavel tem é true
                     
                 }
+ 
             }
             catch (SqlException)
             {

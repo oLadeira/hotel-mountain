@@ -46,8 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\CadastroUsuarioDaoComandos.cs" />
     <Compile Include="DAO\Conexao.cs" />
     <Compile Include="DAO\LoginDaoComandos.cs" />
+    <Compile Include="forms\cadastrarHospede.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\cadastrarHospede.Designer.cs">
+      <DependentUpon>cadastrarHospede.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +66,12 @@
     </Compile>
     <Compile Include="forms\menu.Designer.cs">
       <DependentUpon>menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\opcoesHospedes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\opcoesHospedes.Designer.cs">
+      <DependentUpon>opcoesHospedes.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\testeBD.cs">
       <SubType>Form</SubType>
@@ -77,13 +90,20 @@
       <DependentUpon>HotelMountainDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Modelo\Controle.cs" />
+    <Compile Include="Modelo\Hospede.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="forms\cadastrarHospede.resx">
+      <DependentUpon>cadastrarHospede.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\menu.resx">
       <DependentUpon>menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\opcoesHospedes.resx">
+      <DependentUpon>opcoesHospedes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\testeBD.resx">
       <DependentUpon>testeBD.cs</DependentUpon>
