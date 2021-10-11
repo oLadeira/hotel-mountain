@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,15 @@ namespace SistemaHotelaria.DAO
 {
     public class Conexao //criar 3 metodos
     {
+
+        public SqlConnection getConexao() {
+            string con = ConfigurationManager.ConnectionStrings["StringConexao"].ToString();
+            return new SqlConnection(con);
+        }
+
+
+
+        /* 
         SqlConnection con = new SqlConnection(); //instanciando classe sqlconnection
         
         public Conexao() //1 - construtor
@@ -34,5 +44,12 @@ namespace SistemaHotelaria.DAO
                 con.Close(); //metodo para fechar a conexao
             }
         }
+
+        */
+
+
+
+
+
     }
 }

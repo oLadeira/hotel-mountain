@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,67 +47,46 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAO\CadastroUsuarioDaoComandos.cs" />
+    <Compile Include="DAO\HospedeDAO.cs" />
     <Compile Include="DAO\Conexao.cs" />
-    <Compile Include="DAO\LoginDaoComandos.cs" />
-    <Compile Include="forms\cadastrarHospede.cs">
+    <Compile Include="View\cadastrarHospede.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\cadastrarHospede.Designer.cs">
+    <Compile Include="View\cadastrarHospede.Designer.cs">
       <DependentUpon>cadastrarHospede.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\login.cs">
+    <Compile Include="View\login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\login.Designer.cs">
+    <Compile Include="View\login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\menu.cs">
+    <Compile Include="View\menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\menu.Designer.cs">
+    <Compile Include="View\menu.Designer.cs">
       <DependentUpon>menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\opcoesHospedes.cs">
+    <Compile Include="View\opcoesHospedes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\opcoesHospedes.Designer.cs">
+    <Compile Include="View\opcoesHospedes.Designer.cs">
       <DependentUpon>opcoesHospedes.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\testeBD.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\testeBD.Designer.cs">
-      <DependentUpon>testeBD.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HotelMountainDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HotelMountainDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="HotelMountainDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HotelMountainDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Modelo\Controle.cs" />
-    <Compile Include="Modelo\Hospede.cs" />
+    <Compile Include="Model\Hospede.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="forms\cadastrarHospede.resx">
+    <EmbeddedResource Include="View\cadastrarHospede.resx">
       <DependentUpon>cadastrarHospede.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\login.resx">
+    <EmbeddedResource Include="View\login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\menu.resx">
+    <EmbeddedResource Include="View\menu.resx">
       <DependentUpon>menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\opcoesHospedes.resx">
+    <EmbeddedResource Include="View\opcoesHospedes.resx">
       <DependentUpon>opcoesHospedes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\testeBD.resx">
-      <DependentUpon>testeBD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -118,28 +98,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="HotelMountainDataSet.xsc">
-      <DependentUpon>HotelMountainDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="HotelMountainDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>HotelMountainDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="HotelMountainDataSet.xss">
-      <DependentUpon>HotelMountainDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="HotelMountainDataSet1.xsc">
-      <DependentUpon>HotelMountainDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="HotelMountainDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>HotelMountainDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="HotelMountainDataSet1.xss">
-      <DependentUpon>HotelMountainDataSet1.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SistemaHotelaria.Modelo;
 
-using SistemaHotelaria.DAO;
+//using SistemaHotelaria.DAO;
 
 
 namespace SistemaHotelaria
@@ -31,6 +31,7 @@ namespace SistemaHotelaria
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
+            /*
             Controle controle = new Controle(); //instanciando classe controle
 
             controle.acessar(txtUsuario.Text, txtSenha.Text); //acessando metodo acessar da classe controle passando como parametros os dados das caixas de textos
@@ -53,6 +54,8 @@ namespace SistemaHotelaria
             {
                 MessageBox.Show(controle.mensagem);
             }
+            */
         }
+
     }
 }
