@@ -47,8 +47,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\FuncionarioDAO.cs" />
     <Compile Include="DAO\HospedeDAO.cs" />
     <Compile Include="DAO\Conexao.cs" />
+    <Compile Include="Model\Funcionario.cs" />
+    <Compile Include="View\alterarHospede.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\alterarHospede.Designer.cs">
+      <DependentUpon>alterarHospede.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\alterarHospedeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\alterarHospedeForm.Designer.cs">
+      <DependentUpon>alterarHospedeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\cadastrarFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\cadastrarFuncionario.Designer.cs">
+      <DependentUpon>cadastrarFuncionario.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\cadastrarHospede.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +87,12 @@
     <Compile Include="View\menu.Designer.cs">
       <DependentUpon>menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\opcoesFuncionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\opcoesFuncionarios.Designer.cs">
+      <DependentUpon>opcoesFuncionarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\opcoesHospedes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +102,15 @@
     <Compile Include="Model\Hospede.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="View\alterarHospede.resx">
+      <DependentUpon>alterarHospede.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\alterarHospedeForm.resx">
+      <DependentUpon>alterarHospedeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\cadastrarFuncionario.resx">
+      <DependentUpon>cadastrarFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\cadastrarHospede.resx">
       <DependentUpon>cadastrarHospede.cs</DependentUpon>
     </EmbeddedResource>
@@ -84,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\menu.resx">
       <DependentUpon>menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\opcoesFuncionarios.resx">
+      <DependentUpon>opcoesFuncionarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\opcoesHospedes.resx">
       <DependentUpon>opcoesHospedes.cs</DependentUpon>

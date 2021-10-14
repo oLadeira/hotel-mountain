@@ -8,6 +8,7 @@ namespace SistemaHotelaria.Modelo
 {
     class Hospede
     {
+        private int id;
         private String nome;
         private String estadoCivil;
         private String telefone;
@@ -24,6 +25,7 @@ namespace SistemaHotelaria.Modelo
         {
         }
 
+        public int Id { get => id; set => id = value; }
         public string Nome { get => nome; set => nome = value; }
         public string EstadoCivil { get => estadoCivil; set => estadoCivil = value; }
         public string Telefone { get => telefone; set => telefone = value; }
@@ -34,6 +36,7 @@ namespace SistemaHotelaria.Modelo
         public string NumeroEndereco { get => numeroEndereco; set => numeroEndereco = value; }
         public string Estado { get => estado; set => estado = value; }
         public string Cidade { get => cidade; set => cidade = value; }
-       //public string Sexo { get => sexo; set => sexo = value; }
+        
+        //public string Sexo { get => sexo; set => sexo = value; }
     }
 }

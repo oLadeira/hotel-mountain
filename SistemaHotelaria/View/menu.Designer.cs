@@ -37,7 +37,7 @@ namespace SistemaHotelaria
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
+            this.tipFuncionarios = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -51,7 +51,7 @@ namespace SistemaHotelaria
             this.toolStripButton4,
             this.toolStripButton5,
             this.toolStripButton6,
-            this.toolStripButton7,
+            this.tipFuncionarios,
             this.toolStripButton8});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
@@ -115,13 +115,16 @@ namespace SistemaHotelaria
             this.toolStripButton6.Size = new System.Drawing.Size(70, 83);
             this.toolStripButton6.Text = "Serviços";
             // 
-            // toolStripButton7
+            // tipFuncionarios
             // 
-            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
-            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.Size = new System.Drawing.Size(95, 83);
-            this.toolStripButton7.Text = "Funcionários";
+            this.tipFuncionarios.Image = ((System.Drawing.Image)(resources.GetObject("tipFuncionarios.Image")));
+            this.tipFuncionarios.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tipFuncionarios.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tipFuncionarios.Name = "tipFuncionarios";
+            this.tipFuncionarios.Size = new System.Drawing.Size(79, 83);
+            this.tipFuncionarios.Text = "Funcionários";
+            this.tipFuncionarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tipFuncionarios.Click += new System.EventHandler(this.tipFuncionarios_Click);
             // 
             // toolStripButton8
             // 
@@ -162,7 +165,7 @@ namespace SistemaHotelaria
         private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.ToolStripButton toolStripButton5;
         private System.Windows.Forms.ToolStripButton toolStripButton6;
-        private System.Windows.Forms.ToolStripButton toolStripButton7;
+        private System.Windows.Forms.ToolStripButton tipFuncionarios;
         private System.Windows.Forms.ToolStripButton toolStripButton8;
     }
 }

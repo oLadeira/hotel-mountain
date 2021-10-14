@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SistemaHotelaria.DAO;
+using SistemaHotelaria.Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -9,41 +11,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SistemaHotelaria.forms;
-using SistemaHotelaria.View;
 
-namespace SistemaHotelaria.forms
+namespace SistemaHotelaria.View
 {
-    public partial class opcoesHospedes : Form
+    public partial class alterarHospede : Form
     {
+
+        private int id;
+
+
 
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["StringConexao"].ConnectionString);
         SqlCommand cmd = new SqlCommand();
+        Hospede hospede = new Hospede();
         
-        public opcoesHospedes()
+
+        public alterarHospede()
         {
             InitializeComponent();
         }
 
-        private void btnCadastrarHospede_Click(object sender, EventArgs e)
-        {          
-            cadastrarHospede TelaCadastroHosp = new cadastrarHospede();
+        public int Id { get => id; set => id = value; }
 
-            TelaCadastroHosp.Show();
-            this.Hide();            
-        }
-
-        private void btnVisualizarHospede_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btnVisualizarHospede_Click_1(object sender, EventArgs e)
+        private void alterarHospede_Load(object sender, EventArgs e)
         {
             try
             {
@@ -52,29 +42,40 @@ namespace SistemaHotelaria.forms
 
                 SqlDataAdapter da = new SqlDataAdapter(cmd.CommandText, con);
                 DataTable tabela = new DataTable();
-
+                                
                 da.Fill(tabela);
 
                 dgvHospedes.DataSource = tabela;
-
-                con.Close();
+                                
             }
             catch (SqlException ex)
             {
                 MessageBox.Show(ex.Message);
             }
+            finally
+            {
+                con.Close();
+            }
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            alterarHospede TelaAlterarHospede = new alterarHospede();
-            TelaAlterarHospede.Show();
+            Id = Convert.ToInt32(txtId.Text);
+
+            HospedeDAO hospedeDAO = new HospedeDAO();          
+            hospedeDAO.dadosAlterar(Id, hospede);
+
+            alterarHospedeForm telaAlterarHospedeForm = new alterarHospedeForm(Id);
+            telaAlterarHospedeForm.Show();
             this.Close();
         }
 
-        private void dgvHospedes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
+                
     }
+    
 }
+

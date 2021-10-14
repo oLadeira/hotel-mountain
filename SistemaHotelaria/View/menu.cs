@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SistemaHotelaria.forms;
+using SistemaHotelaria.View;
 
 namespace SistemaHotelaria
 {
@@ -22,6 +23,12 @@ namespace SistemaHotelaria
         {
             opcoesHospedes TelaOpcoesHosp = new opcoesHospedes();
             TelaOpcoesHosp.Show();
+        }
+
+        private void tipFuncionarios_Click(object sender, EventArgs e)
+        {
+            opcoesFuncionarios TelaOpcoesFunci = new opcoesFuncionarios();
+            TelaOpcoesFunci.Show();
         }
     }
 }

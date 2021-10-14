@@ -31,14 +31,14 @@ namespace SistemaHotelaria.forms
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(opcoesHospedes));
             this.btnCadastrarHospede = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.dgvHospedes = new System.Windows.Forms.DataGridView();
+            this.btnVisualizarHospede = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHospedes)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCadastrarHospede
@@ -55,40 +55,44 @@ namespace SistemaHotelaria.forms
             this.btnCadastrarHospede.UseVisualStyleBackColor = true;
             this.btnCadastrarHospede.Click += new System.EventHandler(this.btnCadastrarHospede_Click);
             // 
-            // dataGridView1
+            // dgvHospedes
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(11, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1151, 514);
-            this.dataGridView1.TabIndex = 4;
+            this.dgvHospedes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvHospedes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvHospedes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHospedes.Location = new System.Drawing.Point(11, 12);
+            this.dgvHospedes.Name = "dgvHospedes";
+            this.dgvHospedes.Size = new System.Drawing.Size(1151, 514);
+            this.dgvHospedes.TabIndex = 4;
+            this.dgvHospedes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHospedes_CellContentClick);
             // 
-            // button1
+            // btnVisualizarHospede
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(129, 592);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 39);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Visualizar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnVisualizarHospede.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVisualizarHospede.Image = ((System.Drawing.Image)(resources.GetObject("btnVisualizarHospede.Image")));
+            this.btnVisualizarHospede.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVisualizarHospede.Location = new System.Drawing.Point(129, 592);
+            this.btnVisualizarHospede.Name = "btnVisualizarHospede";
+            this.btnVisualizarHospede.Size = new System.Drawing.Size(112, 39);
+            this.btnVisualizarHospede.TabIndex = 5;
+            this.btnVisualizarHospede.Text = "Visualizar";
+            this.btnVisualizarHospede.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnVisualizarHospede.UseVisualStyleBackColor = true;
+            this.btnVisualizarHospede.Click += new System.EventHandler(this.btnVisualizarHospede_Click_1);
             // 
-            // button2
+            // btnAlterar
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(247, 592);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 39);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Alterar";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlterar.Image = ((System.Drawing.Image)(resources.GetObject("btnAlterar.Image")));
+            this.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAlterar.Location = new System.Drawing.Point(247, 592);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(112, 39);
+            this.btnAlterar.TabIndex = 6;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // button3
             // 
@@ -143,15 +147,15 @@ namespace SistemaHotelaria.forms
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnAlterar);
+            this.Controls.Add(this.btnVisualizarHospede);
+            this.Controls.Add(this.dgvHospedes);
             this.Controls.Add(this.btnCadastrarHospede);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "opcoesHospedes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hotel Mountain - escolha uma opção!";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHospedes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,9 +164,9 @@ namespace SistemaHotelaria.forms
         #endregion
 
         private System.Windows.Forms.Button btnCadastrarHospede;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView dgvHospedes;
+        private System.Windows.Forms.Button btnVisualizarHospede;
+        private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
