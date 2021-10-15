@@ -15,7 +15,7 @@ namespace SistemaHotelaria.DAO
     {
 
         //instanciando a classe de conexao, a string que possui o endereco do banco está no arquivo App.config
-        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["StringConexao"].ConnectionString);
+        readonly SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["StringConexao"].ConnectionString);
         SqlCommand cmd = new SqlCommand();
         Hospede hospede = new Hospede();
 
@@ -62,6 +62,7 @@ namespace SistemaHotelaria.DAO
 
             try
             {                
+                
                 con.Open();
                 cmd.CommandText = "SELECT * FROM hospede WHERE id = @id";
 
@@ -72,10 +73,10 @@ namespace SistemaHotelaria.DAO
 
                 SqlDataReader reader = cmd.ExecuteReader();
 
+                
                 while (reader.Read())
                 {
                     //lblTeste.Text = reader.GetString(1).ToString();
-
 
                     hospede.Id = reader.GetInt32(0);
                     hospede.Nome = reader.GetString(1);
@@ -85,7 +86,7 @@ namespace SistemaHotelaria.DAO
                     hospede.Cep = reader.GetString(5);
                     hospede.Endereco = reader.GetString(6);
                     hospede.NumeroEndereco = reader.GetString(7);
-                    hospede.Estado = reader.GetString(8);
+                    hospede.Estado = reader.GetInt32(8);
                     hospede.Cidade = reader.GetString(9);                                  
                 }                                                         
                 return hospede;               
@@ -142,7 +143,6 @@ namespace SistemaHotelaria.DAO
         {
             try
             {
-                //
 
             }
             catch
@@ -151,33 +151,62 @@ namespace SistemaHotelaria.DAO
             }
 
         }
-        /*
-        public void cadastrar(String nome)
-        {            
-            Hospede hospede = new Hospede();
-            hospede.setNome(nome);
-            
 
-            cmd.CommandText = "insert into hospedes values (@nome, @dataNasci, @estadoCivil, @telefone)";
-            cmd.Parameters.AddWithValue("@nome", nome);
-            cmd.Parameters.AddWithValue("@dataNasci", nome);
-            cmd.Parameters.AddWithValue("@estadoCivil", nome);
-            cmd.Parameters.AddWithValue("@telefone", nome);
-
+        public DataTable listarHospedes()
+        {
             try
             {
-                cmd.Connection = con.conectar();
+                con.Open();
+                cmd.CommandText = "SELECT h.id, h.nome, h.telefone, h.email, h.cpf, h.cep, h.endereco, h.numeroEndereco, e.nome as estado, h.cidade FROM hospede as h INNER JOIN estado as e ON h.estado = e.id";
 
-                cmd.ExecuteNonQuery(); //executando a query    
-                                                                              
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd.CommandText, con);
+                DataTable tabela = new DataTable();
+
+                da.Fill(tabela);
+
+                //dgvHospedes.DataSource = tabela;
+
+                return tabela;
             }
-            catch (SqlException)
+            catch (SqlException ex)
             {
-                this.mensagem = "Erro ao inserir novo hóspede! Contato o administrador do banco de dados";
+                System.Windows.Forms.MessageBox.Show(ex.Message);
             }
-
+            finally
+            {
+                con.Close();
+            }
+            return null;
         }
 
-        */
+        public DataTable listarEstadoComboBox()
+        {
+            try
+            {
+                con.Open();
+                cmd.CommandText = "SELECT * FROM estado";
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd.CommandText, con);
+                DataTable tabela = new DataTable();
+
+                da.Fill(tabela);
+
+                //dgvHospedes.DataSource = tabela;
+
+                
+                return tabela;
+            }
+            
+            catch (SqlException ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+            return null;
+        }
     }
 }

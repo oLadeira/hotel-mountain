@@ -17,7 +17,7 @@ namespace SistemaHotelaria.Modelo
         private String cep;
         private String endereco;
         private String numeroEndereco;
-        private String estado;
+        private int estado;
         private String cidade;
         //private String sexo;
 
@@ -34,9 +34,10 @@ namespace SistemaHotelaria.Modelo
         public string Cep { get => cep; set => cep = value; }
         public string Endereco { get => endereco; set => endereco = value; }
         public string NumeroEndereco { get => numeroEndereco; set => numeroEndereco = value; }
-        public string Estado { get => estado; set => estado = value; }
-        public string Cidade { get => cidade; set => cidade = value; }
         
+        public string Cidade { get => cidade; set => cidade = value; }
+        public int Estado { get => estado; set => estado = value; }
+
         //public string Sexo { get => sexo; set => sexo = value; }
     }
 }

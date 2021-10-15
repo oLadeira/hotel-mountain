@@ -34,7 +34,7 @@ namespace SistemaHotelaria.forms
             this.dgvHospedes = new System.Windows.Forms.DataGridView();
             this.btnVisualizarHospede = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
@@ -64,7 +64,6 @@ namespace SistemaHotelaria.forms
             this.dgvHospedes.Name = "dgvHospedes";
             this.dgvHospedes.Size = new System.Drawing.Size(1151, 514);
             this.dgvHospedes.TabIndex = 4;
-            this.dgvHospedes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHospedes_CellContentClick);
             // 
             // btnVisualizarHospede
             // 
@@ -94,18 +93,19 @@ namespace SistemaHotelaria.forms
             this.btnAlterar.UseVisualStyleBackColor = true;
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
-            // button3
+            // btnExcluir
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(365, 592);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(112, 39);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Excluir";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
+            this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExcluir.Location = new System.Drawing.Point(365, 592);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(112, 39);
+            this.btnExcluir.TabIndex = 7;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // textBox1
             // 
@@ -146,7 +146,7 @@ namespace SistemaHotelaria.forms
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnVisualizarHospede);
             this.Controls.Add(this.dgvHospedes);
@@ -167,7 +167,7 @@ namespace SistemaHotelaria.forms
         private System.Windows.Forms.DataGridView dgvHospedes;
         private System.Windows.Forms.Button btnVisualizarHospede;
         private System.Windows.Forms.Button btnAlterar;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button4;

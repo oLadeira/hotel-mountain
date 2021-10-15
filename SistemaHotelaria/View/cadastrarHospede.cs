@@ -43,7 +43,7 @@ namespace SistemaHotelaria.forms
             hospede.Cep = txtCep.Text;
             hospede.Endereco = txtEndereco.Text;
             hospede.NumeroEndereco = txtNumero.Text;
-            hospede.Estado = cmbEstado.SelectedItem.ToString();
+            hospede.Estado = Convert.ToInt32(cmbEstado.SelectedValue.ToString());
             hospede.Cidade = txtCidade.Text;
             //hospede.Sexo = gboxSexo.Text;
 
@@ -56,6 +56,15 @@ namespace SistemaHotelaria.forms
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cadastrarHospede_Load(object sender, EventArgs e)
+        {
+            HospedeDAO hospedeDAO = new HospedeDAO();
+
+            cmbEstado.DataSource = hospedeDAO.listarEstadoComboBox();
+            cmbEstado.ValueMember = "id";
+            cmbEstado.DisplayMember = "nome";
         }
     }
 }

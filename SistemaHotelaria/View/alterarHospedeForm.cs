@@ -40,7 +40,7 @@ namespace SistemaHotelaria.View
             hospede.Cep = txtCep.Text;
             hospede.Endereco = txtEndereco.Text;
             hospede.NumeroEndereco = txtNumero.Text;
-            hospede.Estado = cmbEstado.Text;
+            hospede.Estado = Convert.ToInt32(cmbEstado.Text);
             hospede.Cidade = txtCidade.Text;
 
             hospedeDAO.alterarHospede(id1, hospede);
@@ -59,8 +59,13 @@ namespace SistemaHotelaria.View
             txtCep.Text = hospede.Cep;
             txtEndereco.Text = hospede.Endereco;
             txtNumero.Text = hospede.NumeroEndereco;
-            cmbEstado.Text = hospede.Estado;
+            cmbEstado.Text = Convert.ToString(hospede.Estado);
             txtCidade.Text = hospede.Cidade;
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

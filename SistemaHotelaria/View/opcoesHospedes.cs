@@ -9,16 +9,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SistemaHotelaria.DAO;
 using SistemaHotelaria.forms;
 using SistemaHotelaria.View;
 
 namespace SistemaHotelaria.forms
 {
     public partial class opcoesHospedes : Form
-    {
-
-        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["StringConexao"].ConnectionString);
-        SqlCommand cmd = new SqlCommand();
+    {              
         
         public opcoesHospedes()
         {
@@ -38,31 +36,10 @@ namespace SistemaHotelaria.forms
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnVisualizarHospede_Click_1(object sender, EventArgs e)
         {
-            try
-            {
-                con.Open();
-                cmd.CommandText = "SELECT * FROM hospede";
-
-                SqlDataAdapter da = new SqlDataAdapter(cmd.CommandText, con);
-                DataTable tabela = new DataTable();
-
-                da.Fill(tabela);
-
-                dgvHospedes.DataSource = tabela;
-
-                con.Close();
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            HospedeDAO hospedeDAO = new HospedeDAO();
+            dgvHospedes.DataSource = hospedeDAO.listarHospedes();
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)
@@ -70,9 +47,9 @@ namespace SistemaHotelaria.forms
             alterarHospede TelaAlterarHospede = new alterarHospede();
             TelaAlterarHospede.Show();
             this.Close();
-        }
+        }                            
 
-        private void dgvHospedes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnExcluir_Click(object sender, EventArgs e)
         {
 
         }

@@ -290,8 +290,6 @@ namespace SistemaHotelaria.forms
             // 
             this.cmbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbEstado.FormattingEnabled = true;
-            this.cmbEstado.Items.AddRange(new object[] {
-            "São Paulo"});
             this.cmbEstado.Location = new System.Drawing.Point(341, 279);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(180, 28);
@@ -367,6 +365,7 @@ namespace SistemaHotelaria.forms
             this.Name = "cadastrarHospede";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hotel Mountain - Cadastrar Hóspede";
+            this.Load += new System.EventHandler(this.cadastrarHospede_Load);
             this.gboxSexo.ResumeLayout(false);
             this.gboxSexo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
