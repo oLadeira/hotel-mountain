@@ -1,16 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Configuration;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using SistemaHotelaria.DAO;
-using SistemaHotelaria.forms;
 using SistemaHotelaria.View;
 
 namespace SistemaHotelaria.forms
@@ -30,11 +20,7 @@ namespace SistemaHotelaria.forms
             TelaCadastroHosp.Show();
             this.Hide();            
         }
-
-        private void btnVisualizarHospede_Click(object sender, EventArgs e)
-        {
-
-        }
+                
 
         private void btnVisualizarHospede_Click_1(object sender, EventArgs e)
         {
@@ -51,7 +37,14 @@ namespace SistemaHotelaria.forms
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
+            excluirHospede TelaAlterarHospede = new excluirHospede();
+            TelaAlterarHospede.Show();
+            this.Close();
+        }
 
+        private void opcoesHospedes_Load(object sender, EventArgs e)
+        {
+            dgvHospedes.AutoGenerateColumns = false;
         }
     }
 }

@@ -38,9 +38,7 @@ namespace SistemaHotelaria.DAO
                 cmd.Parameters.AddWithValue("@estado", hospede.Estado);
                 cmd.Parameters.AddWithValue("@cidade", hospede.Cidade);
 
-
-                cmd.ExecuteNonQuery();
-                
+                cmd.ExecuteNonQuery();         
 
                 System.Windows.Forms.MessageBox.Show("Hóspede cadastrado com sucesso!", "Sucesso!", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Information);
                                 
@@ -53,9 +51,7 @@ namespace SistemaHotelaria.DAO
             finally
             {
                 con.Close();
-            }
-            
-        
+            }                   
         }
 
         public Hospede dadosAlterar(int id, Hospede hospede) {
@@ -139,15 +135,29 @@ namespace SistemaHotelaria.DAO
             }
         }
 
-        public void deletarHospede(Hospede hospede)
+        public void deletarHospedeById(int id)
         {
             try
             {
+                con.Open();
 
+                cmd = new SqlCommand(cmd.CommandText, con);
+
+                cmd.CommandText = "DELETE FROM hospede WHERE id = @id";
+
+                cmd.Parameters.AddWithValue("id", id);
+
+                cmd.ExecuteNonQuery();
+
+                System.Windows.Forms.MessageBox.Show("Hóspede Excluído com sucesso!", "Sucesso!", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Information);
             }
-            catch
+            catch(SqlException ex)
             {
-
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
             }
 
         }

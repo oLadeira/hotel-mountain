@@ -46,3 +46,5 @@ E:\MEUS DOCUMENTOS\UNIP\4º Semestre\PIM\SistemaHotelariaV3\SistemaHotelaria\obj
 E:\MEUS DOCUMENTOS\UNIP\4º Semestre\PIM\SistemaHotelariaV3\SistemaHotelaria\obj\Debug\SistemaHotelaria.View.alterarHospedeForm.resources
 E:\MEUS DOCUMENTOS\UNIP\4º Semestre\PIM\SistemaHotelariaV3\SistemaHotelaria\obj\Debug\SistemaHotelaria.View.cadastrarFuncionario.resources
 E:\MEUS DOCUMENTOS\UNIP\4º Semestre\PIM\SistemaHotelariaV3\SistemaHotelaria\obj\Debug\SistemaHotelaria.View.opcoesFuncionarios.resources
+E:\MEUS DOCUMENTOS\UNIP\4º Semestre\PIM\SistemaHotelariaV3\SistemaHotelaria\obj\Debug\SistemaHotelaria.View.excluirHospede.resources
+E:\MEUS DOCUMENTOS\UNIP\4º Semestre\PIM\SistemaHotelariaV3\SistemaHotelaria\obj\Debug\SistemaHotelaria.View.excluirHospedeForm.resources
