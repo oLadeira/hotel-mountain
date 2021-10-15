@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaHotelaria.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace SistemaHotelaria.View
 {
     public partial class opcoesFuncionarios : Form
     {
+        FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
         public opcoesFuncionarios()
         {
             InitializeComponent();
@@ -20,6 +22,18 @@ namespace SistemaHotelaria.View
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            cadastrarFuncionario TelaCadastrarFuncionario = new cadastrarFuncionario();
+            TelaCadastrarFuncionario.Show();
+            this.Close();
+        }
+
+        private void btnVisualizar_Click(object sender, EventArgs e)
+        {
+            dgvFuncionarios.DataSource = funcionarioDAO.listarFuncionarios();
         }
     }
 }
