@@ -110,10 +110,12 @@ namespace SistemaHotelaria
             // toolStripButton6
             // 
             this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
+            this.toolStripButton6.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(70, 83);
+            this.toolStripButton6.Size = new System.Drawing.Size(68, 83);
             this.toolStripButton6.Text = "Serviços";
+            this.toolStripButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // tipFuncionarios
             // 
@@ -129,10 +131,12 @@ namespace SistemaHotelaria
             // toolStripButton8
             // 
             this.toolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton8.Image")));
+            this.toolStripButton8.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton8.Name = "toolStripButton8";
-            this.toolStripButton8.Size = new System.Drawing.Size(98, 83);
+            this.toolStripButton8.Size = new System.Drawing.Size(82, 83);
             this.toolStripButton8.Text = "Fornecedores";
+            this.toolStripButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // menu
             // 

@@ -60,14 +60,22 @@ namespace SistemaHotelaria.View
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            Id = Convert.ToInt32(txtId.Text);
+            try
+            {
+                Id = Convert.ToInt32(txtId.Text);
 
-            HospedeDAO hospedeDAO = new HospedeDAO();          
-            hospedeDAO.dadosAlterar(Id, hospede);
+                HospedeDAO hospedeDAO = new HospedeDAO();
+                hospedeDAO.dadosAlterar(Id, hospede);
 
-            alterarHospedeForm telaAlterarHospedeForm = new alterarHospedeForm(Id);
-            telaAlterarHospedeForm.Show();
-            this.Close();
+                alterarHospedeForm telaAlterarHospedeForm = new alterarHospedeForm(Id);
+                telaAlterarHospedeForm.Show();
+                this.Close();
+            }
+            catch(System.FormatException ex)
+            {
+                MessageBox.Show("Por favor digite um ID válido!", "Erro", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+            }
+            
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

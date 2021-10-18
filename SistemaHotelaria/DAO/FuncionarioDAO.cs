@@ -155,6 +155,32 @@ namespace SistemaHotelaria.DAO
             return null;
         }
 
+        public void deletarFuncionarioById(int id)
+        {
+            try
+            {
+                con.Open();
+
+                cmd.CommandText = "DELETE FROM funcionario WHERE id = @id";
+                cmd = new SqlCommand(cmd.CommandText, con);
+
+                cmd.Parameters.AddWithValue("@id", id);
+
+                cmd.ExecuteNonQuery();
+
+                System.Windows.Forms.MessageBox.Show("Funcionário deletado com sucesso!", "Sucesso!", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Information);
+                                
+            }
+            catch(SqlException ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
         public DataTable listarCargoComboBox()
         {
             try

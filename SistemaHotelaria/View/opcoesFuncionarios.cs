@@ -42,5 +42,12 @@ namespace SistemaHotelaria.View
             TelaAlterarFuncionario.Show();
             this.Close();
         }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            excluirFuncionario TelaExcluirFuncionario = new excluirFuncionario();
+            TelaExcluirFuncionario.Show();
+            this.Close();
+        }
     }
 }

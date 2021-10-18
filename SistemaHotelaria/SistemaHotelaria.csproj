@@ -87,6 +87,18 @@
     <Compile Include="View\cadastrarHospede.Designer.cs">
       <DependentUpon>cadastrarHospede.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\excluirFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\excluirFuncionario.Designer.cs">
+      <DependentUpon>excluirFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\excluirFuncionarioForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\excluirFuncionarioForm.Designer.cs">
+      <DependentUpon>excluirFuncionarioForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\excluirHospede.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +155,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\cadastrarHospede.resx">
       <DependentUpon>cadastrarHospede.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\excluirFuncionario.resx">
+      <DependentUpon>excluirFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\excluirFuncionarioForm.resx">
+      <DependentUpon>excluirFuncionarioForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\excluirHospede.resx">
       <DependentUpon>excluirHospede.cs</DependentUpon>
