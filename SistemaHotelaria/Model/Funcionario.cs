@@ -8,6 +8,7 @@ namespace SistemaHotelaria.Model
 {
     class Funcionario
     {
+        private int id;
         private String nome;
         private String email;
         private String cpf;
@@ -20,6 +21,7 @@ namespace SistemaHotelaria.Model
         private int cargo;
         private String turno;
 
+        public int Id { get => id; set => id = value; }
         public string Nome { get => nome; set => nome = value; }
         public string Email { get => email; set => email = value; }
         public string Cpf { get => cpf; set => cpf = value; }
@@ -31,5 +33,6 @@ namespace SistemaHotelaria.Model
         public string Numero { get => numero; set => numero = value; }
         public int Cargo { get => cargo; set => cargo = value; }
         public string Turno { get => turno; set => turno = value; }
+        
     }
 }

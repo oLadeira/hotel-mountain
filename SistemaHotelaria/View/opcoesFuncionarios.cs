@@ -35,5 +35,12 @@ namespace SistemaHotelaria.View
         {
             dgvFuncionarios.DataSource = funcionarioDAO.listarFuncionarios();
         }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            alterarFuncionario TelaAlterarFuncionario = new alterarFuncionario();
+            TelaAlterarFuncionario.Show();
+            this.Close();
+        }
     }
 }

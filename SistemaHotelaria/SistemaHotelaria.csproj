@@ -51,6 +51,18 @@
     <Compile Include="DAO\HospedeDAO.cs" />
     <Compile Include="DAO\Conexao.cs" />
     <Compile Include="Model\Funcionario.cs" />
+    <Compile Include="View\alterarFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\alterarFuncionario.Designer.cs">
+      <DependentUpon>alterarFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\alterarFuncionarioForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\alterarFuncionarioForm.Designer.cs">
+      <DependentUpon>alterarFuncionarioForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\alterarHospede.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +126,12 @@
     <Compile Include="Model\Hospede.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="View\alterarFuncionario.resx">
+      <DependentUpon>alterarFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\alterarFuncionarioForm.resx">
+      <DependentUpon>alterarFuncionarioForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\alterarHospede.resx">
       <DependentUpon>alterarHospede.cs</DependentUpon>
     </EmbeddedResource>

@@ -37,7 +37,7 @@ namespace SistemaHotelaria.View
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
             this.btnVisualizar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.dgvFuncionarios = new System.Windows.Forms.DataGridView();
@@ -101,18 +101,19 @@ namespace SistemaHotelaria.View
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnAlterar
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(247, 592);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 39);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Alterar";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlterar.Image = ((System.Drawing.Image)(resources.GetObject("btnAlterar.Image")));
+            this.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAlterar.Location = new System.Drawing.Point(247, 592);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(112, 39);
+            this.btnAlterar.TabIndex = 13;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnVisualizar
             // 
@@ -300,7 +301,7 @@ namespace SistemaHotelaria.View
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnVisualizar);
             this.Controls.Add(this.btnCadastrar);
             this.Name = "opcoesFuncionarios";
@@ -317,7 +318,7 @@ namespace SistemaHotelaria.View
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnVisualizar;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.DataGridView dgvFuncionarios;
