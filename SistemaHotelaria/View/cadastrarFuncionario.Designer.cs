@@ -370,6 +370,7 @@ namespace SistemaHotelaria.View
             this.Name = "cadastrarFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hotel Mountain - Cadastrar Funcionário";
+            this.Load += new System.EventHandler(this.cadastrarFuncionario_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.gboxSexo.ResumeLayout(false);
