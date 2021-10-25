@@ -337,7 +337,7 @@ namespace SistemaHotelaria.View
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(660, 603);
+            this.button1.Location = new System.Drawing.Point(699, 603);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(133, 50);
             this.button1.TabIndex = 31;
@@ -351,7 +351,7 @@ namespace SistemaHotelaria.View
             this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrar.Image")));
             this.btnCadastrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCadastrar.Location = new System.Drawing.Point(495, 603);
+            this.btnCadastrar.Location = new System.Drawing.Point(534, 603);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(133, 50);
             this.btnCadastrar.TabIndex = 30;

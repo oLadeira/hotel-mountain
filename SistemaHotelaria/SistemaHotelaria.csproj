@@ -50,65 +50,80 @@
     <Compile Include="DAO\FuncionarioDAO.cs" />
     <Compile Include="DAO\HospedeDAO.cs" />
     <Compile Include="DAO\Conexao.cs" />
+    <Compile Include="DAO\QuartoDAO.cs" />
+    <Compile Include="Model\Check_in.cs" />
     <Compile Include="Model\Funcionario.cs" />
-    <Compile Include="View\alterarFuncionario.cs">
+    <Compile Include="Model\Quarto.cs" />
+    <Compile Include="View\Checkin\cadastrarCheckin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\alterarFuncionario.Designer.cs">
+    <Compile Include="View\Checkin\cadastrarCheckin.Designer.cs">
+      <DependentUpon>cadastrarCheckin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Checkin\opcoesCheckin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Checkin\opcoesCheckin.Designer.cs">
+      <DependentUpon>opcoesCheckin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Funcionario\alterarFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Funcionario\alterarFuncionario.Designer.cs">
       <DependentUpon>alterarFuncionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\alterarFuncionarioForm.cs">
+    <Compile Include="View\Funcionario\alterarFuncionarioForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\alterarFuncionarioForm.Designer.cs">
+    <Compile Include="View\Funcionario\alterarFuncionarioForm.Designer.cs">
       <DependentUpon>alterarFuncionarioForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\alterarHospede.cs">
+    <Compile Include="View\Hospede\alterarHospede.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\alterarHospede.Designer.cs">
+    <Compile Include="View\Hospede\alterarHospede.Designer.cs">
       <DependentUpon>alterarHospede.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\alterarHospedeForm.cs">
+    <Compile Include="View\Hospede\alterarHospedeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\alterarHospedeForm.Designer.cs">
+    <Compile Include="View\Hospede\alterarHospedeForm.Designer.cs">
       <DependentUpon>alterarHospedeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\cadastrarFuncionario.cs">
+    <Compile Include="View\Funcionario\cadastrarFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\cadastrarFuncionario.Designer.cs">
+    <Compile Include="View\Funcionario\cadastrarFuncionario.Designer.cs">
       <DependentUpon>cadastrarFuncionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\cadastrarHospede.cs">
+    <Compile Include="View\Hospede\cadastrarHospede.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\cadastrarHospede.Designer.cs">
+    <Compile Include="View\Hospede\cadastrarHospede.Designer.cs">
       <DependentUpon>cadastrarHospede.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\excluirFuncionario.cs">
+    <Compile Include="View\Funcionario\excluirFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\excluirFuncionario.Designer.cs">
+    <Compile Include="View\Funcionario\excluirFuncionario.Designer.cs">
       <DependentUpon>excluirFuncionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\excluirFuncionarioForm.cs">
+    <Compile Include="View\Funcionario\excluirFuncionarioForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\excluirFuncionarioForm.Designer.cs">
+    <Compile Include="View\Funcionario\excluirFuncionarioForm.Designer.cs">
       <DependentUpon>excluirFuncionarioForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\excluirHospede.cs">
+    <Compile Include="View\Hospede\excluirHospede.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\excluirHospede.Designer.cs">
+    <Compile Include="View\Hospede\excluirHospede.Designer.cs">
       <DependentUpon>excluirHospede.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\excluirHospedeForm.cs">
+    <Compile Include="View\Hospede\excluirHospedeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\excluirHospedeForm.Designer.cs">
+    <Compile Include="View\Hospede\excluirHospedeForm.Designer.cs">
       <DependentUpon>excluirHospedeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\login.cs">
@@ -123,49 +138,67 @@
     <Compile Include="View\menu.Designer.cs">
       <DependentUpon>menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\opcoesFuncionarios.cs">
+    <Compile Include="View\Funcionario\opcoesFuncionarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\opcoesFuncionarios.Designer.cs">
+    <Compile Include="View\Funcionario\opcoesFuncionarios.Designer.cs">
       <DependentUpon>opcoesFuncionarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\opcoesHospedes.cs">
+    <Compile Include="View\Hospede\opcoesHospedes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\opcoesHospedes.Designer.cs">
+    <Compile Include="View\Hospede\opcoesHospedes.Designer.cs">
       <DependentUpon>opcoesHospedes.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Hospede.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="View\alterarFuncionario.resx">
+    <Compile Include="View\Quarto\cadastrarQuarto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Quarto\cadastrarQuarto.Designer.cs">
+      <DependentUpon>cadastrarQuarto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Quarto\opcoesQuarto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Quarto\opcoesQuarto.Designer.cs">
+      <DependentUpon>opcoesQuarto.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\Checkin\cadastrarCheckin.resx">
+      <DependentUpon>cadastrarCheckin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Checkin\opcoesCheckin.resx">
+      <DependentUpon>opcoesCheckin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Funcionario\alterarFuncionario.resx">
       <DependentUpon>alterarFuncionario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\alterarFuncionarioForm.resx">
+    <EmbeddedResource Include="View\Funcionario\alterarFuncionarioForm.resx">
       <DependentUpon>alterarFuncionarioForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\alterarHospede.resx">
+    <EmbeddedResource Include="View\Hospede\alterarHospede.resx">
       <DependentUpon>alterarHospede.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\alterarHospedeForm.resx">
+    <EmbeddedResource Include="View\Hospede\alterarHospedeForm.resx">
       <DependentUpon>alterarHospedeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\cadastrarFuncionario.resx">
+    <EmbeddedResource Include="View\Funcionario\cadastrarFuncionario.resx">
       <DependentUpon>cadastrarFuncionario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\cadastrarHospede.resx">
+    <EmbeddedResource Include="View\Hospede\cadastrarHospede.resx">
       <DependentUpon>cadastrarHospede.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\excluirFuncionario.resx">
+    <EmbeddedResource Include="View\Funcionario\excluirFuncionario.resx">
       <DependentUpon>excluirFuncionario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\excluirFuncionarioForm.resx">
+    <EmbeddedResource Include="View\Funcionario\excluirFuncionarioForm.resx">
       <DependentUpon>excluirFuncionarioForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\excluirHospede.resx">
+    <EmbeddedResource Include="View\Hospede\excluirHospede.resx">
       <DependentUpon>excluirHospede.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\excluirHospedeForm.resx">
+    <EmbeddedResource Include="View\Hospede\excluirHospedeForm.resx">
       <DependentUpon>excluirHospedeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\login.resx">
@@ -174,10 +207,10 @@
     <EmbeddedResource Include="View\menu.resx">
       <DependentUpon>menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\opcoesFuncionarios.resx">
+    <EmbeddedResource Include="View\Funcionario\opcoesFuncionarios.resx">
       <DependentUpon>opcoesFuncionarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\opcoesHospedes.resx">
+    <EmbeddedResource Include="View\Hospede\opcoesHospedes.resx">
       <DependentUpon>opcoesHospedes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -190,6 +223,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\Quarto\cadastrarQuarto.resx">
+      <DependentUpon>cadastrarQuarto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Quarto\opcoesQuarto.resx">
+      <DependentUpon>opcoesQuarto.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

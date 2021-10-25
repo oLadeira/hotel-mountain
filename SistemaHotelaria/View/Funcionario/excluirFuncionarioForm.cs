@@ -35,6 +35,18 @@ namespace SistemaHotelaria.View
         {
             funcionarioDAO.dadosAlterar(id1, funcionario);
 
+            txtNome.ReadOnly = true;
+            txtEmail.ReadOnly = true;
+            txtCpf.ReadOnly = true;
+            txtCep.ReadOnly = true;
+            //cmbEstadoCivil.Text = true;
+            txtTelefone.ReadOnly = true;
+            txtEndereco.ReadOnly = true;
+            txtNumero.ReadOnly = true;
+            //cmbCargo.Text = Convert.ToString(funcionario.Cargo);
+            //cmbTurno.Text = funcionario.Turno;
+
+
             txtNome.Text = funcionario.Nome;
             txtEmail.Text = funcionario.Email;
             txtCpf.Text = funcionario.Cpf;

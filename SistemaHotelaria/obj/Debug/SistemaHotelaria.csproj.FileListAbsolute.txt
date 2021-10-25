@@ -52,3 +52,7 @@ E:\MEUS DOCUMENTOS\UNIP\4º Semestre\PIM\SistemaHotelariaV3\SistemaHotelaria\obj
 E:\MEUS DOCUMENTOS\UNIP\4º Semestre\PIM\SistemaHotelariaV3\SistemaHotelaria\obj\Debug\SistemaHotelaria.View.alterarFuncionarioForm.resources
 E:\MEUS DOCUMENTOS\UNIP\4º Semestre\PIM\SistemaHotelariaV3\SistemaHotelaria\obj\Debug\SistemaHotelaria.View.excluirFuncionario.resources
 E:\MEUS DOCUMENTOS\UNIP\4º Semestre\PIM\SistemaHotelariaV3\SistemaHotelaria\obj\Debug\SistemaHotelaria.View.excluirFuncionarioForm.resources
+E:\MEUS DOCUMENTOS\UNIP\4º Semestre\PIM\SistemaHotelariaV3\SistemaHotelaria\obj\Debug\SistemaHotelaria.View.Checkin.opcoesCheckin.resources
+E:\MEUS DOCUMENTOS\UNIP\4º Semestre\PIM\SistemaHotelariaV3\SistemaHotelaria\obj\Debug\SistemaHotelaria.View.Checkin.cadastrarCheckin.resources
+E:\MEUS DOCUMENTOS\UNIP\4º Semestre\PIM\SistemaHotelariaV3\SistemaHotelaria\obj\Debug\SistemaHotelaria.View.Quarto.cadastrarQuarto.resources
+E:\MEUS DOCUMENTOS\UNIP\4º Semestre\PIM\SistemaHotelariaV3\SistemaHotelaria\obj\Debug\SistemaHotelaria.View.Quarto.opcoesQuarto.resources
