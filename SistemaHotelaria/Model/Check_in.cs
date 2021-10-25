@@ -14,14 +14,12 @@ namespace SistemaHotelaria.Model
         private DateTime entrada;
         private DateTime saida;
         private int dias;
-        private float total;
-
+        
         public int Id { get => id; set => id = value; }
         public string CpfHospede { get => cpfHospede; set => cpfHospede = value; }
         public int IdQuarto { get => idQuarto; set => idQuarto = value; }
         public DateTime Entrada { get => entrada; set => entrada = value; }
         public DateTime Saida { get => saida; set => saida = value; }
         public int Dias { get => dias; set => dias = value; }
-        public float Total { get => total; set => total = value; }
     }
 }

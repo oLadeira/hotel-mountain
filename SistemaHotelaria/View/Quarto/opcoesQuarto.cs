@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaHotelaria.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace SistemaHotelaria.View.Quarto
 {
     public partial class opcoesQuarto : Form
     {
+        QuartoDAO quartoDAO = new QuartoDAO();
         public opcoesQuarto()
         {
             InitializeComponent();
@@ -22,6 +24,11 @@ namespace SistemaHotelaria.View.Quarto
             cadastrarQuarto TelaCadastrarQuarto = new cadastrarQuarto();
             TelaCadastrarQuarto.Show();
             this.Close();
+        }
+
+        private void btnVisualizar_Click(object sender, EventArgs e)
+        {
+            dgvQuartos.DataSource = quartoDAO.listarQuarto();
         }
     }
 }

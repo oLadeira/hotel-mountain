@@ -45,6 +45,33 @@ namespace SistemaHotelaria.DAO
             }
         }
 
+        public DataTable listarQuarto()
+        {
+            try
+            {
+                con.Open();
+
+                cmd.CommandText = "SELECT * FROM quarto";
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd.CommandText, con);
+
+                DataTable tabela = new DataTable();
+
+                da.Fill(tabela);
+
+                return tabela;
+            }
+            catch (SqlException ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+            return null; 
+        }
+
         public DataTable listarQuartoComboBox() {
 
             try

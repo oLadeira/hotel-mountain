@@ -30,23 +30,23 @@ namespace SistemaHotelaria.View.Quarto
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(opcoesQuarto));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnVisualizar = new System.Windows.Forms.Button();
-            this.dgvHospedes = new System.Windows.Forms.DataGridView();
+            this.dgvQuartos = new System.Windows.Forms.DataGridView();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeHospede = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHospedes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvQuartos)).BeginInit();
             this.SuspendLayout();
             // 
             // button4
@@ -118,51 +118,52 @@ namespace SistemaHotelaria.View.Quarto
             this.btnVisualizar.Text = "Visualizar";
             this.btnVisualizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnVisualizar.UseVisualStyleBackColor = true;
+            this.btnVisualizar.Click += new System.EventHandler(this.btnVisualizar_Click);
             // 
-            // dgvHospedes
+            // dgvQuartos
             // 
-            this.dgvHospedes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvHospedes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvHospedes.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dgvHospedes.CausesValidation = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHospedes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvHospedes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHospedes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvQuartos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvQuartos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvQuartos.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgvQuartos.CausesValidation = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvQuartos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvQuartos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvQuartos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.nomeHospede,
             this.telefone,
             this.email,
             this.status});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvHospedes.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvHospedes.EnableHeadersVisualStyles = false;
-            this.dgvHospedes.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dgvHospedes.Location = new System.Drawing.Point(11, 12);
-            this.dgvHospedes.Name = "dgvHospedes";
-            this.dgvHospedes.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHospedes.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvHospedes.Size = new System.Drawing.Size(1151, 514);
-            this.dgvHospedes.TabIndex = 12;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvQuartos.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvQuartos.EnableHeadersVisualStyles = false;
+            this.dgvQuartos.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dgvQuartos.Location = new System.Drawing.Point(11, 12);
+            this.dgvQuartos.Name = "dgvQuartos";
+            this.dgvQuartos.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvQuartos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvQuartos.Size = new System.Drawing.Size(1151, 514);
+            this.dgvQuartos.TabIndex = 12;
             // 
             // btnCadastrar
             // 
@@ -188,7 +189,7 @@ namespace SistemaHotelaria.View.Quarto
             // 
             // nomeHospede
             // 
-            this.nomeHospede.DataPropertyName = "nome";
+            this.nomeHospede.DataPropertyName = "categoria";
             this.nomeHospede.FillWeight = 106.599F;
             this.nomeHospede.HeaderText = "Categoria";
             this.nomeHospede.Name = "nomeHospede";
@@ -196,7 +197,7 @@ namespace SistemaHotelaria.View.Quarto
             // 
             // telefone
             // 
-            this.telefone.DataPropertyName = "telefone";
+            this.telefone.DataPropertyName = "valor";
             this.telefone.FillWeight = 106.599F;
             this.telefone.HeaderText = "Valor";
             this.telefone.Name = "telefone";
@@ -204,7 +205,7 @@ namespace SistemaHotelaria.View.Quarto
             // 
             // email
             // 
-            this.email.DataPropertyName = "email";
+            this.email.DataPropertyName = "numero";
             this.email.FillWeight = 106.599F;
             this.email.HeaderText = "Número";
             this.email.Name = "email";
@@ -212,6 +213,7 @@ namespace SistemaHotelaria.View.Quarto
             // 
             // status
             // 
+            this.status.DataPropertyName = "status";
             this.status.HeaderText = "Status";
             this.status.Name = "status";
             this.status.ReadOnly = true;
@@ -227,12 +229,12 @@ namespace SistemaHotelaria.View.Quarto
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnVisualizar);
-            this.Controls.Add(this.dgvHospedes);
+            this.Controls.Add(this.dgvQuartos);
             this.Controls.Add(this.btnCadastrar);
             this.Name = "opcoesQuarto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "opcoesQuarto";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHospedes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvQuartos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,7 +248,7 @@ namespace SistemaHotelaria.View.Quarto
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnVisualizar;
-        private System.Windows.Forms.DataGridView dgvHospedes;
+        private System.Windows.Forms.DataGridView dgvQuartos;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeHospede;

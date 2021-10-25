@@ -79,6 +79,7 @@ namespace SistemaHotelaria.View.Quarto
             this.numericNumero.Size = new System.Drawing.Size(112, 26);
             this.numericNumero.TabIndex = 45;
             this.numericNumero.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numericNumero.ValueChanged += new System.EventHandler(this.numericNumero_ValueChanged);
             // 
             // maskValor
             // 

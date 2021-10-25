@@ -55,5 +55,10 @@ namespace SistemaHotelaria.View.Quarto
         {
 
         }
+
+        private void numericNumero_ValueChanged(object sender, EventArgs e)
+        {
+            numericNumero.Maximum = 1000;
+        }
     }
 }

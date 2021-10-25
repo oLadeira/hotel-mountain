@@ -44,7 +44,6 @@ namespace SistemaHotelaria
         {
             opcoesQuarto TelaOpcoesQuarto = new opcoesQuarto();
             TelaOpcoesQuarto.Show();
-            this.Close();
         }
     }
 }
