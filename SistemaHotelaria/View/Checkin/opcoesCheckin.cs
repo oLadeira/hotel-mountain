@@ -12,6 +12,7 @@ namespace SistemaHotelaria.View.Checkin
 {
     public partial class opcoesCheckin : Form
     {
+        DAO.CheckinDAO checkinDAO = new DAO.CheckinDAO();
         public opcoesCheckin()
         {
             InitializeComponent();
@@ -22,6 +23,16 @@ namespace SistemaHotelaria.View.Checkin
             cadastrarCheckin TelaCadastrarCheckin = new cadastrarCheckin();
             TelaCadastrarCheckin.Show();
             this.Close();
+        }
+
+        private void opcoesCheckin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVisualizar_Click(object sender, EventArgs e)
+        {
+            dgvCheckin.DataSource = checkinDAO.listarCheckin();
         }
     }
 }

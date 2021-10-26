@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -52,7 +53,30 @@ namespace SistemaHotelaria.DAO
             }
         }
 
+        public DataTable listarCheckin()
+        {
+            try
+            {
+                con.Open();
 
+                cmd.CommandText = "SELECT c.id, c.cpfHospede, q.numero, c.entrada, c.saida, c.dias FROM checkIn as c INNER JOIN quarto AS q ON idQuarto = q.id;";
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd.CommandText, con);
+                DataTable tabela = new DataTable();
+
+                da.Fill(tabela);
+                return tabela;
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                con.Close();
+            }
+            return null;
+        }
 
     }
 }

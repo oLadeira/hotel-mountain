@@ -33,7 +33,7 @@ namespace SistemaHotelaria.View.Checkin
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(opcoesCheckin));
-            this.dgvFuncionarios = new System.Windows.Forms.DataGridView();
+            this.dgvCheckin = new System.Windows.Forms.DataGridView();
             this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -42,21 +42,20 @@ namespace SistemaHotelaria.View.Checkin
             this.btnVisualizar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeHospede = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cep = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estadoCivil = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionarios)).BeginInit();
+            this.cpfHospede = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.entrada = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.saida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dias = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCheckin)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgvFuncionarios
+            // dgvCheckin
             // 
-            this.dgvFuncionarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvFuncionarios.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvFuncionarios.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dgvFuncionarios.CausesValidation = false;
+            this.dgvCheckin.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvCheckin.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvCheckin.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgvCheckin.CausesValidation = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -64,16 +63,15 @@ namespace SistemaHotelaria.View.Checkin
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFuncionarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvFuncionarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFuncionarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvCheckin.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvCheckin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCheckin.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
-            this.nomeHospede,
-            this.email,
-            this.cpf,
-            this.cep,
-            this.estadoCivil,
-            this.telefone});
+            this.cpfHospede,
+            this.numero,
+            this.entrada,
+            this.saida,
+            this.dias});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -81,12 +79,12 @@ namespace SistemaHotelaria.View.Checkin
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvFuncionarios.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvFuncionarios.EnableHeadersVisualStyles = false;
-            this.dgvFuncionarios.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dgvFuncionarios.Location = new System.Drawing.Point(11, 12);
-            this.dgvFuncionarios.Name = "dgvFuncionarios";
-            this.dgvFuncionarios.ReadOnly = true;
+            this.dgvCheckin.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvCheckin.EnableHeadersVisualStyles = false;
+            this.dgvCheckin.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dgvCheckin.Location = new System.Drawing.Point(11, 12);
+            this.dgvCheckin.Name = "dgvCheckin";
+            this.dgvCheckin.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -94,9 +92,9 @@ namespace SistemaHotelaria.View.Checkin
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFuncionarios.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvFuncionarios.Size = new System.Drawing.Size(1151, 514);
-            this.dgvFuncionarios.TabIndex = 19;
+            this.dgvCheckin.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvCheckin.Size = new System.Drawing.Size(1151, 514);
+            this.dgvCheckin.TabIndex = 19;
             // 
             // button4
             // 
@@ -167,6 +165,7 @@ namespace SistemaHotelaria.View.Checkin
             this.btnVisualizar.Text = "Visualizar";
             this.btnVisualizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnVisualizar.UseVisualStyleBackColor = true;
+            this.btnVisualizar.Click += new System.EventHandler(this.btnVisualizar_Click);
             // 
             // btnCadastrar
             // 
@@ -190,53 +189,45 @@ namespace SistemaHotelaria.View.Checkin
             this.id.Name = "id";
             this.id.ReadOnly = true;
             // 
-            // nomeHospede
+            // cpfHospede
             // 
-            this.nomeHospede.DataPropertyName = "nome";
-            this.nomeHospede.FillWeight = 102.1925F;
-            this.nomeHospede.HeaderText = "CPF Hóspede";
-            this.nomeHospede.Name = "nomeHospede";
-            this.nomeHospede.ReadOnly = true;
+            this.cpfHospede.DataPropertyName = "cpfHospede";
+            this.cpfHospede.FillWeight = 102.1925F;
+            this.cpfHospede.HeaderText = "CPF Hóspede";
+            this.cpfHospede.Name = "cpfHospede";
+            this.cpfHospede.ReadOnly = true;
             // 
-            // email
+            // numero
             // 
-            this.email.DataPropertyName = "email";
-            this.email.FillWeight = 102.1925F;
-            this.email.HeaderText = "ID Quarto";
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
+            this.numero.DataPropertyName = "numero";
+            this.numero.FillWeight = 102.1925F;
+            this.numero.HeaderText = "Número do Quarto";
+            this.numero.Name = "numero";
+            this.numero.ReadOnly = true;
             // 
-            // cpf
+            // entrada
             // 
-            this.cpf.DataPropertyName = "cpf";
-            this.cpf.FillWeight = 102.1925F;
-            this.cpf.HeaderText = "Entrada";
-            this.cpf.Name = "cpf";
-            this.cpf.ReadOnly = true;
+            this.entrada.DataPropertyName = "entrada";
+            this.entrada.FillWeight = 102.1925F;
+            this.entrada.HeaderText = "Entrada";
+            this.entrada.Name = "entrada";
+            this.entrada.ReadOnly = true;
             // 
-            // cep
+            // saida
             // 
-            this.cep.DataPropertyName = "cep";
-            this.cep.FillWeight = 102.1925F;
-            this.cep.HeaderText = "Saída";
-            this.cep.Name = "cep";
-            this.cep.ReadOnly = true;
+            this.saida.DataPropertyName = "saida";
+            this.saida.FillWeight = 102.1925F;
+            this.saida.HeaderText = "Saída";
+            this.saida.Name = "saida";
+            this.saida.ReadOnly = true;
             // 
-            // estadoCivil
+            // dias
             // 
-            this.estadoCivil.DataPropertyName = "estadoCivil";
-            this.estadoCivil.FillWeight = 150.6094F;
-            this.estadoCivil.HeaderText = "Dias";
-            this.estadoCivil.Name = "estadoCivil";
-            this.estadoCivil.ReadOnly = true;
-            // 
-            // telefone
-            // 
-            this.telefone.DataPropertyName = "telefone";
-            this.telefone.FillWeight = 102.1925F;
-            this.telefone.HeaderText = "Total";
-            this.telefone.Name = "telefone";
-            this.telefone.ReadOnly = true;
+            this.dias.DataPropertyName = "dias";
+            this.dias.FillWeight = 150.6094F;
+            this.dias.HeaderText = "Dias";
+            this.dias.Name = "dias";
+            this.dias.ReadOnly = true;
             // 
             // opcoesCheckin
             // 
@@ -250,11 +241,12 @@ namespace SistemaHotelaria.View.Checkin
             this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnVisualizar);
             this.Controls.Add(this.btnCadastrar);
-            this.Controls.Add(this.dgvFuncionarios);
+            this.Controls.Add(this.dgvCheckin);
             this.Name = "opcoesCheckin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "opcoesCheckin";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionarios)).EndInit();
+            this.Load += new System.EventHandler(this.opcoesCheckin_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCheckin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -262,7 +254,7 @@ namespace SistemaHotelaria.View.Checkin
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvFuncionarios;
+        private System.Windows.Forms.DataGridView dgvCheckin;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
@@ -271,11 +263,10 @@ namespace SistemaHotelaria.View.Checkin
         private System.Windows.Forms.Button btnVisualizar;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomeHospede;
-        private System.Windows.Forms.DataGridViewTextBoxColumn email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cpf;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cep;
-        private System.Windows.Forms.DataGridViewTextBoxColumn estadoCivil;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telefone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cpfHospede;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn entrada;
+        private System.Windows.Forms.DataGridViewTextBoxColumn saida;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dias;
     }
 }
