@@ -35,9 +35,9 @@ namespace SistemaHotelaria
             this.tipCheckin = new System.Windows.Forms.ToolStripButton();
             this.tipCheckout = new System.Windows.Forms.ToolStripButton();
             this.tipQuartos = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
+            this.tipServicos = new System.Windows.Forms.ToolStripButton();
             this.tipFuncionarios = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
+            this.tipFornecedores = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,9 +48,9 @@ namespace SistemaHotelaria
             this.tipCheckin,
             this.tipCheckout,
             this.tipQuartos,
-            this.toolStripButton6,
+            this.tipServicos,
             this.tipFuncionarios,
-            this.toolStripButton8});
+            this.tipFornecedores});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1173, 86);
@@ -101,15 +101,16 @@ namespace SistemaHotelaria
             this.tipQuartos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tipQuartos.Click += new System.EventHandler(this.tipQuartos_Click);
             // 
-            // toolStripButton6
+            // tipServicos
             // 
-            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
-            this.toolStripButton6.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(68, 83);
-            this.toolStripButton6.Text = "Serviços";
-            this.toolStripButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tipServicos.Image = ((System.Drawing.Image)(resources.GetObject("tipServicos.Image")));
+            this.tipServicos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tipServicos.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tipServicos.Name = "tipServicos";
+            this.tipServicos.Size = new System.Drawing.Size(68, 83);
+            this.tipServicos.Text = "Serviços";
+            this.tipServicos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tipServicos.Click += new System.EventHandler(this.tipServicos_Click);
             // 
             // tipFuncionarios
             // 
@@ -122,15 +123,15 @@ namespace SistemaHotelaria
             this.tipFuncionarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tipFuncionarios.Click += new System.EventHandler(this.tipFuncionarios_Click);
             // 
-            // toolStripButton8
+            // tipFornecedores
             // 
-            this.toolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton8.Image")));
-            this.toolStripButton8.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton8.Name = "toolStripButton8";
-            this.toolStripButton8.Size = new System.Drawing.Size(82, 83);
-            this.toolStripButton8.Text = "Fornecedores";
-            this.toolStripButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tipFornecedores.Image = ((System.Drawing.Image)(resources.GetObject("tipFornecedores.Image")));
+            this.tipFornecedores.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tipFornecedores.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tipFornecedores.Name = "tipFornecedores";
+            this.tipFornecedores.Size = new System.Drawing.Size(82, 83);
+            this.tipFornecedores.Text = "Fornecedores";
+            this.tipFornecedores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // menu
             // 
@@ -161,8 +162,8 @@ namespace SistemaHotelaria
         private System.Windows.Forms.ToolStripButton tipCheckin;
         private System.Windows.Forms.ToolStripButton tipCheckout;
         private System.Windows.Forms.ToolStripButton tipQuartos;
-        private System.Windows.Forms.ToolStripButton toolStripButton6;
+        private System.Windows.Forms.ToolStripButton tipServicos;
         private System.Windows.Forms.ToolStripButton tipFuncionarios;
-        private System.Windows.Forms.ToolStripButton toolStripButton8;
+        private System.Windows.Forms.ToolStripButton tipFornecedores;
     }
 }

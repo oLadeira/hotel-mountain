@@ -192,6 +192,12 @@
     <Compile Include="View\Quarto\opcoesQuarto.Designer.cs">
       <DependentUpon>opcoesQuarto.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Servicos\cadastrarServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Servicos\cadastrarServico.Designer.cs">
+      <DependentUpon>cadastrarServico.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="View\Checkin\cadastrarCheckin.resx">
       <DependentUpon>cadastrarCheckin.cs</DependentUpon>
     </EmbeddedResource>
@@ -267,6 +273,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Quarto\opcoesQuarto.resx">
       <DependentUpon>opcoesQuarto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Servicos\cadastrarServico.resx">
+      <DependentUpon>cadastrarServico.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

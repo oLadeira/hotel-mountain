@@ -12,6 +12,7 @@ using SistemaHotelaria.View;
 using SistemaHotelaria.View.Checkin;
 using SistemaHotelaria.View.Quarto;
 using SistemaHotelaria.View.Checkout;
+using SistemaHotelaria.View.Servicos;
 
 namespace SistemaHotelaria
 {
@@ -51,6 +52,12 @@ namespace SistemaHotelaria
         {
             opcoesCheckout TelaOpcoesCheckout = new opcoesCheckout();
             TelaOpcoesCheckout.Show();
+        }
+
+        private void tipServicos_Click(object sender, EventArgs e)
+        {
+            cadastrarServico TelaCadastrarServico = new cadastrarServico();
+            TelaCadastrarServico.Show();
         }
     }
 }
