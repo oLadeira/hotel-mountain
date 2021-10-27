@@ -123,7 +123,7 @@ namespace SistemaHotelaria.DAO
                 cmd.ExecuteNonQuery();
 
                 System.Windows.Forms.MessageBox.Show("Hóspede Atualizado com sucesso!", "Sucesso!", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Information);
-                               
+                                
             }
             catch(SqlException ex)
             {

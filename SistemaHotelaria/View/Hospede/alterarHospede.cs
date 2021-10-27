@@ -31,7 +31,7 @@ namespace SistemaHotelaria.View
             InitializeComponent();
         }
 
-        public int Id { get => id; set => id = value; }
+        //public int Id { get => id; set => id = value; }
 
         private void alterarHospede_Load(object sender, EventArgs e)
         {
@@ -62,12 +62,12 @@ namespace SistemaHotelaria.View
         {
             try
             {
-                Id = Convert.ToInt32(txtId.Text);
+                id = Convert.ToInt32(txtId.Text);
 
                 HospedeDAO hospedeDAO = new HospedeDAO();
-                hospedeDAO.dadosAlterar(Id, hospede);
+                hospedeDAO.dadosAlterar(id, hospede);
 
-                alterarHospedeForm telaAlterarHospedeForm = new alterarHospedeForm(Id);
+                alterarHospedeForm telaAlterarHospedeForm = new alterarHospedeForm(id);
                 telaAlterarHospedeForm.Show();
                 this.Close();
             }

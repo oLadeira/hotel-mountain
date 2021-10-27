@@ -11,6 +11,7 @@ using SistemaHotelaria.forms;
 using SistemaHotelaria.View;
 using SistemaHotelaria.View.Checkin;
 using SistemaHotelaria.View.Quarto;
+using SistemaHotelaria.View.Checkout;
 
 namespace SistemaHotelaria
 {
@@ -44,6 +45,12 @@ namespace SistemaHotelaria
         {
             opcoesQuarto TelaOpcoesQuarto = new opcoesQuarto();
             TelaOpcoesQuarto.Show();
+        }
+
+        private void tipCheckout_Click(object sender, EventArgs e)
+        {
+            opcoesCheckout TelaOpcoesCheckout = new opcoesCheckout();
+            TelaOpcoesCheckout.Show();
         }
     }
 }

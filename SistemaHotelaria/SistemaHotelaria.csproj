@@ -48,11 +48,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\CheckinDAO.cs" />
+    <Compile Include="DAO\CheckoutDAO.cs" />
     <Compile Include="DAO\FuncionarioDAO.cs" />
     <Compile Include="DAO\HospedeDAO.cs" />
     <Compile Include="DAO\Conexao.cs" />
     <Compile Include="DAO\QuartoDAO.cs" />
     <Compile Include="Model\Check_in.cs" />
+    <Compile Include="Model\Check_out.cs" />
     <Compile Include="Model\Funcionario.cs" />
     <Compile Include="Model\Quarto.cs" />
     <Compile Include="View\Checkin\cadastrarCheckin.cs">
@@ -66,6 +68,30 @@
     </Compile>
     <Compile Include="View\Checkin\opcoesCheckin.Designer.cs">
       <DependentUpon>opcoesCheckin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Checkout\cadastrarCheckout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Checkout\cadastrarCheckout.Designer.cs">
+      <DependentUpon>cadastrarCheckout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Checkout\opcoesCheckout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Checkout\opcoesCheckout.Designer.cs">
+      <DependentUpon>opcoesCheckout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Checkout\pesquisarCheckin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Checkout\pesquisarCheckin.Designer.cs">
+      <DependentUpon>pesquisarCheckin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Checkout\servicosUtilizados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Checkout\servicosUtilizados.Designer.cs">
+      <DependentUpon>servicosUtilizados.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Funcionario\alterarFuncionario.cs">
       <SubType>Form</SubType>
@@ -171,6 +197,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Checkin\opcoesCheckin.resx">
       <DependentUpon>opcoesCheckin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Checkout\cadastrarCheckout.resx">
+      <DependentUpon>cadastrarCheckout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Checkout\opcoesCheckout.resx">
+      <DependentUpon>opcoesCheckout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Checkout\pesquisarCheckin.resx">
+      <DependentUpon>pesquisarCheckin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Checkout\servicosUtilizados.resx">
+      <DependentUpon>servicosUtilizados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Funcionario\alterarFuncionario.resx">
       <DependentUpon>alterarFuncionario.cs</DependentUpon>

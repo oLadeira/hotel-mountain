@@ -58,9 +58,17 @@ namespace SistemaHotelaria.View.Checkin
             checkin.Entrada = Convert.ToDateTime(dtpEntrada.Value.ToString());
             checkin.Saida = Convert.ToDateTime(dtpSaida.Value.ToString());
 
-            checkin.Dias = Convert.ToInt32(checkin.Saida.ToString("dd")) - Convert.ToInt32(checkin.Entrada.ToString("dd"));
+            DateTime startTime = dtpEntrada.Value;
+            DateTime endTime = dtpSaida.Value;
 
-            txtDias.Text = checkin.Dias.ToString();
+            TimeSpan duration = new TimeSpan(endTime.Ticks - startTime.Ticks);
+
+            txtDias.Text = Convert.ToString(duration.ToString(@"dd"));
+
+            checkin.Dias = Convert.ToInt32(checkin.Saida.ToString("dd")) - Convert.ToInt32(checkin.Entrada.ToString("dd"));
+                       
+
+            //txtDias.Text = checkin.Dias.ToString();
 
         }
 
@@ -87,6 +95,11 @@ namespace SistemaHotelaria.View.Checkin
 
             }
             
+        }
+
+        private void dtpEntrada_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

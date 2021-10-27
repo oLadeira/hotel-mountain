@@ -105,6 +105,9 @@ namespace SistemaHotelaria.View.Quarto
             // 
             this.cmbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCategoria.FormattingEnabled = true;
+            this.cmbCategoria.Items.AddRange(new object[] {
+            "BÁSICO",
+            "LUXO"});
             this.cmbCategoria.Location = new System.Drawing.Point(10, 39);
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.Size = new System.Drawing.Size(277, 28);

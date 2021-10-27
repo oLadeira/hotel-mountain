@@ -33,8 +33,7 @@ namespace SistemaHotelaria
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tipHospedes = new System.Windows.Forms.ToolStripButton();
             this.tipCheckin = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.tipCheckout = new System.Windows.Forms.ToolStripButton();
             this.tipQuartos = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.tipFuncionarios = new System.Windows.Forms.ToolStripButton();
@@ -47,8 +46,7 @@ namespace SistemaHotelaria
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tipHospedes,
             this.tipCheckin,
-            this.toolStripButton3,
-            this.toolStripButton4,
+            this.tipCheckout,
             this.tipQuartos,
             this.toolStripButton6,
             this.tipFuncionarios,
@@ -81,24 +79,16 @@ namespace SistemaHotelaria
             this.tipCheckin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tipCheckin.Click += new System.EventHandler(this.tipCheckin_Click);
             // 
-            // toolStripButton3
+            // tipCheckout
             // 
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(69, 83);
-            this.toolStripButton3.Text = "Check-Out";
-            this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // toolStripButton4
-            // 
-            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-            this.toolStripButton4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(72, 83);
-            this.toolStripButton4.Text = "Reservas";
+            this.tipCheckout.Image = ((System.Drawing.Image)(resources.GetObject("tipCheckout.Image")));
+            this.tipCheckout.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tipCheckout.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tipCheckout.Name = "tipCheckout";
+            this.tipCheckout.Size = new System.Drawing.Size(69, 83);
+            this.tipCheckout.Text = "Check-Out";
+            this.tipCheckout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tipCheckout.Click += new System.EventHandler(this.tipCheckout_Click);
             // 
             // tipQuartos
             // 
@@ -169,8 +159,7 @@ namespace SistemaHotelaria
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton tipHospedes;
         private System.Windows.Forms.ToolStripButton tipCheckin;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ToolStripButton tipCheckout;
         private System.Windows.Forms.ToolStripButton tipQuartos;
         private System.Windows.Forms.ToolStripButton toolStripButton6;
         private System.Windows.Forms.ToolStripButton tipFuncionarios;

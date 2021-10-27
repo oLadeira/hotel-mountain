@@ -16,7 +16,7 @@ namespace SistemaHotelaria.View
 {
     public partial class alterarHospedeForm : Form
     {
-        int id1;
+        private int id1;
         Hospede hospede = new Hospede();
         HospedeDAO hospedeDAO = new HospedeDAO();
         public alterarHospedeForm()
