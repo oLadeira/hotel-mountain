@@ -16,5 +16,12 @@ namespace SistemaHotelaria.View.Fornecedores
         {
             InitializeComponent();
         }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            cadastrarFornecedor TelaCadastrarFornecedor = new cadastrarFornecedor();
+            TelaCadastrarFornecedor.Show();
+            this.Close();
+        }
     }
 }

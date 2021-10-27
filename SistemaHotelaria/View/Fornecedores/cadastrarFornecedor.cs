@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SistemaHotelaria.DAO;
+using SistemaHotelaria.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,33 @@ namespace SistemaHotelaria.View.Fornecedores
 {
     public partial class cadastrarFornecedor : Form
     {
+        FornecedorDAO fornecedorDAO = new FornecedorDAO();
+        Fornecedor fornecedor = new Fornecedor();
+
         public cadastrarFornecedor()
         {
             InitializeComponent();
+        }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            fornecedor.NomeFantasia = txtNomeFantasia.Text;
+            fornecedor.RazaoSocial = txtRazaoSocial.Text;
+            fornecedor.Endereco = txtEndereco.Text;
+            fornecedor.Cnpj = txtCnpj.Text;
+            fornecedor.Email = txtEmail.Text;
+            fornecedor.Telefone = mskTelefone.Text;
+            fornecedor.Categoria = cmbCategoria.Text;
+
+
+            fornecedorDAO.cadastrarFornecedor(fornecedor);
+
+
+        }
+
+        private void cadastrarFornecedor_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

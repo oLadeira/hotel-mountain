@@ -132,6 +132,7 @@ namespace SistemaHotelaria
             this.tipFornecedores.Size = new System.Drawing.Size(82, 83);
             this.tipFornecedores.Text = "Fornecedores";
             this.tipFornecedores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tipFornecedores.Click += new System.EventHandler(this.tipFornecedores_Click);
             // 
             // menu
             // 

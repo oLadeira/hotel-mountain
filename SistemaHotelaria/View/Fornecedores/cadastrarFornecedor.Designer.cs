@@ -31,41 +31,41 @@ namespace SistemaHotelaria.View.Fornecedores
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(cadastrarFornecedor));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cmbCargo = new System.Windows.Forms.ComboBox();
+            this.cmbCategoria = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtEndereco = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtCep = new System.Windows.Forms.TextBox();
+            this.txtCnpj = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtCpf = new System.Windows.Forms.TextBox();
+            this.txtEndereco = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtNumero = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtNome = new System.Windows.Forms.TextBox();
+            this.txtRazaoSocial = new System.Windows.Forms.TextBox();
+            this.txtNomeFantasia = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
+            this.mskTelefone = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.cmbCargo);
+            this.groupBox1.Controls.Add(this.mskTelefone);
+            this.groupBox1.Controls.Add(this.cmbCategoria);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtEndereco);
+            this.groupBox1.Controls.Add(this.txtEmail);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.txtCep);
+            this.groupBox1.Controls.Add(this.txtCnpj);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.txtCpf);
+            this.groupBox1.Controls.Add(this.txtEndereco);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.txtNumero);
-            this.groupBox1.Controls.Add(this.txtEmail);
-            this.groupBox1.Controls.Add(this.txtNome);
+            this.groupBox1.Controls.Add(this.txtRazaoSocial);
+            this.groupBox1.Controls.Add(this.txtNomeFantasia);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.pictureBox1);
@@ -76,18 +76,18 @@ namespace SistemaHotelaria.View.Fornecedores
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cadastro Funcionário";
             // 
-            // cmbCargo
+            // cmbCategoria
             // 
-            this.cmbCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbCargo.FormattingEnabled = true;
-            this.cmbCargo.Items.AddRange(new object[] {
-            "MANHÃ",
-            "TARDE",
-            "NOITE"});
-            this.cmbCargo.Location = new System.Drawing.Point(659, 178);
-            this.cmbCargo.Name = "cmbCargo";
-            this.cmbCargo.Size = new System.Drawing.Size(180, 28);
-            this.cmbCargo.TabIndex = 51;
+            this.cmbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCategoria.FormattingEnabled = true;
+            this.cmbCategoria.Items.AddRange(new object[] {
+            "BEBIDAS",
+            "FRIOS",
+            "CARNES"});
+            this.cmbCategoria.Location = new System.Drawing.Point(659, 178);
+            this.cmbCategoria.Name = "cmbCategoria";
+            this.cmbCategoria.Size = new System.Drawing.Size(180, 28);
+            this.cmbCategoria.TabIndex = 51;
             // 
             // label2
             // 
@@ -99,13 +99,13 @@ namespace SistemaHotelaria.View.Fornecedores
             this.label2.TabIndex = 48;
             this.label2.Text = "Categoria";
             // 
-            // txtEndereco
+            // txtEmail
             // 
-            this.txtEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEndereco.Location = new System.Drawing.Point(5, 180);
-            this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(382, 26);
-            this.txtEndereco.TabIndex = 37;
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(5, 180);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(382, 26);
+            this.txtEmail.TabIndex = 37;
             // 
             // label8
             // 
@@ -117,13 +117,13 @@ namespace SistemaHotelaria.View.Fornecedores
             this.label8.TabIndex = 43;
             this.label8.Text = "CNPJ";
             // 
-            // txtCep
+            // txtCnpj
             // 
-            this.txtCep.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCep.Location = new System.Drawing.Point(462, 106);
-            this.txtCep.Name = "txtCep";
-            this.txtCep.Size = new System.Drawing.Size(377, 26);
-            this.txtCep.TabIndex = 35;
+            this.txtCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCnpj.Location = new System.Drawing.Point(462, 106);
+            this.txtCnpj.Name = "txtCnpj";
+            this.txtCnpj.Size = new System.Drawing.Size(377, 26);
+            this.txtCnpj.TabIndex = 35;
             // 
             // label6
             // 
@@ -135,13 +135,13 @@ namespace SistemaHotelaria.View.Fornecedores
             this.label6.TabIndex = 42;
             this.label6.Text = "Endereço";
             // 
-            // txtCpf
+            // txtEndereco
             // 
-            this.txtCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCpf.Location = new System.Drawing.Point(10, 106);
-            this.txtCpf.Name = "txtCpf";
-            this.txtCpf.Size = new System.Drawing.Size(377, 26);
-            this.txtCpf.TabIndex = 34;
+            this.txtEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEndereco.Location = new System.Drawing.Point(10, 106);
+            this.txtEndereco.Name = "txtEndereco";
+            this.txtEndereco.Size = new System.Drawing.Size(377, 26);
+            this.txtEndereco.TabIndex = 34;
             // 
             // label5
             // 
@@ -163,29 +163,21 @@ namespace SistemaHotelaria.View.Fornecedores
             this.label7.TabIndex = 44;
             this.label7.Text = "E-mail";
             // 
-            // txtNumero
+            // txtRazaoSocial
             // 
-            this.txtNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumero.Location = new System.Drawing.Point(467, 180);
-            this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(167, 26);
-            this.txtNumero.TabIndex = 38;
+            this.txtRazaoSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRazaoSocial.Location = new System.Drawing.Point(462, 39);
+            this.txtRazaoSocial.Name = "txtRazaoSocial";
+            this.txtRazaoSocial.Size = new System.Drawing.Size(377, 26);
+            this.txtRazaoSocial.TabIndex = 32;
             // 
-            // txtEmail
+            // txtNomeFantasia
             // 
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(462, 39);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(377, 26);
-            this.txtEmail.TabIndex = 32;
-            // 
-            // txtNome
-            // 
-            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(10, 39);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(377, 26);
-            this.txtNome.TabIndex = 27;
+            this.txtNomeFantasia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomeFantasia.Location = new System.Drawing.Point(10, 39);
+            this.txtNomeFantasia.Name = "txtNomeFantasia";
+            this.txtNomeFantasia.Size = new System.Drawing.Size(377, 26);
+            this.txtNomeFantasia.TabIndex = 27;
             // 
             // label10
             // 
@@ -242,6 +234,16 @@ namespace SistemaHotelaria.View.Fornecedores
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            // 
+            // mskTelefone
+            // 
+            this.mskTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskTelefone.Location = new System.Drawing.Point(467, 180);
+            this.mskTelefone.Mask = "(99) 0000-00000";
+            this.mskTelefone.Name = "mskTelefone";
+            this.mskTelefone.Size = new System.Drawing.Size(167, 26);
+            this.mskTelefone.TabIndex = 52;
             // 
             // cadastrarFornecedor
             // 
@@ -252,7 +254,8 @@ namespace SistemaHotelaria.View.Fornecedores
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.groupBox1);
             this.Name = "cadastrarFornecedor";
-            this.Text = "cadastrarFornecedor";
+            this.Text = "Hotel Mountain - Cadastrar Fornecedor";
+            this.Load += new System.EventHandler(this.cadastrarFornecedor_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -263,22 +266,22 @@ namespace SistemaHotelaria.View.Fornecedores
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox cmbCargo;
+        private System.Windows.Forms.ComboBox cmbCategoria;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtEndereco;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtCep;
+        private System.Windows.Forms.TextBox txtCnpj;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtCpf;
+        private System.Windows.Forms.TextBox txtEndereco;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtNumero;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.TextBox txtRazaoSocial;
+        private System.Windows.Forms.TextBox txtNomeFantasia;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.MaskedTextBox mskTelefone;
     }
 }
