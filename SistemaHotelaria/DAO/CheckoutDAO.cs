@@ -36,6 +36,7 @@ namespace SistemaHotelaria.DAO
 
                 cmd.ExecuteNonQuery();
 
+                System.Windows.Forms.MessageBox.Show("Check-Out realizado com sucesso!", "Sucesso!", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Information);
 
             }
             catch (SqlException ex)

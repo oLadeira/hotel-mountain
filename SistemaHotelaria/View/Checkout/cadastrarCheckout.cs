@@ -48,13 +48,9 @@ namespace SistemaHotelaria.View.Checkout
 
             dtpEntrada.Value = checkin.Entrada;
             dtpSaida.Value = checkin.Saida;
-
             DateTime startTime = dtpEntrada.Value;
             DateTime endTime = dtpSaida.Value;
-
-            TimeSpan duration = new TimeSpan(endTime.Ticks - startTime.Ticks);
-                      
-
+            TimeSpan duration = new TimeSpan(endTime.Ticks - startTime.Ticks);                  
             txtDias.Text = Convert.ToString(duration.ToString("dd"));
                         
 
@@ -63,11 +59,12 @@ namespace SistemaHotelaria.View.Checkout
             //comboBox serviços
             cmbServicos.DisplayMember = "Text";
             cmbServicos.ValueMember = "Value";
-            cmbServicos.Items.Add(new { Text = "Limpeza do Quarto", Value = "250,00" });
-            cmbServicos.Items.Add(new { Text = "Limpeza Completa", Value = "350,00" });
-
-            
-
+            var items = new[] {
+                new { Text = "", Value = "" },
+                new { Text = "Limpeza de Quarto", Value = "200,00" },
+                new { Text = "Limpeza Completa", Value = "300,00" }
+            };
+            cmbServicos.DataSource = items;
         }
 
         private void btnServicos_Click(object sender, EventArgs e)
@@ -105,7 +102,7 @@ namespace SistemaHotelaria.View.Checkout
 
             txtTotal.Text = Convert.ToString(Convert.ToDecimal(txtTotal.Text) + Convert.ToDecimal(cmbServicos.SelectedValue));
 
-            label13.Text = cmbServicos.SelectedValue.ToString();
+            //label13.Text = Convert.ToString(cmbServicos.SelectedValue);
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
