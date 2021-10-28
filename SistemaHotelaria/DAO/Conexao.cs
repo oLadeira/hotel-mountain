@@ -16,8 +16,6 @@ namespace SistemaHotelaria.DAO
             return new SqlConnection(con);
         }
 
-
-
         /* 
         SqlConnection con = new SqlConnection(); //instanciando classe sqlconnection
         
@@ -46,10 +44,6 @@ namespace SistemaHotelaria.DAO
         }
 
         */
-
-
-
-
 
     }
 }

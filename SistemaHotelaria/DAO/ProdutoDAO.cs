@@ -47,6 +47,33 @@ namespace SistemaHotelaria.DAO
             }
         }
 
+        public DataTable listarProdutosComboBox()
+        {
+            try
+            {
+                con.Open();
+
+                cmd.CommandText = "SELECT * FROM produto";
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd.CommandText, con);
+                DataTable tabela = new DataTable();
+
+                da.Fill(tabela);
+
+                return tabela;
+            }
+            catch (SqlException ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+                return null;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+
 
         public DataTable listarFornecedoresComboBox()
         {

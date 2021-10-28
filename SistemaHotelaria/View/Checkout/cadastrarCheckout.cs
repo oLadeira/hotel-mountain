@@ -30,30 +30,96 @@ namespace SistemaHotelaria.View.Checkout
         }
                        
 
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            
-            
-        }
-
         private void cadastrarCheckout_Load(object sender, EventArgs e)
         {                                   
             checkoutDAO.pesquisarCheckin(cpf1, checkin);
-                       
+            ProdutoDAO produtoDAO = new ProdutoDAO();
+            QuartoDAO quartoDAO = new QuartoDAO();
+
+            //comboBox produtos
+            cmbProdutos.DataSource = produtoDAO.listarProdutosComboBox();
+            cmbProdutos.DisplayMember = "nome";
+            cmbProdutos.ValueMember = "valorVenda";
 
             txtCpf.Text = checkin.CpfHospede;
+
             txtQuarto.Text = Convert.ToString(checkin.IdQuarto);
+            //txtQuarto.Text = Convert.ToString(quartoDAO.listarQuarto(Convert.ToInt32(checkin.IdQuarto)));
+
             dtpEntrada.Value = checkin.Entrada;
             dtpSaida.Value = checkin.Saida;
-            txtDias.Text = Convert.ToString(checkin.Dias);
 
-            txtTotal.Text = Convert.ToString(checkoutDAO.calculaTotal(txtCpf.Text));
+            DateTime startTime = dtpEntrada.Value;
+            DateTime endTime = dtpSaida.Value;
+
+            TimeSpan duration = new TimeSpan(endTime.Ticks - startTime.Ticks);
+                      
+
+            txtDias.Text = Convert.ToString(duration.ToString("dd"));
+                        
+
+            txtTotal.Text = Convert.ToString(checkoutDAO.calculaTotal(txtCpf.Text) * Convert.ToDecimal(txtDias.Text));
+
+            //comboBox serviços
+            cmbServicos.DisplayMember = "Text";
+            cmbServicos.ValueMember = "Value";
+            cmbServicos.Items.Add(new { Text = "Limpeza do Quarto", Value = "250,00" });
+            cmbServicos.Items.Add(new { Text = "Limpeza Completa", Value = "350,00" });
+
+            
+
         }
 
         private void btnServicos_Click(object sender, EventArgs e)
         {
             servicosUtilizados TelaServicosUtilizados = new servicosUtilizados();
             TelaServicosUtilizados.Show();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            listProdutos.Items.Add(cmbProdutos.Text);
+            listQuantidade.Items.Add(numericQuantidade.Value);
+
+
+            //decimal calculo = Convert.ToDecimal(txtTotal.Text) + Convert.ToDecimal(cmbProdutos.SelectedValue);
+
+            decimal calc = Convert.ToDecimal(cmbProdutos.SelectedValue) * numericQuantidade.Value;
+
+            txtTotal.Text = Convert.ToString(Convert.ToDecimal(txtTotal.Text) + calc);
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericQuantidade_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddServico_Click(object sender, EventArgs e)
+        {
+            listServicos.Items.Add(cmbServicos.Text);
+
+            txtTotal.Text = Convert.ToString(Convert.ToDecimal(txtTotal.Text) + Convert.ToDecimal(cmbServicos.SelectedValue));
+
+            label13.Text = cmbServicos.SelectedValue.ToString();
+        }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            Check_out checkout = new Check_out();
+            
+            checkout.CpfHosped = txtCpf.Text;
+            checkout.IdQuarto = Convert.ToInt32(txtQuarto.Text);
+            checkout.Entrada = dtpEntrada.Value;
+            checkout.Saida = dtpSaida.Value;
+            checkout.Dias = Convert.ToInt32(txtDias.Text);
+            checkout.Total = Convert.ToDecimal(txtTotal.Text);
+
+            checkoutDAO.cadastrarCheckout(checkout);
         }
     }
 }

@@ -19,11 +19,6 @@ namespace SistemaHotelaria.View.Servicos
             InitializeComponent();
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void cadastrarServico_Load(object sender, EventArgs e)
         {
             ProdutoDAO produtoDAO = new ProdutoDAO();

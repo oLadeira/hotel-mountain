@@ -14,7 +14,7 @@ namespace SistemaHotelaria.Model
         private DateTime entrada;
         private DateTime saida;
         private int dias;
-        private float total;
+        private decimal total;
 
         public int Id { get => id; set => id = value; }
         public string CpfHosped { get => cpfHosped; set => cpfHosped = value; }
@@ -22,6 +22,6 @@ namespace SistemaHotelaria.Model
         public DateTime Entrada { get => entrada; set => entrada = value; }
         public DateTime Saida { get => saida; set => saida = value; }
         public int Dias { get => dias; set => dias = value; }
-        public float Total { get => total; set => total = value; }
+        public decimal Total { get => total; set => total = value; }
     }
 }

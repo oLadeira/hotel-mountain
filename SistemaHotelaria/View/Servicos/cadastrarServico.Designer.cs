@@ -76,7 +76,7 @@ namespace SistemaHotelaria.View.Servicos
             // 
             this.mskVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskVenda.Location = new System.Drawing.Point(368, 108);
-            this.mskVenda.Mask = "000.00";
+            this.mskVenda.Mask = "0000.00";
             this.mskVenda.Name = "mskVenda";
             this.mskVenda.Size = new System.Drawing.Size(82, 26);
             this.mskVenda.TabIndex = 36;
@@ -90,13 +90,12 @@ namespace SistemaHotelaria.View.Servicos
             this.label6.Size = new System.Drawing.Size(101, 20);
             this.label6.TabIndex = 35;
             this.label6.Text = "Valor Venda:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // mskCompra
             // 
             this.mskCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskCompra.Location = new System.Drawing.Point(139, 108);
-            this.mskCompra.Mask = "000.00";
+            this.mskCompra.Mask = "0000.00";
             this.mskCompra.Name = "mskCompra";
             this.mskCompra.Size = new System.Drawing.Size(82, 26);
             this.mskCompra.TabIndex = 34;

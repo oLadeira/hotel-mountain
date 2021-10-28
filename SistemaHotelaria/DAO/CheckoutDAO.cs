@@ -13,6 +13,40 @@ namespace SistemaHotelaria.DAO
     {
         readonly SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["StringConexao"].ConnectionString);
         SqlCommand cmd = new SqlCommand();
+        SqlCommand cmd2 = new SqlCommand();
+
+        public void cadastrarCheckout(Check_out checkout)
+        {
+            try
+            {
+                con.Open();
+
+                cmd.CommandText = "INSERT INTO checkOut (cpfHosped, idQuarto, entrada, saida, dias, total) VALUES (@cpfHosped, @idQuarto, @entrada, @saida, @dias, @total)";
+
+                //cmd2.CommandText = "UPDATE checkOut SET status = 'DISPONIVEL' WHERE id = @id";
+
+                cmd = new SqlCommand(cmd.CommandText, con);
+
+                cmd.Parameters.AddWithValue("@cpfHosped", checkout.CpfHosped);
+                cmd.Parameters.AddWithValue("@idQuarto", checkout.IdQuarto);
+                cmd.Parameters.AddWithValue("@entrada", checkout.Entrada);
+                cmd.Parameters.AddWithValue("@saida", checkout.Saida);
+                cmd.Parameters.AddWithValue("@dias", checkout.Dias);
+                cmd.Parameters.AddWithValue("@total", checkout.Total);
+
+                cmd.ExecuteNonQuery();
+
+
+            }
+            catch (SqlException ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
 
 
         public Check_in pesquisarCheckin(String cpf, Check_in check_in)
@@ -83,11 +117,16 @@ namespace SistemaHotelaria.DAO
             }
             catch (SqlException ex)
             {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
                 return 0;
+            }
+            finally
+            {
+                con.Close();
             }
             
         }
-
+        
 
     }
 }

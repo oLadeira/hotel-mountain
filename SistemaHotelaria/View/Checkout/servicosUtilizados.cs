@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaHotelaria.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,8 +20,32 @@ namespace SistemaHotelaria.View.Checkout
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            listProdutos.Items.Add(cmbProdutos.SelectedItem);
+            listProdutos.Items.Add(cmbProdutos.Text);
             listQuantidade.Items.Add(numericQuantidade.Value);
+
+
+            //decimal calculo = Convert.ToDecimal(txtTotal.Text) + Convert.ToDecimal(cmbProdutos.SelectedValue);
+                        
+
+            decimal calc = Convert.ToDecimal(cmbProdutos.SelectedValue) * numericQuantidade.Value;
+
+            txtTotal.Text = Convert.ToString(Convert.ToDecimal(txtTotal.Text) + calc);
+
+        }
+
+        private void servicosUtilizados_Load(object sender, EventArgs e)
+        {
+            ProdutoDAO produtoDAO = new ProdutoDAO();
+
+            cmbProdutos.DataSource = produtoDAO.listarProdutosComboBox();
+            cmbProdutos.DisplayMember = "nome";
+            cmbProdutos.ValueMember = "valorVenda";
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
