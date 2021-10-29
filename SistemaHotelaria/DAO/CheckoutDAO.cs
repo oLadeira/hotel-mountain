@@ -23,9 +23,10 @@ namespace SistemaHotelaria.DAO
 
                 cmd.CommandText = "INSERT INTO checkOut (cpfHosped, idQuarto, entrada, saida, dias, total) VALUES (@cpfHosped, @idQuarto, @entrada, @saida, @dias, @total)";
 
-                //cmd2.CommandText = "UPDATE checkOut SET status = 'DISPONIVEL' WHERE id = @id";
+                cmd2.CommandText = "UPDATE checkOut SET status = 'DISPONIVEL' WHERE id = @id";
 
                 cmd = new SqlCommand(cmd.CommandText, con);
+                cmd2 = new SqlCommand(cmd2.CommandText, con);
 
                 cmd.Parameters.AddWithValue("@cpfHosped", checkout.CpfHosped);
                 cmd.Parameters.AddWithValue("@idQuarto", checkout.IdQuarto);
@@ -34,7 +35,10 @@ namespace SistemaHotelaria.DAO
                 cmd.Parameters.AddWithValue("@dias", checkout.Dias);
                 cmd.Parameters.AddWithValue("@total", checkout.Total);
 
+                cmd2.Parameters.AddWithValue("@id", checkout.IdQuarto);
+
                 cmd.ExecuteNonQuery();
+                cmd2.ExecuteNonQuery();
 
                 System.Windows.Forms.MessageBox.Show("Check-Out realizado com sucesso!", "Sucesso!", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Information);
 

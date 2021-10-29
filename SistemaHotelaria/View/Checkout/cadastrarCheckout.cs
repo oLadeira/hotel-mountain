@@ -36,7 +36,7 @@ namespace SistemaHotelaria.View.Checkout
             ProdutoDAO produtoDAO = new ProdutoDAO();
             QuartoDAO quartoDAO = new QuartoDAO();
 
-            //comboBox produtos
+            //Populando comboBox produtos
             cmbProdutos.DataSource = produtoDAO.listarProdutosComboBox();
             cmbProdutos.DisplayMember = "nome";
             cmbProdutos.ValueMember = "valorVenda";
@@ -56,7 +56,7 @@ namespace SistemaHotelaria.View.Checkout
 
             txtTotal.Text = Convert.ToString(checkoutDAO.calculaTotal(txtCpf.Text) * Convert.ToDecimal(txtDias.Text));
 
-            //comboBox serviços
+            //Populando comboBox serviços
             cmbServicos.DisplayMember = "Text";
             cmbServicos.ValueMember = "Value";
             var items = new[] {
