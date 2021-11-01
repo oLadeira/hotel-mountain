@@ -69,7 +69,6 @@ namespace SistemaHotelaria.forms
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(277, 26);
             this.txtNome.TabIndex = 0;
-            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
             // label1
             // 

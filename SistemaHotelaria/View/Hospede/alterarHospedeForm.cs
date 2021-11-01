@@ -61,6 +61,10 @@ namespace SistemaHotelaria.View
             txtNumero.Text = hospede.NumeroEndereco;
             cmbEstado.Text = Convert.ToString(hospede.Estado);
             txtCidade.Text = hospede.Cidade;
+
+            cmbEstado.DataSource = hospedeDAO.listarEstadoComboBox();
+            cmbEstado.ValueMember = "id";
+            cmbEstado.DisplayMember = "nome";
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

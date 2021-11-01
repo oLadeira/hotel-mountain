@@ -16,15 +16,11 @@ namespace SistemaHotelaria.View
 {
     public partial class alterarHospede : Form
     {
-
         private int id;
-
-
 
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["StringConexao"].ConnectionString);
         SqlCommand cmd = new SqlCommand();
         Hospede hospede = new Hospede();
-        
 
         public alterarHospede()
         {
@@ -42,11 +38,11 @@ namespace SistemaHotelaria.View
 
                 SqlDataAdapter da = new SqlDataAdapter(cmd.CommandText, con);
                 DataTable tabela = new DataTable();
-                                
+
                 da.Fill(tabela);
 
                 dgvHospedes.DataSource = tabela;
-                                
+
             }
             catch (SqlException ex)
             {
@@ -60,30 +56,28 @@ namespace SistemaHotelaria.View
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            try
+            id = Convert.ToInt32(txtId.Text);
+            HospedeDAO hospedeDAO = new HospedeDAO();
+
+            if(hospedeDAO.validarHospede(id) == false)
             {
-                id = Convert.ToInt32(txtId.Text);
 
-                HospedeDAO hospedeDAO = new HospedeDAO();
-                hospedeDAO.dadosAlterar(id, hospede);
-
+            }
+            else
+            {
                 alterarHospedeForm telaAlterarHospedeForm = new alterarHospedeForm(id);
                 telaAlterarHospedeForm.Show();
                 this.Close();
-            }
-            catch(System.FormatException ex)
-            {
-                MessageBox.Show("Por favor digite um ID válido!", "Erro", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
-            }
-            
+            }         
+
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-                
+
     }
-    
+
 }
 

@@ -27,12 +27,10 @@ namespace SistemaHotelaria.View.Checkout
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            checkoutDAO.pesquisarCheckin(txtCpf.Text, checkin);
-
-            if (checkoutDAO.pesquisarCheckin(txtCpf.Text, checkin) == null)
+            if(checkoutDAO.pesquisarCheckin(txtCpf.Text, checkin) == null)
             {
-                MessageBox.Show("Check-In previamente não realizado!");
-            }
+
+            }                        
             else
             {
                 cadastrarCheckout TelaCadastrarCheckout = new cadastrarCheckout(txtCpf.Text);

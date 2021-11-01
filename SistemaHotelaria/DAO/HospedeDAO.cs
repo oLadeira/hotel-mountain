@@ -8,6 +8,7 @@ using SistemaHotelaria.Modelo;
 using System.Configuration;
 using System.Data;
 using SistemaHotelaria.View;
+using System.Windows.Forms;
 
 namespace SistemaHotelaria.DAO
 {
@@ -19,9 +20,11 @@ namespace SistemaHotelaria.DAO
         SqlCommand cmd = new SqlCommand();
         Hospede hospede = new Hospede();
 
-        public void cadastrarHospede(Hospede hospede) {                
+        public void cadastrarHospede(Hospede hospede)
+        {
 
-            try {
+            try
+            {
                 con.Open();
                 //executando o comando
                 cmd.CommandText = "INSERT INTO hospede(nome, telefone, email, cpf, cep, endereco, numeroEndereco, estado, cidade) VALUES (@nome, @telefone, @email, @cpf, @cep, @endereco, @numeroEndereco, @estado, @cidade)"; //usar stored procedures and transactions
@@ -38,12 +41,14 @@ namespace SistemaHotelaria.DAO
                 cmd.Parameters.AddWithValue("@estado", hospede.Estado);
                 cmd.Parameters.AddWithValue("@cidade", hospede.Cidade);
 
-                cmd.ExecuteNonQuery();         
+                cmd.ExecuteNonQuery();
 
-                System.Windows.Forms.MessageBox.Show("Hóspede cadastrado com sucesso!", "Sucesso!", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Information);
-                                
+                MessageBox.Show("Hóspede cadastrado com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                Form.ActiveForm.Close();
+
             }
-            catch(SqlException e)
+            catch (SqlException e)
             {
                 System.Windows.Forms.MessageBox.Show(e.Message);
 
@@ -51,55 +56,100 @@ namespace SistemaHotelaria.DAO
             finally
             {
                 con.Close();
-            }                   
+            }
         }
 
-        public Hospede dadosAlterar(int id, Hospede hospede) {
-
+        public Hospede dadosAlterar(int id, Hospede hospede)
+        {
             try
-            {                
-                
-                con.Open();
-                cmd.CommandText = "SELECT * FROM hospede WHERE id = @id";
-
-                cmd = new SqlCommand(cmd.CommandText, con);
-
-                cmd.Parameters.AddWithValue("@id", id);
-
-
-                SqlDataReader reader = cmd.ExecuteReader();
-
-                
-                while (reader.Read())
+            {
+                if (validarHospede(id) == true)
                 {
-                    //lblTeste.Text = reader.GetString(1).ToString();
+                    con.Open();
+                    cmd.CommandText = "SELECT * FROM hospede WHERE id = @id";
 
-                    hospede.Id = reader.GetInt32(0);
-                    hospede.Nome = reader.GetString(1);
-                    hospede.Telefone = reader.GetString(2);
-                    hospede.Email = reader.GetString(3);
-                    hospede.Cpf = reader.GetString(4);
-                    hospede.Cep = reader.GetString(5);
-                    hospede.Endereco = reader.GetString(6);
-                    hospede.NumeroEndereco = reader.GetString(7);
-                    hospede.Estado = reader.GetInt32(8);
-                    hospede.Cidade = reader.GetString(9);                                  
-                }                                                         
-                return hospede;               
+                    cmd = new SqlCommand(cmd.CommandText, con);
+
+                    cmd.Parameters.AddWithValue("@id", id);
+
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        //lblTeste.Text = reader.GetString(1).ToString();
+
+                        hospede.Id = reader.GetInt32(0);
+                        hospede.Nome = reader.GetString(1);
+                        hospede.Telefone = reader.GetString(2);
+                        hospede.Email = reader.GetString(3);
+                        hospede.Cpf = reader.GetString(4);
+                        hospede.Cep = reader.GetString(5);
+                        hospede.Endereco = reader.GetString(6);
+                        hospede.NumeroEndereco = reader.GetString(7);
+                        hospede.Estado = reader.GetInt32(8);
+                        hospede.Cidade = reader.GetString(9);
+                    }
+                    return hospede;
+                }
+                else
+                {
+                    throw new Exception();                    
+                }
+                
             }
             catch (SqlException ex)
             {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-                return null;
+                MessageBox.Show(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hóspede não encontrado!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
                 con.Close();
             }
-            
-        }      
-       
-       public void alterarHospede(int id, Hospede hospede)
+            return hospede;
+        }
+
+        public bool validarHospede(int id)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+
+                cmd.CommandText = "SELECT * FROM hospede WHERE id =" + id;
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd.CommandText, con);
+                DataTable tabela = new DataTable();
+
+                da.Fill(tabela);
+
+                int totalRows = tabela.Rows.Count;
+
+                if (totalRows > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    throw new Exception();
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);               
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hóspede não encontrado!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return false;
+        }
+
+        public void alterarHospede(int id, Hospede hospede)
         {
             try
             {
@@ -122,10 +172,12 @@ namespace SistemaHotelaria.DAO
 
                 cmd.ExecuteNonQuery();
 
-                System.Windows.Forms.MessageBox.Show("Hóspede Atualizado com sucesso!", "Sucesso!", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Information);
-                                
+                MessageBox.Show("Hóspede Atualizado com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                Form.ActiveForm.Close();
+
             }
-            catch(SqlException ex)
+            catch (SqlException ex)
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
@@ -149,9 +201,11 @@ namespace SistemaHotelaria.DAO
 
                 cmd.ExecuteNonQuery();
 
-                System.Windows.Forms.MessageBox.Show("Hóspede Excluído com sucesso!", "Sucesso!", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Information);
+                MessageBox.Show("Hóspede Excluído com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                Form.ActiveForm.Close();
             }
-            catch(SqlException ex)
+            catch (SqlException ex)
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
@@ -181,7 +235,7 @@ namespace SistemaHotelaria.DAO
             }
             catch (SqlException ex)
             {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message);
             }
             finally
             {
@@ -204,13 +258,13 @@ namespace SistemaHotelaria.DAO
 
                 //dgvHospedes.DataSource = tabela;
 
-                
+
                 return tabela;
             }
-            
+
             catch (SqlException ex)
             {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message);
             }
             finally
             {
@@ -218,5 +272,7 @@ namespace SistemaHotelaria.DAO
             }
             return null;
         }
+                
+
     }
 }

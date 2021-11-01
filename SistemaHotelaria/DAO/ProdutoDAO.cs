@@ -36,6 +36,8 @@ namespace SistemaHotelaria.DAO
                 cmd.ExecuteNonQuery();
 
                 System.Windows.Forms.MessageBox.Show("Produto cadastrado com sucesso!", "Sucesso!", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Information);
+
+                System.Windows.Forms.Form.ActiveForm.Close();
             }
             catch (SqlException ex)
             {

@@ -61,6 +61,7 @@
     <Compile Include="Model\Funcionario.cs" />
     <Compile Include="Model\Produto.cs" />
     <Compile Include="Model\Quarto.cs" />
+    <Compile Include="ValidacaoCampos\Validar.cs" />
     <Compile Include="View\Checkin\cadastrarCheckin.cs">
       <SubType>Form</SubType>
     </Compile>
