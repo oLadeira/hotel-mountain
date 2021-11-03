@@ -272,7 +272,64 @@ namespace SistemaHotelaria.DAO
             }
             return null;
         }
-                
+        
+        public DataTable listarEstadoHospede(int id)
+        {
+            try
+            {
+                con.Open();
+
+                cmd.CommandText = "SELECT h.id, h.nome, h.telefone, h.email, h.cpf, h.cep, h.endereco, h.numeroEndereco, e.nome as estado, h.cidade FROM hospede as h INNER JOIN estado as e ON h.estado = e.id WHERE h.id=" + id;
+
+                cmd.Parameters.AddWithValue("@id", id);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd.CommandText, con);
+                               
+
+                DataTable tabela = new DataTable();
+
+                da.Fill(tabela);
+
+                return tabela;
+
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+            return null;
+        }
+
+        public DataTable listarHospedeCpf(String cpf)
+        {
+            try
+            {
+                con.Open();
+
+                cmd.CommandText = "SELECT h.id, h.nome, h.telefone, h.email, h.cpf, h.cep, h.endereco, h.numeroEndereco, e.nome as estado, h.cidade FROM hospede as h INNER JOIN estado as e ON h.estado = e.id WHERE h.cpf ='" + cpf + "'";
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd.CommandText, con);
+
+                DataTable tabela = new DataTable();
+
+                da.Fill(tabela);
+
+                return tabela;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+            return null;
+        }
 
     }
 }

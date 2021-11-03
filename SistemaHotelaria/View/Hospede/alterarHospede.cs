@@ -31,32 +31,21 @@ namespace SistemaHotelaria.View
 
         private void alterarHospede_Load(object sender, EventArgs e)
         {
-            try
-            {
-                con.Open();
-                cmd.CommandText = "SELECT * FROM hospede";
-
-                SqlDataAdapter da = new SqlDataAdapter(cmd.CommandText, con);
-                DataTable tabela = new DataTable();
-
-                da.Fill(tabela);
-
-                dgvHospedes.DataSource = tabela;
-
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                con.Close();
-            }
+            HospedeDAO hospedeDAO = new HospedeDAO();
+            dgvHospedes.DataSource = hospedeDAO.listarHospedes();
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            id = Convert.ToInt32(txtId.Text);
+            if (txtId.Text == "")
+            {
+                MessageBox.Show("Insira o id do hóspede!");
+            }
+            else
+            {
+                id = Convert.ToInt32(txtId.Text);
+            }
+            
             HospedeDAO hospedeDAO = new HospedeDAO();
 
             if(hospedeDAO.validarHospede(id) == false)

@@ -32,11 +32,7 @@ namespace SistemaHotelaria.forms
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(cadastrarHospede));
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.gboxSexo = new System.Windows.Forms.GroupBox();
-            this.rbtnFeminino = new System.Windows.Forms.RadioButton();
-            this.rbtnMasculino = new System.Windows.Forms.RadioButton();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -51,13 +47,11 @@ namespace SistemaHotelaria.forms
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.cmbEstado = new System.Windows.Forms.ComboBox();
-            this.cmbEstadoCivil = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.txtCep = new System.Windows.Forms.MaskedTextBox();
             this.txtCpf = new System.Windows.Forms.MaskedTextBox();
-            this.gboxSexo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -80,67 +74,22 @@ namespace SistemaHotelaria.forms
             this.label1.TabIndex = 1;
             this.label1.Text = "Nome";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(20, 178);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 20);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Estado Civil";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(20, 256);
+            this.label4.Location = new System.Drawing.Point(7, 166);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 20);
             this.label4.TabIndex = 7;
             this.label4.Text = "Telefone";
-            // 
-            // gboxSexo
-            // 
-            this.gboxSexo.Controls.Add(this.rbtnFeminino);
-            this.gboxSexo.Controls.Add(this.rbtnMasculino);
-            this.gboxSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gboxSexo.Location = new System.Drawing.Point(24, 340);
-            this.gboxSexo.Name = "gboxSexo";
-            this.gboxSexo.Size = new System.Drawing.Size(200, 100);
-            this.gboxSexo.TabIndex = 4;
-            this.gboxSexo.TabStop = false;
-            this.gboxSexo.Text = "Sexo";
-            // 
-            // rbtnFeminino
-            // 
-            this.rbtnFeminino.AutoSize = true;
-            this.rbtnFeminino.Location = new System.Drawing.Point(20, 59);
-            this.rbtnFeminino.Name = "rbtnFeminino";
-            this.rbtnFeminino.Size = new System.Drawing.Size(92, 24);
-            this.rbtnFeminino.TabIndex = 1;
-            this.rbtnFeminino.TabStop = true;
-            this.rbtnFeminino.Text = "Feminino";
-            this.rbtnFeminino.UseVisualStyleBackColor = true;
-            // 
-            // rbtnMasculino
-            // 
-            this.rbtnMasculino.AutoSize = true;
-            this.rbtnMasculino.Location = new System.Drawing.Point(20, 25);
-            this.rbtnMasculino.Name = "rbtnMasculino";
-            this.rbtnMasculino.Size = new System.Drawing.Size(98, 24);
-            this.rbtnMasculino.TabIndex = 0;
-            this.rbtnMasculino.TabStop = true;
-            this.rbtnMasculino.Text = "Masculino";
-            this.rbtnMasculino.UseVisualStyleBackColor = true;
-            this.rbtnMasculino.CheckedChanged += new System.EventHandler(this.rbtnMasculino_CheckedChanged);
             // 
             // btnCadastrar
             // 
             this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrar.Image")));
             this.btnCadastrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCadastrar.Location = new System.Drawing.Point(539, 603);
+            this.btnCadastrar.Location = new System.Drawing.Point(539, 482);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(133, 50);
             this.btnCadastrar.TabIndex = 12;
@@ -270,25 +219,12 @@ namespace SistemaHotelaria.forms
             this.cmbEstado.Size = new System.Drawing.Size(180, 28);
             this.cmbEstado.TabIndex = 11;
             // 
-            // cmbEstadoCivil
-            // 
-            this.cmbEstadoCivil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbEstadoCivil.FormattingEnabled = true;
-            this.cmbEstadoCivil.Items.AddRange(new object[] {
-            "SOLTEIRO(A)",
-            "CASADO(A)",
-            "VIUVO(A)"});
-            this.cmbEstadoCivil.Location = new System.Drawing.Point(24, 201);
-            this.cmbEstadoCivil.Name = "cmbEstadoCivil";
-            this.cmbEstadoCivil.Size = new System.Drawing.Size(180, 28);
-            this.cmbEstadoCivil.TabIndex = 2;
-            // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(703, 603);
+            this.button1.Location = new System.Drawing.Point(703, 482);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(133, 50);
             this.button1.TabIndex = 27;
@@ -308,9 +244,10 @@ namespace SistemaHotelaria.forms
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.txtCidade);
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Location = new System.Drawing.Point(13, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(823, 563);
+            this.groupBox1.Size = new System.Drawing.Size(823, 454);
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cadastro Hóspede";
@@ -318,7 +255,7 @@ namespace SistemaHotelaria.forms
             // txtTelefone
             // 
             this.txtTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefone.Location = new System.Drawing.Point(11, 269);
+            this.txtTelefone.Location = new System.Drawing.Point(11, 189);
             this.txtTelefone.Mask = "(99) 00000-0000";
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(180, 26);
@@ -346,9 +283,8 @@ namespace SistemaHotelaria.forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(848, 665);
+            this.ClientSize = new System.Drawing.Size(848, 548);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.cmbEstadoCivil);
             this.Controls.Add(this.cmbEstado);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label7);
@@ -357,9 +293,6 @@ namespace SistemaHotelaria.forms
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnCadastrar);
-            this.Controls.Add(this.gboxSexo);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.groupBox1);
@@ -368,8 +301,6 @@ namespace SistemaHotelaria.forms
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hotel Mountain - Cadastrar Hóspede";
             this.Load += new System.EventHandler(this.cadastrarHospede_Load);
-            this.gboxSexo.ResumeLayout(false);
-            this.gboxSexo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -382,11 +313,7 @@ namespace SistemaHotelaria.forms
 
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.GroupBox gboxSexo;
-        private System.Windows.Forms.RadioButton rbtnFeminino;
-        private System.Windows.Forms.RadioButton rbtnMasculino;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
@@ -401,7 +328,6 @@ namespace SistemaHotelaria.forms
         private System.Windows.Forms.TextBox txtNumero;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox cmbEstado;
-        private System.Windows.Forms.ComboBox cmbEstadoCivil;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.MaskedTextBox txtTelefone;

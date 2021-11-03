@@ -46,5 +46,11 @@ namespace SistemaHotelaria.forms
         {
             dgvHospedes.AutoGenerateColumns = false;
         }
+
+        private void btnPesquisarNome_Click(object sender, EventArgs e)
+        {
+            HospedeDAO hospedeDAO = new HospedeDAO();
+            dgvHospedes.DataSource = hospedeDAO.listarHospedeCpf(txtPesquisarCpf.Text);
+        }
     }
 }

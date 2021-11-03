@@ -33,8 +33,7 @@ namespace SistemaHotelaria.forms
 
             if(validar.validaCamposTexto(txtNome, txtEmail, txtEndereco, txtNumero, txtCidade) == true && (txtCep.MaskCompleted || txtCpf.MaskCompleted || txtTelefone.MaskCompleted) == true)
             {
-                hospede.Nome = txtNome.Text;
-                hospede.EstadoCivil = cmbEstadoCivil.SelectedItem.ToString();
+                hospede.Nome = txtNome.Text;                
                 hospede.Telefone = txtTelefone.Text;
                 hospede.Email = txtEmail.Text;
                 hospede.Cpf = txtCpf.Text;

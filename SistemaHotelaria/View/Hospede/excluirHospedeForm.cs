@@ -50,8 +50,12 @@ namespace SistemaHotelaria.View
             txtCep.Text = hospede.Cep;
             txtEndereco.Text = hospede.Endereco;
             txtNumero.Text = hospede.NumeroEndereco;
-            cmbEstado.Text = Convert.ToString(hospede.Estado);
+            //cmbEstado.Text = Convert.ToString(hospede.Estado);
             txtCidade.Text = hospede.Cidade;
+
+            cmbEstado.DataSource = hospedeDAO.listarEstadoHospede(id1);
+            cmbEstado.DisplayMember = "estado";
+            cmbEstado.ValueMember = "";
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)

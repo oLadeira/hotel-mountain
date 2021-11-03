@@ -31,9 +31,16 @@ namespace SistemaHotelaria.View
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            excluirHospedeForm TelaExcluirHospedeForm = new excluirHospedeForm(Convert.ToInt32(txtId.Text));
-            TelaExcluirHospedeForm.Show();
-            this.Close();
+            if (txtId.Text == "")
+            {
+                MessageBox.Show("Insira o id do Hóspede!");
+            }
+            else
+            {
+                excluirHospedeForm TelaExcluirHospedeForm = new excluirHospedeForm(Convert.ToInt32(txtId.Text));
+                TelaExcluirHospedeForm.Show();
+                this.Close();
+            }            
         }
     }
 }

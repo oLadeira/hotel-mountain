@@ -36,7 +36,6 @@ namespace SistemaHotelaria.View
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txtCidade = new System.Windows.Forms.TextBox();
-            this.cmbEstadoCivil = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -48,14 +47,13 @@ namespace SistemaHotelaria.View
             this.button1 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.btnCadastrar = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtTelefone = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtTelefone = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -66,7 +64,7 @@ namespace SistemaHotelaria.View
             this.cmbEstado.FormattingEnabled = true;
             this.cmbEstado.Items.AddRange(new object[] {
             "São Paulo"});
-            this.cmbEstado.Location = new System.Drawing.Point(323, 263);
+            this.cmbEstado.Location = new System.Drawing.Point(304, 263);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(180, 28);
             this.cmbEstado.TabIndex = 41;
@@ -75,7 +73,7 @@ namespace SistemaHotelaria.View
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(319, 242);
+            this.label9.Location = new System.Drawing.Point(300, 242);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(60, 20);
             this.label9.TabIndex = 47;
@@ -117,24 +115,11 @@ namespace SistemaHotelaria.View
             this.txtCidade.Size = new System.Drawing.Size(180, 26);
             this.txtCidade.TabIndex = 40;
             // 
-            // cmbEstadoCivil
-            // 
-            this.cmbEstadoCivil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbEstadoCivil.FormattingEnabled = true;
-            this.cmbEstadoCivil.Items.AddRange(new object[] {
-            "SOLTEIRO(A)",
-            "CASADO(A)",
-            "VIUVO(A)"});
-            this.cmbEstadoCivil.Location = new System.Drawing.Point(6, 185);
-            this.cmbEstadoCivil.Name = "cmbEstadoCivil";
-            this.cmbEstadoCivil.Size = new System.Drawing.Size(180, 28);
-            this.cmbEstadoCivil.TabIndex = 30;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(319, 162);
+            this.label7.Location = new System.Drawing.Point(300, 162);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(78, 20);
             this.label7.TabIndex = 46;
@@ -143,7 +128,7 @@ namespace SistemaHotelaria.View
             // txtEndereco
             // 
             this.txtEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEndereco.Location = new System.Drawing.Point(323, 185);
+            this.txtEndereco.Location = new System.Drawing.Point(304, 185);
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(180, 26);
             this.txtEndereco.TabIndex = 38;
@@ -201,7 +186,6 @@ namespace SistemaHotelaria.View
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.txtCidade);
-            this.groupBox1.Controls.Add(this.cmbEstadoCivil);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtEndereco);
             this.groupBox1.Controls.Add(this.label8);
@@ -213,7 +197,6 @@ namespace SistemaHotelaria.View
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtTelefone);
-            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtNome);
             this.groupBox1.Controls.Add(this.pictureBox1);
@@ -259,34 +242,6 @@ namespace SistemaHotelaria.View
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCadastrar.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(2, 240);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 20);
-            this.label4.TabIndex = 36;
-            this.label4.Text = "Telefone";
-            // 
-            // txtTelefone
-            // 
-            this.txtTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefone.Location = new System.Drawing.Point(6, 263);
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(180, 26);
-            this.txtTelefone.TabIndex = 31;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(2, 162);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 20);
-            this.label3.TabIndex = 33;
-            this.label3.Text = "Estado Civil";
             // 
             // label1
             // 
@@ -344,6 +299,24 @@ namespace SistemaHotelaria.View
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(-4, 162);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(71, 20);
+            this.label4.TabIndex = 36;
+            this.label4.Text = "Telefone";
+            // 
+            // txtTelefone
+            // 
+            this.txtTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefone.Location = new System.Drawing.Point(0, 185);
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(180, 26);
+            this.txtTelefone.TabIndex = 31;
+            // 
             // excluirHospedeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -371,7 +344,6 @@ namespace SistemaHotelaria.View
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtCidade;
-        private System.Windows.Forms.ComboBox cmbEstadoCivil;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtEndereco;
         private System.Windows.Forms.Label label8;
@@ -383,13 +355,12 @@ namespace SistemaHotelaria.View
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnCadastrar;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtTelefone;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtTelefone;
     }
 }
