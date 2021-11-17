@@ -34,13 +34,6 @@ namespace SistemaHotelaria.View.Checkout
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(opcoesCheckout));
             this.dgvCheckin = new System.Windows.Forms.DataGridView();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnExcluir = new System.Windows.Forms.Button();
-            this.btnAlterar = new System.Windows.Forms.Button();
-            this.btnVisualizar = new System.Windows.Forms.Button();
-            this.btnCadastrar = new System.Windows.Forms.Button();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cpfHospede = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,6 +41,13 @@ namespace SistemaHotelaria.View.Checkout
             this.saida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dias = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
+            this.btnVisualizar = new System.Windows.Forms.Button();
+            this.btnCadastrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCheckin)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,6 +97,60 @@ namespace SistemaHotelaria.View.Checkout
             this.dgvCheckin.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvCheckin.Size = new System.Drawing.Size(1151, 514);
             this.dgvCheckin.TabIndex = 20;
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.FillWeight = 33.24625F;
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // cpfHospede
+            // 
+            this.cpfHospede.DataPropertyName = "cpfHospede";
+            this.cpfHospede.FillWeight = 102.1925F;
+            this.cpfHospede.HeaderText = "CPF Hóspede";
+            this.cpfHospede.Name = "cpfHospede";
+            this.cpfHospede.ReadOnly = true;
+            // 
+            // numero
+            // 
+            this.numero.DataPropertyName = "numero";
+            this.numero.FillWeight = 102.1925F;
+            this.numero.HeaderText = "Número do Quarto";
+            this.numero.Name = "numero";
+            this.numero.ReadOnly = true;
+            // 
+            // entrada
+            // 
+            this.entrada.DataPropertyName = "entrada";
+            this.entrada.FillWeight = 102.1925F;
+            this.entrada.HeaderText = "Entrada";
+            this.entrada.Name = "entrada";
+            this.entrada.ReadOnly = true;
+            // 
+            // saida
+            // 
+            this.saida.DataPropertyName = "saida";
+            this.saida.FillWeight = 102.1925F;
+            this.saida.HeaderText = "Saída";
+            this.saida.Name = "saida";
+            this.saida.ReadOnly = true;
+            // 
+            // dias
+            // 
+            this.dias.DataPropertyName = "dias";
+            this.dias.FillWeight = 150.6094F;
+            this.dias.HeaderText = "Dias";
+            this.dias.Name = "dias";
+            this.dias.ReadOnly = true;
+            // 
+            // total
+            // 
+            this.total.HeaderText = "Total";
+            this.total.Name = "total";
+            this.total.ReadOnly = true;
             // 
             // button4
             // 
@@ -182,60 +236,6 @@ namespace SistemaHotelaria.View.Checkout
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
-            // id
-            // 
-            this.id.DataPropertyName = "id";
-            this.id.FillWeight = 33.24625F;
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            // 
-            // cpfHospede
-            // 
-            this.cpfHospede.DataPropertyName = "cpfHospede";
-            this.cpfHospede.FillWeight = 102.1925F;
-            this.cpfHospede.HeaderText = "CPF Hóspede";
-            this.cpfHospede.Name = "cpfHospede";
-            this.cpfHospede.ReadOnly = true;
-            // 
-            // numero
-            // 
-            this.numero.DataPropertyName = "numero";
-            this.numero.FillWeight = 102.1925F;
-            this.numero.HeaderText = "Número do Quarto";
-            this.numero.Name = "numero";
-            this.numero.ReadOnly = true;
-            // 
-            // entrada
-            // 
-            this.entrada.DataPropertyName = "entrada";
-            this.entrada.FillWeight = 102.1925F;
-            this.entrada.HeaderText = "Entrada";
-            this.entrada.Name = "entrada";
-            this.entrada.ReadOnly = true;
-            // 
-            // saida
-            // 
-            this.saida.DataPropertyName = "saida";
-            this.saida.FillWeight = 102.1925F;
-            this.saida.HeaderText = "Saída";
-            this.saida.Name = "saida";
-            this.saida.ReadOnly = true;
-            // 
-            // dias
-            // 
-            this.dias.DataPropertyName = "dias";
-            this.dias.FillWeight = 150.6094F;
-            this.dias.HeaderText = "Dias";
-            this.dias.Name = "dias";
-            this.dias.ReadOnly = true;
-            // 
-            // total
-            // 
-            this.total.HeaderText = "Total";
-            this.total.Name = "total";
-            this.total.ReadOnly = true;
-            // 
             // opcoesCheckout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -249,9 +249,10 @@ namespace SistemaHotelaria.View.Checkout
             this.Controls.Add(this.btnVisualizar);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.dgvCheckin);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "opcoesCheckout";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "opcoesCheckout";
+            this.Text = "Hotel Mountain - Escolha uma Opção!";
             ((System.ComponentModel.ISupportInitialize)(this.dgvCheckin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

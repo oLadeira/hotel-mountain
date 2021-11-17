@@ -31,6 +31,7 @@ namespace SistemaHotelaria.View.Fornecedores
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(cadastrarFornecedor));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.mskTelefone = new System.Windows.Forms.MaskedTextBox();
             this.cmbCategoria = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -47,7 +48,6 @@ namespace SistemaHotelaria.View.Fornecedores
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
-            this.mskTelefone = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -75,6 +75,15 @@ namespace SistemaHotelaria.View.Fornecedores
             this.groupBox1.TabIndex = 30;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cadastro Funcionário";
+            // 
+            // mskTelefone
+            // 
+            this.mskTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskTelefone.Location = new System.Drawing.Point(467, 180);
+            this.mskTelefone.Mask = "(99) 0000-00000";
+            this.mskTelefone.Name = "mskTelefone";
+            this.mskTelefone.Size = new System.Drawing.Size(167, 26);
+            this.mskTelefone.TabIndex = 52;
             // 
             // cmbCategoria
             // 
@@ -236,15 +245,6 @@ namespace SistemaHotelaria.View.Fornecedores
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
-            // mskTelefone
-            // 
-            this.mskTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskTelefone.Location = new System.Drawing.Point(467, 180);
-            this.mskTelefone.Mask = "(99) 0000-00000";
-            this.mskTelefone.Name = "mskTelefone";
-            this.mskTelefone.Size = new System.Drawing.Size(167, 26);
-            this.mskTelefone.TabIndex = 52;
-            // 
             // cadastrarFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -253,7 +253,9 @@ namespace SistemaHotelaria.View.Fornecedores
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "cadastrarFornecedor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hotel Mountain - Cadastrar Fornecedor";
             this.Load += new System.EventHandler(this.cadastrarFornecedor_Load);
             this.groupBox1.ResumeLayout(false);

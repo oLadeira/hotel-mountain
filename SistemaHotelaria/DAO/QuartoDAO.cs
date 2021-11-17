@@ -14,7 +14,7 @@ namespace SistemaHotelaria.DAO
     {
         readonly SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["StringConexao"].ConnectionString);
         SqlCommand cmd = new SqlCommand();
-
+        Quarto quarto = new Quarto();
 
         public void cadastrarQuarto(Quarto quarto)
         {
@@ -36,6 +36,37 @@ namespace SistemaHotelaria.DAO
                 System.Windows.Forms.MessageBox.Show("Quarto cadastrado com sucesso!", "Sucesso!", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Information);
 
                 System.Windows.Forms.Form.ActiveForm.Close();
+            }
+            catch (SqlException ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        public void alterarQuarto(int id, Quarto quarto)
+        {
+            try
+            {
+                con.Open();
+
+                cmd.CommandText = "UPDATE quarto SET categoria = @categoria, valor = @valor, numero = @numero, status = @status WHERE id = @id";
+
+                cmd = new SqlCommand(cmd.CommandText, con);
+
+                cmd.Parameters.AddWithValue("@categoria", quarto.Categoria);
+                cmd.Parameters.AddWithValue("@valor", quarto.Valor);
+                cmd.Parameters.AddWithValue("@numero", quarto.Numero);
+                cmd.Parameters.AddWithValue("@status", quarto.Status);
+                cmd.Parameters.AddWithValue("@id", id);
+
+                cmd.ExecuteNonQuery();
+
+                System.Windows.Forms.MessageBox.Show("Quarto Atualizado com sucesso!", "Sucesso!", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Information);
+
             }
             catch (SqlException ex)
             {
@@ -72,36 +103,7 @@ namespace SistemaHotelaria.DAO
                 con.Close();
             }
             return null; 
-        }
-
-        public DataTable listarQuarto(int id)
-        {
-            try
-            {
-                con.Open();
-
-                cmd.CommandText = "SELECT * FROM quarto WHERE id = @id";
-
-                SqlDataAdapter da = new SqlDataAdapter(cmd.CommandText, con);
-
-                cmd.Parameters.AddWithValue("@id", id);
-
-                DataTable tabela = new DataTable();
-
-                da.Fill(tabela);
-
-                return tabela;
-            }
-            catch (SqlException ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                con.Close();
-            }
-            return null;
-        }
+        }               
 
         public DataTable listarQuartoComboBox() {
 

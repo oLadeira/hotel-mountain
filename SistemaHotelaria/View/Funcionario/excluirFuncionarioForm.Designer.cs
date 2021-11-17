@@ -328,9 +328,10 @@ namespace SistemaHotelaria.View
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "excluirFuncionarioForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "excluirFuncionarioForm";
+            this.Text = "Hotel Mountain - Confirme os dados do Funcionário!";
             this.Load += new System.EventHandler(this.excluirFuncionarioForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

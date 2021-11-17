@@ -368,6 +368,7 @@ namespace SistemaHotelaria.View
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "cadastrarFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hotel Mountain - Cadastrar Funcionário";

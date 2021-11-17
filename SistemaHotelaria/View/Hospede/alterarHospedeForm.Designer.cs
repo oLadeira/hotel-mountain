@@ -310,6 +310,7 @@ namespace SistemaHotelaria.View
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "alterarHospedeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hotel Mountain - Alterar Hóspede ";

@@ -63,3 +63,4 @@ E:\MEUS DOCUMENTOS\UNIP\4º Semestre\PIM\SistemaHotelariaV3\SistemaHotelaria\obj
 E:\MEUS DOCUMENTOS\UNIP\4º Semestre\PIM\SistemaHotelariaV3\SistemaHotelaria\obj\Debug\SistemaHotelaria.View.Servicos.cadastrarServico.resources
 E:\MEUS DOCUMENTOS\UNIP\4º Semestre\PIM\SistemaHotelariaV3\SistemaHotelaria\obj\Debug\SistemaHotelaria.View.Fornecedores.cadastrarFornecedor.resources
 E:\MEUS DOCUMENTOS\UNIP\4º Semestre\PIM\SistemaHotelariaV3\SistemaHotelaria\obj\Debug\SistemaHotelaria.View.Fornecedores.opcoesFornecedores.resources
+E:\MEUS DOCUMENTOS\UNIP\4º Semestre\PIM\SistemaHotelariaV3\SistemaHotelaria\obj\Debug\SistemaHotelaria.View.Checkin.alterarCheckin.resources

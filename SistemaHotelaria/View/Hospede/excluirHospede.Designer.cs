@@ -248,9 +248,10 @@ namespace SistemaHotelaria.View
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtId);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "excluirHospede";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "excluirHospede";
+            this.Text = "Hotel Mountain - Escolha o Hóspede";
             this.Load += new System.EventHandler(this.excluirHospede_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHospedes)).EndInit();
             this.ResumeLayout(false);

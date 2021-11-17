@@ -34,5 +34,19 @@ namespace SistemaHotelaria.View.Checkin
         {
             dgvCheckin.DataSource = checkinDAO.listarCheckin();
         }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            alterarCheckin TelaAlterarCheckin = new alterarCheckin();
+
+            TelaAlterarCheckin.Show();
+
+            this.Close();
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

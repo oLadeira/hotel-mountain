@@ -221,7 +221,9 @@ namespace SistemaHotelaria.View.Servicos
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1153, 313);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "cadastrarServico";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hotel Mountain - Cadastrar Consumível";
             this.Load += new System.EventHandler(this.cadastrarServico_Load);
             this.groupBox1.ResumeLayout(false);

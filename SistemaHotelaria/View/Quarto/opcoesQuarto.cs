@@ -30,5 +30,14 @@ namespace SistemaHotelaria.View.Quarto
         {
             dgvQuartos.DataSource = quartoDAO.listarQuarto();
         }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

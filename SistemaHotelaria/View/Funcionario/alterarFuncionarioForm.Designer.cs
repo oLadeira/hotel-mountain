@@ -51,9 +51,9 @@ namespace SistemaHotelaria.View
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -283,6 +283,16 @@ namespace SistemaHotelaria.View
             this.label1.TabIndex = 28;
             this.label1.Text = "Nome";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SistemaHotelaria.Properties.Resources.hotelMountainLogo;
+            this.pictureBox1.Location = new System.Drawing.Point(650, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(157, 131);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -310,16 +320,6 @@ namespace SistemaHotelaria.View
             this.btnAlterar.UseVisualStyleBackColor = true;
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SistemaHotelaria.Properties.Resources.hotelMountainLogo;
-            this.pictureBox1.Location = new System.Drawing.Point(650, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(157, 131);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
-            // 
             // alterarFuncionarioForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -328,8 +328,10 @@ namespace SistemaHotelaria.View
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "alterarFuncionarioForm";
-            this.Text = "alterarFuncionarioForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Hotel Mountain - Confirme os Dados do Funcionário!";
             this.Load += new System.EventHandler(this.alterarFuncionarioForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

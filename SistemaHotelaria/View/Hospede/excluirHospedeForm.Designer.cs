@@ -47,13 +47,13 @@ namespace SistemaHotelaria.View
             this.button1 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.btnCadastrar = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtTelefone = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtTelefone = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -243,6 +243,24 @@ namespace SistemaHotelaria.View
             this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCadastrar.UseVisualStyleBackColor = true;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(-4, 162);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(71, 20);
+            this.label4.TabIndex = 36;
+            this.label4.Text = "Telefone";
+            // 
+            // txtTelefone
+            // 
+            this.txtTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefone.Location = new System.Drawing.Point(0, 185);
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(180, 26);
+            this.txtTelefone.TabIndex = 31;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -299,24 +317,6 @@ namespace SistemaHotelaria.View
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(-4, 162);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 20);
-            this.label4.TabIndex = 36;
-            this.label4.Text = "Telefone";
-            // 
-            // txtTelefone
-            // 
-            this.txtTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefone.Location = new System.Drawing.Point(0, 185);
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(180, 26);
-            this.txtTelefone.TabIndex = 31;
-            // 
             // excluirHospedeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -325,6 +325,7 @@ namespace SistemaHotelaria.View
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnExcluir);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "excluirHospedeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hotel Mountain - Confirme os dados";

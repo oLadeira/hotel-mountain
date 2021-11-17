@@ -62,6 +62,12 @@
     <Compile Include="Model\Produto.cs" />
     <Compile Include="Model\Quarto.cs" />
     <Compile Include="ValidacaoCampos\Validar.cs" />
+    <Compile Include="View\Checkin\alterarCheckin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Checkin\alterarCheckin.Designer.cs">
+      <DependentUpon>alterarCheckin.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Checkin\cadastrarCheckin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -215,6 +221,9 @@
     <Compile Include="View\Servicos\cadastrarServico.Designer.cs">
       <DependentUpon>cadastrarServico.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\Checkin\alterarCheckin.resx">
+      <DependentUpon>alterarCheckin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Checkin\cadastrarCheckin.resx">
       <DependentUpon>cadastrarCheckin.cs</DependentUpon>
     </EmbeddedResource>

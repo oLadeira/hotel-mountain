@@ -208,5 +208,31 @@ namespace SistemaHotelaria.DAO
             return null;
         }
 
+        public DataTable listarFuncionarioByNome(string nome)
+        {
+            try
+            {
+                con.Open();
+
+                cmd.CommandText = "";
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd.CommandText, con);
+                DataTable tabela = new DataTable();
+
+                da.Fill(tabela);
+
+                return tabela;
+            }
+            catch (SqlException ex)
+            {
+
+            }
+            finally
+            {
+                con.Close();
+            }
+            return null; 
+        }
+
     }
 }

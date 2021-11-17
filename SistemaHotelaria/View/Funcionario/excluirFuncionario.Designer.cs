@@ -269,7 +269,8 @@ namespace SistemaHotelaria.View
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtId);
             this.Name = "excluirFuncionario";
-            this.Text = "excluirFuncionario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Hotel Mountain - Deletar Funcionário";
             this.Load += new System.EventHandler(this.excluirFuncionario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionario)).EndInit();
             this.ResumeLayout(false);

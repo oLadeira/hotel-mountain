@@ -281,8 +281,10 @@ namespace SistemaHotelaria.View.Fornecedores
             this.Controls.Add(this.btnVisualizar);
             this.Controls.Add(this.dgvFornecedores);
             this.Controls.Add(this.btnCadastrar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "opcoesFornecedores";
-            this.Text = "opcoesFornecedores";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Hotel Mountain - Escolha uma Opção!";
             ((System.ComponentModel.ISupportInitialize)(this.dgvFornecedores)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -65,12 +65,12 @@ namespace SistemaHotelaria.View.Checkin
             checkin.Entrada = Convert.ToDateTime(dtpEntrada.Value.ToString());
             checkin.Saida = Convert.ToDateTime(dtpSaida.Value.ToString());
 
-            checkin.Dias = Convert.ToInt32(checkin.Saida.ToString("dd")) - Convert.ToInt32(checkin.Entrada.ToString("dd"));
+            checkin.Dias = Convert.ToInt32(txtDias.Text);
 
 
             checkinDAO.cadastrarCheckin(checkin);
 
-
+            /*
             if (Convert.ToInt32(checkin.Dias.ToString()) <= 0)
             {
                 MessageBox.Show("Digite uma data de entrada e saída válida!");
@@ -79,7 +79,7 @@ namespace SistemaHotelaria.View.Checkin
             {
 
             }
-
+            */
         }
 
         private void dtpEntrada_ValueChanged(object sender, EventArgs e)

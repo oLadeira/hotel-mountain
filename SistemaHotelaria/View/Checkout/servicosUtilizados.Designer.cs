@@ -32,6 +32,7 @@ namespace SistemaHotelaria.View.Checkout
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(servicosUtilizados));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.listQuantidade = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,7 +46,6 @@ namespace SistemaHotelaria.View.Checkout
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericQuantidade)).BeginInit();
             this.SuspendLayout();
@@ -77,6 +77,15 @@ namespace SistemaHotelaria.View.Checkout
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Consumíveis";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(432, 116);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(35, 13);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "label6";
             // 
             // label4
             // 
@@ -222,15 +231,6 @@ namespace SistemaHotelaria.View.Checkout
             this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCadastrar.UseVisualStyleBackColor = true;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(432, 116);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "label6";
-            // 
             // servicosUtilizados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -242,9 +242,10 @@ namespace SistemaHotelaria.View.Checkout
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "servicosUtilizados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "servicosUtilizados";
+            this.Text = "Hotel Mountain - Cadastrar Serviço";
             this.Load += new System.EventHandler(this.servicosUtilizados_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

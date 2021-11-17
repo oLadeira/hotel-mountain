@@ -30,10 +30,7 @@ namespace SistemaHotelaria.View.Checkin
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(cadastrarCheckin));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.txtDias = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -47,25 +44,14 @@ namespace SistemaHotelaria.View.Checkin
             this.label3 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SistemaHotelaria.Properties.Resources.hotelMountainLogo;
-            this.pictureBox1.Location = new System.Drawing.Point(630, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(157, 131);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txtDias);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.groupBox2);
@@ -81,29 +67,10 @@ namespace SistemaHotelaria.View.Checkin
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Realizar Check-In";
             // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(360, 227);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(88, 26);
-            this.textBox2.TabIndex = 38;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(292, 230);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(48, 20);
-            this.label6.TabIndex = 37;
-            this.label6.Text = "Total:";
-            // 
             // txtDias
             // 
             this.txtDias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDias.Location = new System.Drawing.Point(360, 180);
+            this.txtDias.Location = new System.Drawing.Point(360, 208);
             this.txtDias.Name = "txtDias";
             this.txtDias.ReadOnly = true;
             this.txtDias.Size = new System.Drawing.Size(88, 26);
@@ -113,7 +80,7 @@ namespace SistemaHotelaria.View.Checkin
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(292, 183);
+            this.label5.Location = new System.Drawing.Point(292, 211);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(45, 20);
             this.label5.TabIndex = 35;
@@ -242,6 +209,16 @@ namespace SistemaHotelaria.View.Checkin
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SistemaHotelaria.Properties.Resources.hotelMountainLogo;
+            this.pictureBox1.Location = new System.Drawing.Point(630, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(157, 131);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
             // cadastrarCheckin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -250,15 +227,16 @@ namespace SistemaHotelaria.View.Checkin
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "cadastrarCheckin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "cadastrarCheckin";
+            this.Text = "Hotel Mountain - Realizar Check-In";
             this.Load += new System.EventHandler(this.cadastrarCheckin_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -277,8 +255,6 @@ namespace SistemaHotelaria.View.Checkin
         private System.Windows.Forms.ComboBox cmbQuarto;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnCadastrar;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtDias;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox2;

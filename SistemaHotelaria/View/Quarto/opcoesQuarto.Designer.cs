@@ -29,38 +29,24 @@ namespace SistemaHotelaria.View.Quarto
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(opcoesQuarto));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.button4 = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(opcoesQuarto));
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnExcluir = new System.Windows.Forms.Button();
-            this.btnAlterar = new System.Windows.Forms.Button();
-            this.btnVisualizar = new System.Windows.Forms.Button();
             this.dgvQuartos = new System.Windows.Forms.DataGridView();
-            this.btnCadastrar = new System.Windows.Forms.Button();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeHospede = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button4 = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnVisualizar = new System.Windows.Forms.Button();
+            this.btnCadastrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuartos)).BeginInit();
             this.SuspendLayout();
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(1047, 550);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(115, 42);
-            this.button4.TabIndex = 18;
-            this.button4.Text = "Pesquisar";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -79,46 +65,6 @@ namespace SistemaHotelaria.View.Quarto
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(1009, 22);
             this.textBox1.TabIndex = 16;
-            // 
-            // btnExcluir
-            // 
-            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
-            this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExcluir.Location = new System.Drawing.Point(365, 592);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(112, 39);
-            this.btnExcluir.TabIndex = 15;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnExcluir.UseVisualStyleBackColor = true;
-            // 
-            // btnAlterar
-            // 
-            this.btnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlterar.Image = ((System.Drawing.Image)(resources.GetObject("btnAlterar.Image")));
-            this.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAlterar.Location = new System.Drawing.Point(247, 592);
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(112, 39);
-            this.btnAlterar.TabIndex = 14;
-            this.btnAlterar.Text = "Alterar";
-            this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAlterar.UseVisualStyleBackColor = true;
-            // 
-            // btnVisualizar
-            // 
-            this.btnVisualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVisualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnVisualizar.Image")));
-            this.btnVisualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVisualizar.Location = new System.Drawing.Point(129, 592);
-            this.btnVisualizar.Name = "btnVisualizar";
-            this.btnVisualizar.Size = new System.Drawing.Size(112, 39);
-            this.btnVisualizar.TabIndex = 13;
-            this.btnVisualizar.Text = "Visualizar";
-            this.btnVisualizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnVisualizar.UseVisualStyleBackColor = true;
-            this.btnVisualizar.Click += new System.EventHandler(this.btnVisualizar_Click);
             // 
             // dgvQuartos
             // 
@@ -165,20 +111,6 @@ namespace SistemaHotelaria.View.Quarto
             this.dgvQuartos.Size = new System.Drawing.Size(1151, 514);
             this.dgvQuartos.TabIndex = 12;
             // 
-            // btnCadastrar
-            // 
-            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrar.Image")));
-            this.btnCadastrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCadastrar.Location = new System.Drawing.Point(11, 592);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(112, 39);
-            this.btnCadastrar.TabIndex = 11;
-            this.btnCadastrar.Text = "Cadastrar";
-            this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCadastrar.UseVisualStyleBackColor = true;
-            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
-            // 
             // id
             // 
             this.id.DataPropertyName = "id";
@@ -218,6 +150,61 @@ namespace SistemaHotelaria.View.Quarto
             this.status.Name = "status";
             this.status.ReadOnly = true;
             // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(1047, 550);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(115, 42);
+            this.button4.TabIndex = 18;
+            this.button4.Text = "Pesquisar";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
+            this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExcluir.Location = new System.Drawing.Point(247, 592);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(112, 39);
+            this.btnExcluir.TabIndex = 15;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
+            // btnVisualizar
+            // 
+            this.btnVisualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVisualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnVisualizar.Image")));
+            this.btnVisualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVisualizar.Location = new System.Drawing.Point(129, 592);
+            this.btnVisualizar.Name = "btnVisualizar";
+            this.btnVisualizar.Size = new System.Drawing.Size(112, 39);
+            this.btnVisualizar.TabIndex = 13;
+            this.btnVisualizar.Text = "Visualizar";
+            this.btnVisualizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnVisualizar.UseVisualStyleBackColor = true;
+            this.btnVisualizar.Click += new System.EventHandler(this.btnVisualizar_Click);
+            // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrar.Image")));
+            this.btnCadastrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadastrar.Location = new System.Drawing.Point(11, 592);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(112, 39);
+            this.btnCadastrar.TabIndex = 11;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            // 
             // opcoesQuarto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -227,13 +214,13 @@ namespace SistemaHotelaria.View.Quarto
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnExcluir);
-            this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnVisualizar);
             this.Controls.Add(this.dgvQuartos);
             this.Controls.Add(this.btnCadastrar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "opcoesQuarto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "opcoesQuarto";
+            this.Text = "Hotel Mountain - Escolha uma Opção";
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuartos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -246,7 +233,6 @@ namespace SistemaHotelaria.View.Quarto
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnExcluir;
-        private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnVisualizar;
         private System.Windows.Forms.DataGridView dgvQuartos;
         private System.Windows.Forms.Button btnCadastrar;

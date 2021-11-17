@@ -171,9 +171,10 @@ namespace SistemaHotelaria.View.Quarto
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "cadastrarQuarto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "cadastrarQuarto";
+            this.Text = "Hotel Mountain - Cadastrar Quarto";
             this.Load += new System.EventHandler(this.cadastrarQuarto_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

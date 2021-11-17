@@ -29,6 +29,7 @@ namespace SistemaHotelaria.View.Checkout
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(pesquisarCheckin));
             this.txtCpf = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnPesquisar = new System.Windows.Forms.Button();
@@ -56,11 +57,13 @@ namespace SistemaHotelaria.View.Checkout
             // btnPesquisar
             // 
             this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPesquisar.Location = new System.Drawing.Point(664, 57);
+            this.btnPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisar.Image")));
+            this.btnPesquisar.Location = new System.Drawing.Point(648, 57);
             this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(94, 46);
+            this.btnPesquisar.Size = new System.Drawing.Size(126, 36);
             this.btnPesquisar.TabIndex = 34;
             this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPesquisar.UseVisualStyleBackColor = true;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
@@ -72,9 +75,10 @@ namespace SistemaHotelaria.View.Checkout
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtCpf);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "pesquisarCheckin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "pesquisarCheckin";
+            this.Text = "Hotel Mountain - Pesquisar Hóspede";
             this.Load += new System.EventHandler(this.pesquisarCheckin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

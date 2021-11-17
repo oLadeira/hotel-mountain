@@ -49,5 +49,11 @@ namespace SistemaHotelaria.View
             TelaExcluirFuncionario.Show();
             this.Close();
         }
+
+        private void btnPesquisarNome_Click(object sender, EventArgs e)
+        {
+            FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
+            dgvFuncionarios.DataSource = funcionarioDAO.listarFuncionarioByNome(txtPesquisarNome.Text);
+        }
     }
 }
