@@ -77,5 +77,10 @@ namespace SistemaHotelaria.View
 
             this.Close();
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

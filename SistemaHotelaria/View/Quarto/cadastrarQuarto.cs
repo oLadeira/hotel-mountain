@@ -35,7 +35,7 @@ namespace SistemaHotelaria.View.Quarto
             QuartoDAO quartoDAO = new QuartoDAO();
 
             quarto.Categoria = cmbCategoria.Text;
-            quarto.Valor = float.Parse(maskValor.Text);
+            quarto.Valor = Convert.ToDecimal(maskValor.Text);
             quarto.Numero = Convert.ToString(numericNumero.Value);
 
             quartoDAO.cadastrarQuarto(quarto);

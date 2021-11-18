@@ -233,6 +233,18 @@
     <Compile Include="View\Quarto\cadastrarQuarto.Designer.cs">
       <DependentUpon>cadastrarQuarto.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Quarto\excluirQuarto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Quarto\excluirQuarto.Designer.cs">
+      <DependentUpon>excluirQuarto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Quarto\excluirQuartoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Quarto\excluirQuartoForm.Designer.cs">
+      <DependentUpon>excluirQuartoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Quarto\opcoesQuarto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -338,6 +350,12 @@
     </Compile>
     <EmbeddedResource Include="View\Quarto\cadastrarQuarto.resx">
       <DependentUpon>cadastrarQuarto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Quarto\excluirQuarto.resx">
+      <DependentUpon>excluirQuarto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Quarto\excluirQuartoForm.resx">
+      <DependentUpon>excluirQuartoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Quarto\opcoesQuarto.resx">
       <DependentUpon>opcoesQuarto.cs</DependentUpon>

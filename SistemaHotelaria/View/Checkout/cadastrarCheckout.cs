@@ -118,5 +118,10 @@ namespace SistemaHotelaria.View.Checkout
 
             checkoutDAO.cadastrarCheckout(checkout);
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

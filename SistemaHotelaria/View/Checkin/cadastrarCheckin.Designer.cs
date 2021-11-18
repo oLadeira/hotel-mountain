@@ -42,9 +42,9 @@ namespace SistemaHotelaria.View.Checkin
             this.cmbQuarto = new System.Windows.Forms.ComboBox();
             this.txtCpf = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -182,6 +182,16 @@ namespace SistemaHotelaria.View.Checkin
             this.label3.TabIndex = 30;
             this.label3.Text = "CPF do Hóspede:";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SistemaHotelaria.Properties.Resources.hotelMountainLogo;
+            this.pictureBox1.Location = new System.Drawing.Point(630, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(157, 131);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -194,6 +204,7 @@ namespace SistemaHotelaria.View.Checkin
             this.button3.Text = "Cancelar";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnCadastrar
             // 
@@ -208,16 +219,6 @@ namespace SistemaHotelaria.View.Checkin
             this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SistemaHotelaria.Properties.Resources.hotelMountainLogo;
-            this.pictureBox1.Location = new System.Drawing.Point(630, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(157, 131);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
             // 
             // cadastrarCheckin
             // 

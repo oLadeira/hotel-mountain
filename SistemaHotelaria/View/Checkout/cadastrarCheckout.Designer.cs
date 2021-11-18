@@ -33,7 +33,6 @@ namespace SistemaHotelaria.View.Checkout
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
-            this.btnServicos = new System.Windows.Forms.Button();
             this.txtQuarto = new System.Windows.Forms.TextBox();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -59,7 +58,6 @@ namespace SistemaHotelaria.View.Checkout
             this.cmbProdutos = new System.Windows.Forms.ComboBox();
             this.listProdutos = new System.Windows.Forms.ListBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.listServicos = new System.Windows.Forms.ListBox();
             this.btnAddServico = new System.Windows.Forms.Button();
@@ -77,7 +75,6 @@ namespace SistemaHotelaria.View.Checkout
             // 
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.btnCadastrar);
-            this.groupBox1.Controls.Add(this.btnServicos);
             this.groupBox1.Controls.Add(this.txtQuarto);
             this.groupBox1.Controls.Add(this.txtTotal);
             this.groupBox1.Controls.Add(this.label6);
@@ -90,7 +87,7 @@ namespace SistemaHotelaria.View.Checkout
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1259, 328);
+            this.groupBox1.Size = new System.Drawing.Size(1057, 328);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Realizar Check-Out";
@@ -100,20 +97,21 @@ namespace SistemaHotelaria.View.Checkout
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(1120, 265);
+            this.button3.Location = new System.Drawing.Point(900, 272);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(133, 50);
             this.button3.TabIndex = 35;
             this.button3.Text = "Cancelar";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnCadastrar
             // 
             this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrar.Image")));
             this.btnCadastrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCadastrar.Location = new System.Drawing.Point(955, 265);
+            this.btnCadastrar.Location = new System.Drawing.Point(735, 272);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(133, 50);
             this.btnCadastrar.TabIndex = 34;
@@ -121,17 +119,6 @@ namespace SistemaHotelaria.View.Checkout
             this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
-            // 
-            // btnServicos
-            // 
-            this.btnServicos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnServicos.Location = new System.Drawing.Point(608, 102);
-            this.btnServicos.Name = "btnServicos";
-            this.btnServicos.Size = new System.Drawing.Size(180, 58);
-            this.btnServicos.TabIndex = 40;
-            this.btnServicos.Text = "Adicionar Serviços/Consumíveis";
-            this.btnServicos.UseVisualStyleBackColor = true;
-            this.btnServicos.Click += new System.EventHandler(this.btnServicos_Click);
             // 
             // txtQuarto
             // 
@@ -268,7 +255,7 @@ namespace SistemaHotelaria.View.Checkout
             // pictureBox1
             // 
             this.pictureBox1.Image = global::SistemaHotelaria.Properties.Resources.hotelMountainLogo;
-            this.pictureBox1.Location = new System.Drawing.Point(1096, 10);
+            this.pictureBox1.Location = new System.Drawing.Point(876, 19);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(157, 131);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -288,7 +275,7 @@ namespace SistemaHotelaria.View.Checkout
             this.groupBox3.Controls.Add(this.listProdutos);
             this.groupBox3.Location = new System.Drawing.Point(12, 356);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1259, 339);
+            this.groupBox3.Size = new System.Drawing.Size(1057, 339);
             this.groupBox3.TabIndex = 16;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Consumíveis";
@@ -308,9 +295,9 @@ namespace SistemaHotelaria.View.Checkout
             this.listQuantidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listQuantidade.FormattingEnabled = true;
             this.listQuantidade.ItemHeight = 20;
-            this.listQuantidade.Location = new System.Drawing.Point(900, 140);
+            this.listQuantidade.Location = new System.Drawing.Point(908, 140);
             this.listQuantidade.Name = "listQuantidade";
-            this.listQuantidade.Size = new System.Drawing.Size(39, 184);
+            this.listQuantidade.Size = new System.Drawing.Size(31, 184);
             this.listQuantidade.TabIndex = 7;
             // 
             // label9
@@ -326,9 +313,9 @@ namespace SistemaHotelaria.View.Checkout
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(1056, 39);
+            this.btnAdd.Location = new System.Drawing.Point(978, 42);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(48, 37);
+            this.btnAdd.Size = new System.Drawing.Size(34, 35);
             this.btnAdd.TabIndex = 5;
             this.btnAdd.Text = "+";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -363,7 +350,7 @@ namespace SistemaHotelaria.View.Checkout
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(6, 50);
+            this.label11.Location = new System.Drawing.Point(5, 27);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(69, 20);
             this.label11.TabIndex = 2;
@@ -377,9 +364,9 @@ namespace SistemaHotelaria.View.Checkout
             "TESTE",
             "TESTE02",
             "TESTE11"});
-            this.cmbProdutos.Location = new System.Drawing.Point(81, 47);
+            this.cmbProdutos.Location = new System.Drawing.Point(9, 50);
             this.cmbProdutos.Name = "cmbProdutos";
-            this.cmbProdutos.Size = new System.Drawing.Size(728, 28);
+            this.cmbProdutos.Size = new System.Drawing.Size(800, 28);
             this.cmbProdutos.TabIndex = 1;
             // 
             // listProdutos
@@ -394,7 +381,6 @@ namespace SistemaHotelaria.View.Checkout
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.label13);
             this.groupBox4.Controls.Add(this.label12);
             this.groupBox4.Controls.Add(this.listServicos);
             this.groupBox4.Controls.Add(this.btnAddServico);
@@ -402,19 +388,10 @@ namespace SistemaHotelaria.View.Checkout
             this.groupBox4.Controls.Add(this.cmbServicos);
             this.groupBox4.Location = new System.Drawing.Point(12, 701);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(1259, 246);
+            this.groupBox4.Size = new System.Drawing.Size(1057, 246);
             this.groupBox4.TabIndex = 17;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Serviços";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(854, 64);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(41, 13);
-            this.label13.TabIndex = 9;
-            this.label13.Text = "label13";
             // 
             // label12
             // 
@@ -439,9 +416,9 @@ namespace SistemaHotelaria.View.Checkout
             // btnAddServico
             // 
             this.btnAddServico.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddServico.Location = new System.Drawing.Point(1040, 56);
+            this.btnAddServico.Location = new System.Drawing.Point(978, 41);
             this.btnAddServico.Name = "btnAddServico";
-            this.btnAddServico.Size = new System.Drawing.Size(48, 37);
+            this.btnAddServico.Size = new System.Drawing.Size(34, 34);
             this.btnAddServico.TabIndex = 6;
             this.btnAddServico.Text = "+";
             this.btnAddServico.UseVisualStyleBackColor = true;
@@ -470,7 +447,7 @@ namespace SistemaHotelaria.View.Checkout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1283, 960);
+            this.ClientSize = new System.Drawing.Size(1099, 960);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
@@ -512,7 +489,6 @@ namespace SistemaHotelaria.View.Checkout
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.TextBox txtQuarto;
-        private System.Windows.Forms.Button btnServicos;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ListBox listQuantidade;
@@ -529,6 +505,5 @@ namespace SistemaHotelaria.View.Checkout
         private System.Windows.Forms.Button btnAddServico;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ListBox listServicos;
-        private System.Windows.Forms.Label label13;
     }
 }

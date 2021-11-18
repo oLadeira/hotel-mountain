@@ -68,3 +68,5 @@ E:\MEUS DOCUMENTOS\UNIP\4º Semestre\PIM\SistemaHotelariaV3\SistemaHotelaria\obj
 E:\MEUS DOCUMENTOS\UNIP\4º Semestre\PIM\SistemaHotelariaV3\SistemaHotelaria\obj\Debug\SistemaHotelaria.View.Fornecedores.alterarFornecedorForm.resources
 E:\MEUS DOCUMENTOS\UNIP\4º Semestre\PIM\SistemaHotelariaV3\SistemaHotelaria\obj\Debug\SistemaHotelaria.View.Fornecedores.excluirFornecedor.resources
 E:\MEUS DOCUMENTOS\UNIP\4º Semestre\PIM\SistemaHotelariaV3\SistemaHotelaria\obj\Debug\SistemaHotelaria.View.Fornecedores.excluirFornecedorForm.resources
+E:\MEUS DOCUMENTOS\UNIP\4º Semestre\PIM\SistemaHotelariaV3\SistemaHotelaria\obj\Debug\SistemaHotelaria.View.Quarto.excluirQuarto.resources
+E:\MEUS DOCUMENTOS\UNIP\4º Semestre\PIM\SistemaHotelariaV3\SistemaHotelaria\obj\Debug\SistemaHotelaria.View.Quarto.excluirQuartoForm.resources

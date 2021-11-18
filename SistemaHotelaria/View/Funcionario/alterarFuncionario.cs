@@ -44,5 +44,10 @@ namespace SistemaHotelaria.View
                 MessageBox.Show("Por favor digite um ID válido!", "Erro", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
             }                           
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

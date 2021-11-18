@@ -42,5 +42,10 @@ namespace SistemaHotelaria.View.Servicos
             produtoDAO.cadastrarProduto(produto);
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

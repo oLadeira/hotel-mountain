@@ -33,7 +33,9 @@ namespace SistemaHotelaria.View.Quarto
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-
+            excluirQuarto TelaExcluirQuarto = new excluirQuarto();
+            TelaExcluirQuarto.Show();
+            this.Close();
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)

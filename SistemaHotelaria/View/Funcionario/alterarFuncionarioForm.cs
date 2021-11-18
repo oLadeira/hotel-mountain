@@ -62,5 +62,10 @@ namespace SistemaHotelaria.View
 
             funcionarioDAO.alterarHospede(id1, funcionario);
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

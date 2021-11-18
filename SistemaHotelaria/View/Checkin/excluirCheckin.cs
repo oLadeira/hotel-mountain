@@ -23,5 +23,10 @@ namespace SistemaHotelaria.View.Checkin
         {
             dgvCheckin.DataSource = checkinDAO.listarCheckin();
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

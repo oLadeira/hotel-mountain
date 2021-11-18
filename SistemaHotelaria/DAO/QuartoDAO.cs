@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace SistemaHotelaria.DAO
 {
@@ -130,6 +131,89 @@ namespace SistemaHotelaria.DAO
                 con.Close();
             }
             return null;
+        }
+
+        public Quarto dadosAlterar(int id, Quarto quarto)
+        {
+            try
+            {
+                if (validarQuarto(id) == true)
+                {
+                    con.Open();
+                    cmd.CommandText = "SELECT * FROM quarto WHERE id = @id";
+
+                    cmd = new SqlCommand(cmd.CommandText, con);
+
+                    cmd.Parameters.AddWithValue("@id", id);
+
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        quarto.Id = reader.GetInt32(0);
+                        quarto.Categoria = reader.GetString(1);
+                        quarto.Valor= reader.GetDecimal(2); //problema
+                        quarto.Numero= reader.GetString(3);
+                        quarto.Status= reader.GetString(4);                        
+                    }
+                    return quarto;
+                }
+                else
+                {
+                    throw new Exception();
+                }
+
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Quarto não encontrado!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                con.Close();
+            }
+            return quarto;
+        }
+
+        public bool validarQuarto(int id)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+
+                cmd.CommandText = "SELECT * FROM quarto WHERE id =" + id;
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd.CommandText, con);
+                DataTable tabela = new DataTable();
+
+                da.Fill(tabela);
+
+                int totalRows = tabela.Rows.Count;
+
+                if (totalRows > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    throw new Exception();
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Quarto não encontrado!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return false;
         }
 
     }

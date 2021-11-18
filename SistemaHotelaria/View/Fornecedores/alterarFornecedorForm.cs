@@ -54,5 +54,10 @@ namespace SistemaHotelaria.View.Fornecedores
             fornecedorDAO.alterarFornecedor(id1, fornecedor);
             this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
