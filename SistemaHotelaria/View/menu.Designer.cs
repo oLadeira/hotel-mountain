@@ -107,8 +107,8 @@ namespace SistemaHotelaria
             this.tipServicos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tipServicos.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tipServicos.Name = "tipServicos";
-            this.tipServicos.Size = new System.Drawing.Size(68, 83);
-            this.tipServicos.Text = "Serviços";
+            this.tipServicos.Size = new System.Drawing.Size(79, 83);
+            this.tipServicos.Text = "Consumíveis";
             this.tipServicos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tipServicos.Click += new System.EventHandler(this.tipServicos_Click);
             // 

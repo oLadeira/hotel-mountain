@@ -140,8 +140,6 @@ namespace SistemaHotelaria.DAO
 
                 da.Fill(tabela);
 
-                //dgvHospedes.DataSource = tabela;
-
                 return tabela;
             }
             catch (SqlException ex)

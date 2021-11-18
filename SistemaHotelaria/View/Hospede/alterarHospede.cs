@@ -57,7 +57,8 @@ namespace SistemaHotelaria.View
                 alterarHospedeForm telaAlterarHospedeForm = new alterarHospedeForm(id);
                 telaAlterarHospedeForm.Show();
                 this.Close();
-            }         
+            }          
+                      
 
         }
 

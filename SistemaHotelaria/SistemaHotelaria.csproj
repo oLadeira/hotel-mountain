@@ -62,11 +62,11 @@
     <Compile Include="Model\Produto.cs" />
     <Compile Include="Model\Quarto.cs" />
     <Compile Include="ValidacaoCampos\Validar.cs" />
-    <Compile Include="View\Checkin\alterarCheckin.cs">
+    <Compile Include="View\Checkin\excluirCheckin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Checkin\alterarCheckin.Designer.cs">
-      <DependentUpon>alterarCheckin.cs</DependentUpon>
+    <Compile Include="View\Checkin\excluirCheckin.Designer.cs">
+      <DependentUpon>excluirCheckin.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Checkin\cadastrarCheckin.cs">
       <SubType>Form</SubType>
@@ -104,11 +104,35 @@
     <Compile Include="View\Checkout\servicosUtilizados.Designer.cs">
       <DependentUpon>servicosUtilizados.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Fornecedores\alterarFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Fornecedores\alterarFornecedor.Designer.cs">
+      <DependentUpon>alterarFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Fornecedores\alterarFornecedorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Fornecedores\alterarFornecedorForm.Designer.cs">
+      <DependentUpon>alterarFornecedorForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Fornecedores\cadastrarFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Fornecedores\cadastrarFornecedor.Designer.cs">
       <DependentUpon>cadastrarFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Fornecedores\excluirFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Fornecedores\excluirFornecedor.Designer.cs">
+      <DependentUpon>excluirFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Fornecedores\excluirFornecedorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Fornecedores\excluirFornecedorForm.Designer.cs">
+      <DependentUpon>excluirFornecedorForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Fornecedores\opcoesFornecedores.cs">
       <SubType>Form</SubType>
@@ -221,8 +245,8 @@
     <Compile Include="View\Servicos\cadastrarServico.Designer.cs">
       <DependentUpon>cadastrarServico.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\Checkin\alterarCheckin.resx">
-      <DependentUpon>alterarCheckin.cs</DependentUpon>
+    <EmbeddedResource Include="View\Checkin\excluirCheckin.resx">
+      <DependentUpon>excluirCheckin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Checkin\cadastrarCheckin.resx">
       <DependentUpon>cadastrarCheckin.cs</DependentUpon>
@@ -242,8 +266,20 @@
     <EmbeddedResource Include="View\Checkout\servicosUtilizados.resx">
       <DependentUpon>servicosUtilizados.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Fornecedores\alterarFornecedor.resx">
+      <DependentUpon>alterarFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Fornecedores\alterarFornecedorForm.resx">
+      <DependentUpon>alterarFornecedorForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Fornecedores\cadastrarFornecedor.resx">
       <DependentUpon>cadastrarFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Fornecedores\excluirFornecedor.resx">
+      <DependentUpon>excluirFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Fornecedores\excluirFornecedorForm.resx">
+      <DependentUpon>excluirFornecedorForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Fornecedores\opcoesFornecedores.resx">
       <DependentUpon>opcoesFornecedores.cs</DependentUpon>

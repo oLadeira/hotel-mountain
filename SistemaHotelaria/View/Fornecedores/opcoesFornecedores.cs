@@ -12,6 +12,7 @@ namespace SistemaHotelaria.View.Fornecedores
 {
     public partial class opcoesFornecedores : Form
     {
+        DAO.FornecedorDAO fornecedorDAO = new DAO.FornecedorDAO();
         public opcoesFornecedores()
         {
             InitializeComponent();
@@ -21,6 +22,25 @@ namespace SistemaHotelaria.View.Fornecedores
         {
             cadastrarFornecedor TelaCadastrarFornecedor = new cadastrarFornecedor();
             TelaCadastrarFornecedor.Show();
+            this.Close();
+        }
+
+        private void btnVisualizar_Click(object sender, EventArgs e)
+        {
+            dgvFornecedores.DataSource = fornecedorDAO.listarFornecedores();
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            alterarFornecedor TelaAlterarFornecedor = new alterarFornecedor();
+            TelaAlterarFornecedor.Show();
+            this.Close();
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            excluirFornecedor TelaExcluirFornecedor = new excluirFornecedor();
+            TelaExcluirFornecedor.Show();
             this.Close();
         }
     }

@@ -30,12 +30,10 @@ namespace SistemaHotelaria.View.Fornecedores
             fornecedor.Cnpj = txtCnpj.Text;
             fornecedor.Email = txtEmail.Text;
             fornecedor.Telefone = mskTelefone.Text;
-            fornecedor.Categoria = cmbCategoria.Text;
-
+            fornecedor.Categoria = Convert.ToString(cmbCategoria.SelectedItem);
 
             fornecedorDAO.cadastrarFornecedor(fornecedor);
-
-
+            this.Close();
         }
 
         private void cadastrarFornecedor_Load(object sender, EventArgs e)

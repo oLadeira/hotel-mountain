@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace SistemaHotelaria.View.Checkin
 {    
-    public partial class alterarCheckin : Form
+    public partial class excluirCheckin : Form
     {
         DAO.CheckinDAO checkinDAO = new DAO.CheckinDAO();
 
-        public alterarCheckin()
+        public excluirCheckin()
         {
             InitializeComponent();
         }

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -55,6 +56,31 @@ namespace SistemaHotelaria.DAO
             }
         }
 
+        public DataTable listarCheckOut()
+        {
+            try
+            {
+                con.Open();
+                cmd.CommandText = "SELECT c.id, c.cpfHosped, q.numero, c.entrada, c.saida, c.dias, c.total FROM checkOut as c INNER JOIN quarto as q ON c.idQuarto = q.id; ";
+
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd.CommandText, con);
+                DataTable tabela = new DataTable();
+
+                da.Fill(tabela);
+
+                return tabela;
+            }
+            catch (SqlException ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+            return null;
+        }
 
         public Check_in pesquisarCheckin(String cpf, Check_in check_in)
         {

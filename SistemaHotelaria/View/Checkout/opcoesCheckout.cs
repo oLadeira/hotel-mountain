@@ -12,6 +12,7 @@ namespace SistemaHotelaria.View.Checkout
 {
     public partial class opcoesCheckout : Form
     {
+        DAO.CheckoutDAO checkOutDAO = new DAO.CheckoutDAO();
         public opcoesCheckout()
         {
             InitializeComponent();
@@ -22,6 +23,11 @@ namespace SistemaHotelaria.View.Checkout
             pesquisarCheckin TelaPesquisarCheckin = new pesquisarCheckin();
             TelaPesquisarCheckin.Show();
             this.Close();
+        }
+
+        private void btnVisualizar_Click(object sender, EventArgs e)
+        {
+            dgvCheckOut.DataSource = checkOutDAO.listarCheckOut();
         }
     }
 }

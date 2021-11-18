@@ -37,7 +37,7 @@ namespace SistemaHotelaria.View.Checkin
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            alterarCheckin TelaAlterarCheckin = new alterarCheckin();
+            excluirCheckin TelaAlterarCheckin = new excluirCheckin();
 
             TelaAlterarCheckin.Show();
 
