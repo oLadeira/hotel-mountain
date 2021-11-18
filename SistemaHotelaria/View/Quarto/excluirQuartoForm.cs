@@ -40,5 +40,11 @@ namespace SistemaHotelaria.View.Quarto
         {
             this.Close();
         }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            quartoDAO.deletarQuartoById(id);
+            this.Close();
+        }
     }
 }

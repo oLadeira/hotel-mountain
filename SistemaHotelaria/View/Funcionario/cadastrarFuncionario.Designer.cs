@@ -37,9 +37,7 @@ namespace SistemaHotelaria.View
             this.label2 = new System.Windows.Forms.Label();
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtCep = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtCpf = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.cmbEstadoCivil = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -50,13 +48,15 @@ namespace SistemaHotelaria.View
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtTelefone = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
+            this.txtCpf = new System.Windows.Forms.MaskedTextBox();
+            this.txtCep = new System.Windows.Forms.MaskedTextBox();
+            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.gboxSexo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -64,15 +64,16 @@ namespace SistemaHotelaria.View
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtTelefone);
+            this.groupBox1.Controls.Add(this.txtCep);
+            this.groupBox1.Controls.Add(this.txtCpf);
             this.groupBox1.Controls.Add(this.cmbCargo);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.cmbTurno);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtEndereco);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.txtCep);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.txtCpf);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.cmbEstadoCivil);
             this.groupBox1.Controls.Add(this.label7);
@@ -81,7 +82,6 @@ namespace SistemaHotelaria.View
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtEmail);
-            this.groupBox1.Controls.Add(this.txtTelefone);
             this.groupBox1.Controls.Add(this.txtNome);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label1);
@@ -157,14 +157,6 @@ namespace SistemaHotelaria.View
             this.label8.TabIndex = 43;
             this.label8.Text = "CEP";
             // 
-            // txtCep
-            // 
-            this.txtCep.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCep.Location = new System.Drawing.Point(308, 106);
-            this.txtCep.Name = "txtCep";
-            this.txtCep.Size = new System.Drawing.Size(275, 26);
-            this.txtCep.TabIndex = 35;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -174,14 +166,6 @@ namespace SistemaHotelaria.View
             this.label6.Size = new System.Drawing.Size(40, 20);
             this.label6.TabIndex = 42;
             this.label6.Text = "CPF";
-            // 
-            // txtCpf
-            // 
-            this.txtCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCpf.Location = new System.Drawing.Point(10, 106);
-            this.txtCpf.Name = "txtCpf";
-            this.txtCpf.Size = new System.Drawing.Size(277, 26);
-            this.txtCpf.TabIndex = 34;
             // 
             // label5
             // 
@@ -286,14 +270,6 @@ namespace SistemaHotelaria.View
             this.txtEmail.Size = new System.Drawing.Size(277, 26);
             this.txtEmail.TabIndex = 32;
             // 
-            // txtTelefone
-            // 
-            this.txtTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefone.Location = new System.Drawing.Point(10, 258);
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(180, 26);
-            this.txtTelefone.TabIndex = 30;
-            // 
             // txtNome
             // 
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -360,6 +336,33 @@ namespace SistemaHotelaria.View
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
+            // txtCpf
+            // 
+            this.txtCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCpf.Location = new System.Drawing.Point(10, 106);
+            this.txtCpf.Mask = "000,000,000-00";
+            this.txtCpf.Name = "txtCpf";
+            this.txtCpf.Size = new System.Drawing.Size(277, 26);
+            this.txtCpf.TabIndex = 32;
+            // 
+            // txtCep
+            // 
+            this.txtCep.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCep.Location = new System.Drawing.Point(308, 106);
+            this.txtCep.Mask = "00000-000";
+            this.txtCep.Name = "txtCep";
+            this.txtCep.Size = new System.Drawing.Size(275, 26);
+            this.txtCep.TabIndex = 52;
+            // 
+            // txtTelefone
+            // 
+            this.txtTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefone.Location = new System.Drawing.Point(10, 269);
+            this.txtTelefone.Mask = "(99) 00000-0000";
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(180, 26);
+            this.txtTelefone.TabIndex = 53;
+            // 
             // cadastrarFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -391,9 +394,7 @@ namespace SistemaHotelaria.View
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtEndereco;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtCep;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtCpf;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cmbEstadoCivil;
         private System.Windows.Forms.Label label7;
@@ -404,12 +405,14 @@ namespace SistemaHotelaria.View
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtTelefone;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.ComboBox cmbCargo;
+        private System.Windows.Forms.MaskedTextBox txtCpf;
+        private System.Windows.Forms.MaskedTextBox txtCep;
+        private System.Windows.Forms.MaskedTextBox txtTelefone;
     }
 }

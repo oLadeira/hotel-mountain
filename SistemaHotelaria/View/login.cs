@@ -16,6 +16,8 @@ namespace SistemaHotelaria
 {
     public partial class login : Form
     {
+        DAO.LoginDAO loginDAO = new DAO.LoginDAO();
+
         public login()
         {
             InitializeComponent();
@@ -31,6 +33,26 @@ namespace SistemaHotelaria
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
+            if (txtUsuario.Text == "" && txtSenha.Text == "")
+            {
+                MessageBox.Show("Insira as informações de login!");
+            }
+            else
+            {
+                if (loginDAO.realizaLogin(txtUsuario.Text, txtSenha.Text) == false)
+                {
+                    MessageBox.Show("Usuário não encontrado, verifique login e senha", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Logado com sucesso!", "Entrando", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    menu TelaMenu = new menu();
+                    TelaMenu.Show();
+                    this.Hide();
+                }
+
+            }
+
             /*
             Controle controle = new Controle(); //instanciando classe controle
 

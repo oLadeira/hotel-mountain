@@ -216,5 +216,34 @@ namespace SistemaHotelaria.DAO
             return false;
         }
 
+        public void deletarQuartoById(int id)
+        {
+            try
+            {
+                con.Open();
+
+                cmd = new SqlCommand(cmd.CommandText, con);
+
+                cmd.CommandText = "DELETE FROM quarto WHERE id = @id";
+
+                cmd.Parameters.AddWithValue("id", id);
+
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Quarto Excluído com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                Form.ActiveForm.Close();
+            }
+            catch (SqlException ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+
+        }
+
     }
 }

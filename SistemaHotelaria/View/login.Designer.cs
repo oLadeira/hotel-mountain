@@ -35,7 +35,6 @@ namespace SistemaHotelaria
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnEntrar = new System.Windows.Forms.Button();
-            this.btnEsqueceuSenha = new System.Windows.Forms.Button();
             this.btnPular = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -90,7 +89,7 @@ namespace SistemaHotelaria
             // btnEntrar
             // 
             this.btnEntrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEntrar.Location = new System.Drawing.Point(170, 374);
+            this.btnEntrar.Location = new System.Drawing.Point(171, 381);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(124, 36);
             this.btnEntrar.TabIndex = 5;
@@ -98,23 +97,13 @@ namespace SistemaHotelaria
             this.btnEntrar.UseVisualStyleBackColor = true;
             this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
-            // btnEsqueceuSenha
-            // 
-            this.btnEsqueceuSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEsqueceuSenha.Location = new System.Drawing.Point(143, 457);
-            this.btnEsqueceuSenha.Name = "btnEsqueceuSenha";
-            this.btnEsqueceuSenha.Size = new System.Drawing.Size(184, 36);
-            this.btnEsqueceuSenha.TabIndex = 6;
-            this.btnEsqueceuSenha.Text = "Esqueceu a senha?";
-            this.btnEsqueceuSenha.UseVisualStyleBackColor = true;
-            // 
             // btnPular
             // 
-            this.btnPular.Location = new System.Drawing.Point(365, 365);
+            this.btnPular.Location = new System.Drawing.Point(365, 374);
             this.btnPular.Name = "btnPular";
             this.btnPular.Size = new System.Drawing.Size(69, 52);
             this.btnPular.TabIndex = 7;
-            this.btnPular.Text = "Pular Login";
+            this.btnPular.Text = "Pular Login (apenas para teste)";
             this.btnPular.UseVisualStyleBackColor = true;
             this.btnPular.Click += new System.EventHandler(this.btnPular_Click);
             // 
@@ -124,7 +113,6 @@ namespace SistemaHotelaria
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(459, 521);
             this.Controls.Add(this.btnPular);
-            this.Controls.Add(this.btnEsqueceuSenha);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -149,7 +137,6 @@ namespace SistemaHotelaria
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnEntrar;
-        private System.Windows.Forms.Button btnEsqueceuSenha;
         private System.Windows.Forms.Button btnPular;
     }
 }

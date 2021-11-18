@@ -53,6 +53,7 @@
     <Compile Include="DAO\FuncionarioDAO.cs" />
     <Compile Include="DAO\HospedeDAO.cs" />
     <Compile Include="DAO\Conexao.cs" />
+    <Compile Include="DAO\LoginDAO.cs" />
     <Compile Include="DAO\ProdutoDAO.cs" />
     <Compile Include="DAO\QuartoDAO.cs" />
     <Compile Include="Model\Check_in.cs" />

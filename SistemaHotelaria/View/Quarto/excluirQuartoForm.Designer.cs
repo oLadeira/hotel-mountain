@@ -39,7 +39,7 @@ namespace SistemaHotelaria.View.Quarto
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericNumero)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -146,18 +146,19 @@ namespace SistemaHotelaria.View.Quarto
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // btnCadastrar
+            // btnExcluir
             // 
-            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrar.Image")));
-            this.btnCadastrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCadastrar.Location = new System.Drawing.Point(537, 309);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(133, 50);
-            this.btnCadastrar.TabIndex = 34;
-            this.btnCadastrar.Text = "Excluir";
-            this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
+            this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExcluir.Location = new System.Drawing.Point(537, 309);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(133, 50);
+            this.btnExcluir.TabIndex = 34;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // excluirQuartoForm
             // 
@@ -165,7 +166,7 @@ namespace SistemaHotelaria.View.Quarto
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(848, 371);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnCadastrar);
+            this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "excluirQuartoForm";
@@ -190,7 +191,7 @@ namespace SistemaHotelaria.View.Quarto
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.TextBox txtCategoria;
     }
 }
