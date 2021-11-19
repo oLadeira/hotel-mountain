@@ -171,7 +171,7 @@ namespace SistemaHotelaria.View.Quarto
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "excluirQuartoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "excluirQuartoForm";
+            this.Text = "Hotel Moutain - Confirme os Dados";
             this.Load += new System.EventHandler(this.excluirQuartoForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

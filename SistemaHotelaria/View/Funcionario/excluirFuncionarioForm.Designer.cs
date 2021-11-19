@@ -31,9 +31,7 @@ namespace SistemaHotelaria.View
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(excluirFuncionarioForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cmbCargo = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.cmbTurno = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -41,7 +39,6 @@ namespace SistemaHotelaria.View
             this.label6 = new System.Windows.Forms.Label();
             this.txtCpf = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.cmbEstadoCivil = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -54,15 +51,19 @@ namespace SistemaHotelaria.View
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
+            this.txtCargo = new System.Windows.Forms.TextBox();
+            this.cmbTurno = new System.Windows.Forms.TextBox();
+            this.cmbEstadoCivil = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.cmbCargo);
-            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.cmbEstadoCivil);
             this.groupBox1.Controls.Add(this.cmbTurno);
+            this.groupBox1.Controls.Add(this.txtCargo);
+            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtEndereco);
             this.groupBox1.Controls.Add(this.label8);
@@ -70,7 +71,6 @@ namespace SistemaHotelaria.View
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txtCpf);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.cmbEstadoCivil);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtNumero);
             this.groupBox1.Controls.Add(this.label4);
@@ -88,19 +88,6 @@ namespace SistemaHotelaria.View
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Excluir Funcionário";
             // 
-            // cmbCargo
-            // 
-            this.cmbCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbCargo.FormattingEnabled = true;
-            this.cmbCargo.Items.AddRange(new object[] {
-            "MANHÃ",
-            "TARDE",
-            "NOITE"});
-            this.cmbCargo.Location = new System.Drawing.Point(306, 258);
-            this.cmbCargo.Name = "cmbCargo";
-            this.cmbCargo.Size = new System.Drawing.Size(180, 28);
-            this.cmbCargo.TabIndex = 51;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -110,19 +97,6 @@ namespace SistemaHotelaria.View
             this.label9.Size = new System.Drawing.Size(50, 20);
             this.label9.TabIndex = 50;
             this.label9.Text = "Turno";
-            // 
-            // cmbTurno
-            // 
-            this.cmbTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbTurno.FormattingEnabled = true;
-            this.cmbTurno.Items.AddRange(new object[] {
-            "MANHÃ",
-            "TARDE",
-            "NOITE"});
-            this.cmbTurno.Location = new System.Drawing.Point(522, 256);
-            this.cmbTurno.Name = "cmbTurno";
-            this.cmbTurno.Size = new System.Drawing.Size(180, 28);
-            this.cmbTurno.TabIndex = 49;
             // 
             // label2
             // 
@@ -187,19 +161,6 @@ namespace SistemaHotelaria.View
             this.label5.Size = new System.Drawing.Size(48, 20);
             this.label5.TabIndex = 41;
             this.label5.Text = "Email";
-            // 
-            // cmbEstadoCivil
-            // 
-            this.cmbEstadoCivil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbEstadoCivil.FormattingEnabled = true;
-            this.cmbEstadoCivil.Items.AddRange(new object[] {
-            "SOLTEIRO(A)",
-            "CASADO(A)",
-            "VIUVO(A)"});
-            this.cmbEstadoCivil.Location = new System.Drawing.Point(10, 180);
-            this.cmbEstadoCivil.Name = "cmbEstadoCivil";
-            this.cmbEstadoCivil.Size = new System.Drawing.Size(180, 28);
-            this.cmbEstadoCivil.TabIndex = 29;
             // 
             // label7
             // 
@@ -321,6 +282,30 @@ namespace SistemaHotelaria.View
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
+            // txtCargo
+            // 
+            this.txtCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCargo.Location = new System.Drawing.Point(306, 258);
+            this.txtCargo.Name = "txtCargo";
+            this.txtCargo.Size = new System.Drawing.Size(182, 26);
+            this.txtCargo.TabIndex = 51;
+            // 
+            // cmbTurno
+            // 
+            this.cmbTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTurno.Location = new System.Drawing.Point(522, 258);
+            this.cmbTurno.Name = "cmbTurno";
+            this.cmbTurno.Size = new System.Drawing.Size(180, 26);
+            this.cmbTurno.TabIndex = 52;
+            // 
+            // cmbEstadoCivil
+            // 
+            this.cmbEstadoCivil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbEstadoCivil.Location = new System.Drawing.Point(6, 180);
+            this.cmbEstadoCivil.Name = "cmbEstadoCivil";
+            this.cmbEstadoCivil.Size = new System.Drawing.Size(180, 26);
+            this.cmbEstadoCivil.TabIndex = 53;
+            // 
             // excluirFuncionarioForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -344,9 +329,7 @@ namespace SistemaHotelaria.View
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox cmbCargo;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox cmbTurno;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtEndereco;
         private System.Windows.Forms.Label label8;
@@ -354,7 +337,6 @@ namespace SistemaHotelaria.View
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtCpf;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox cmbEstadoCivil;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtNumero;
         private System.Windows.Forms.Label label4;
@@ -367,5 +349,8 @@ namespace SistemaHotelaria.View
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.TextBox txtCargo;
+        private System.Windows.Forms.TextBox cmbTurno;
+        private System.Windows.Forms.TextBox cmbEstadoCivil;
     }
 }

@@ -29,6 +29,10 @@ namespace SistemaHotelaria.View.Quarto
 
         private void excluirQuartoForm_Load(object sender, EventArgs e)
         {
+            txtCategoria.Enabled = false;
+            numericNumero.Enabled = false;
+            maskValor.Enabled = false;
+
             quartoDAO.dadosAlterar(id, quarto);
 
             txtCategoria.Text = quarto.Categoria;

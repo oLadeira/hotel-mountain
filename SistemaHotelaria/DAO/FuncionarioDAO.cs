@@ -3,6 +3,8 @@ using SistemaHotelaria.Modelo;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
+using System;
 
 namespace SistemaHotelaria.DAO
 {
@@ -206,6 +208,40 @@ namespace SistemaHotelaria.DAO
             return null;
         }
 
+        public String listarCargoComboBox(int id)
+        {
+            try
+            {
+                con.Open();
+                cmd.CommandText = "SELECT * FROM cargo WHERE id = @id";
+
+                cmd = new SqlCommand(cmd.CommandText, con);
+
+                cmd.Parameters.AddWithValue("@id", id);
+
+                String cargo="";
+
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    cargo = reader.GetString(1);
+                                        
+                }
+                return cargo;
+
+            }
+            catch (SqlException ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+            return null;
+        }
+
         public DataTable listarFuncionarioByNome(string nome)
         {
             try
@@ -223,13 +259,49 @@ namespace SistemaHotelaria.DAO
             }
             catch (SqlException ex)
             {
-
+                MessageBox.Show(ex.Message);
             }
             finally
             {
                 con.Close();
             }
             return null; 
+        }
+
+        public bool validarFuncionario(int id)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+
+                cmd.CommandText = "SELECT * FROM funcionario WHERE id =" + id;
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd.CommandText, con);
+                DataTable tabela = new DataTable();
+
+                da.Fill(tabela);
+
+                int totalRows = tabela.Rows.Count;
+
+                if (totalRows > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    throw new Exception();
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Funcionário não encontrado!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return false;
         }
 
     }

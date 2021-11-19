@@ -43,9 +43,11 @@ namespace SistemaHotelaria.View
             txtTelefone.ReadOnly = true;
             txtEndereco.ReadOnly = true;
             txtNumero.ReadOnly = true;
+            txtCargo.ReadOnly = true;
+            cmbTurno.ReadOnly = true;
+            cmbEstadoCivil.ReadOnly = true;
             //cmbCargo.Text = Convert.ToString(funcionario.Cargo);
             //cmbTurno.Text = funcionario.Turno;
-
 
             txtNome.Text = funcionario.Nome;
             txtEmail.Text = funcionario.Email;
@@ -55,23 +57,25 @@ namespace SistemaHotelaria.View
             txtTelefone.Text = funcionario.Telefone;
             txtEndereco.Text = funcionario.Endereco;
             txtNumero.Text = funcionario.Numero;
-            cmbCargo.Text = Convert.ToString(funcionario.Cargo);
             cmbTurno.Text = funcionario.Turno;
+            cmbEstadoCivil.Text = funcionario.EstadoCivil;
+
+            txtCargo.Text = funcionarioDAO.listarCargoComboBox(id1);
 
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            funcionario.Nome = txtNome.Text;
-            funcionario.Email = txtEmail.Text;
-            funcionario.Cpf = txtCpf.Text;
-            funcionario.Cep = txtCep.Text;
-            funcionario.EstadoCivil = cmbEstadoCivil.Text;
-            funcionario.Telefone = txtTelefone.Text;
-            funcionario.Endereco = txtEndereco.Text;
-            funcionario.Numero = txtNumero.Text;
-            funcionario.Cargo = Convert.ToInt32(cmbCargo.Text);
-            funcionario.Turno = cmbTurno.Text;
+            //funcionario.Nome = txtNome.Text;
+            //funcionario.Email = txtEmail.Text;
+           // funcionario.Cpf = txtCpf.Text;
+            //funcionario.Cep = txtCep.Text;
+           // funcionario.EstadoCivil = cmbEstadoCivil.Text;
+            //funcionario.Telefone = txtTelefone.Text;
+            //funcionario.Endereco = txtEndereco.Text;
+           // funcionario.Numero = txtNumero.Text;
+            //funcionario.Cargo = Convert.ToInt32(cmbCargo.Text);
+           // funcionario.Turno = cmbTurno.Text;
 
             funcionarioDAO.deletarFuncionarioById(id1);
 

@@ -13,6 +13,8 @@ namespace SistemaHotelaria.View
 {
     public partial class alterarFuncionario : Form
     {
+        FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
+
         public alterarFuncionario()
         {
             InitializeComponent();
@@ -24,25 +26,30 @@ namespace SistemaHotelaria.View
         }
 
         private void alterarFuncionario_Load(object sender, EventArgs e)
-        {
-            FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
-
+        {          
             dgvFuncionario.DataSource = funcionarioDAO.listarFuncionarios();
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)
-        {
-            try
+        {          
+            if (txtId.Text == "")
             {
-                alterarFuncionarioForm TelaAlterarFuncionarioForm = new alterarFuncionarioForm(Convert.ToInt32(txtId.Text));
-
-                TelaAlterarFuncionarioForm.Show();
-                this.Close();
+                MessageBox.Show("Insira o id do funcionário!");
             }
-            catch(System.FormatException ex)
+            else
             {
-                MessageBox.Show("Por favor digite um ID válido!", "Erro", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
-            }                           
+                if (funcionarioDAO.validarFuncionario(Convert.ToInt32(txtId.Text)) == false)
+                {
+
+                }
+                else
+                {
+                    alterarFuncionarioForm TelaAlterarFuncionarioForm = new alterarFuncionarioForm(Convert.ToInt32(txtId.Text));
+
+                    TelaAlterarFuncionarioForm.Show();
+                    this.Close();
+                }
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

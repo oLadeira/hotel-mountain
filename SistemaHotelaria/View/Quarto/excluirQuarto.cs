@@ -20,10 +20,26 @@ namespace SistemaHotelaria.View.Quarto
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
-        {
-            excluirQuartoForm TelaExcluirQuartoForm = new excluirQuartoForm(Convert.ToInt32(txtId.Text));
-            TelaExcluirQuartoForm.Show();
-            this.Close();
+        {           
+
+            if (txtId.Text == "")
+            {
+                MessageBox.Show("Insira o id do Quarto!");
+            }
+            else
+            {
+                if (quartoDAO.validarQuarto(Convert.ToInt32(txtId.Text)) == false)
+                {
+
+                }
+                else
+                {
+                    excluirQuartoForm TelaExcluirQuartoForm = new excluirQuartoForm(Convert.ToInt32(txtId.Text));
+                    TelaExcluirQuartoForm.Show();
+                    this.Close();
+                }
+
+            }
         }
 
         private void excluirQuarto_Load(object sender, EventArgs e)

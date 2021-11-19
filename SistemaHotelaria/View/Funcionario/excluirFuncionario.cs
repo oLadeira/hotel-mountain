@@ -13,6 +13,7 @@ namespace SistemaHotelaria.View
 {
     public partial class excluirFuncionario : Form
     {
+        FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
         public excluirFuncionario()
         {
             InitializeComponent();
@@ -20,16 +21,30 @@ namespace SistemaHotelaria.View
 
         private void excluirFuncionario_Load(object sender, EventArgs e)
         {
-            FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
+            
             dgvFuncionario.DataSource = funcionarioDAO.listarFuncionarios();
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            excluirFuncionarioForm TelaExcluirFuncionario = new excluirFuncionarioForm(Convert.ToInt32(txtId.Text));
+            if (txtId.Text == "")
+            {
+                MessageBox.Show("Insira o id do fornecedor!");
+            }
+            else
+            {
+                if (funcionarioDAO.validarFuncionario(Convert.ToInt32(txtId.Text)) == false)
+                {
 
-            TelaExcluirFuncionario.Show();
-            this.Close();
+                }
+                else
+                {
+                    excluirFuncionarioForm TelaExcluirFuncionario = new excluirFuncionarioForm(Convert.ToInt32(txtId.Text));
+
+                    TelaExcluirFuncionario.Show();
+                    this.Close();
+                }
+            }            
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

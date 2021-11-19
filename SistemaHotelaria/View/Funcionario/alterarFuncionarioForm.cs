@@ -43,8 +43,11 @@ namespace SistemaHotelaria.View
             txtTelefone.Text = funcionario.Telefone;
             txtEndereco.Text = funcionario.Endereco;
             txtNumero.Text = funcionario.Numero;
-            cmbCargo.Text = Convert.ToString(funcionario.Cargo);
             cmbTurno.Text = funcionario.Turno;
+
+            cmbCargo.DataSource = funcionarioDAO.listarCargoComboBox();
+            cmbCargo.ValueMember = "id";
+            cmbCargo.DisplayMember = "cargo";
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)
@@ -57,10 +60,11 @@ namespace SistemaHotelaria.View
             funcionario.Telefone = txtTelefone.Text;
             funcionario.Endereco = txtEndereco.Text;
             funcionario.Numero = txtNumero.Text;
-            funcionario.Cargo = Convert.ToInt32(cmbCargo.Text);
+            funcionario.Cargo = Convert.ToInt32(cmbCargo.SelectedValue.ToString());
             funcionario.Turno = cmbTurno.Text;
 
             funcionarioDAO.alterarHospede(id1, funcionario);
+            this.Close();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
