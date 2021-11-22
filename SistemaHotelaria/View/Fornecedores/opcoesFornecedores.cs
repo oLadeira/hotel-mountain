@@ -43,5 +43,10 @@ namespace SistemaHotelaria.View.Fornecedores
             TelaExcluirFornecedor.Show();
             this.Close();
         }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            dgvFornecedores.DataSource = fornecedorDAO.listarFornecedorNome(txtPesquisar.Text);
+        }
     }
 }

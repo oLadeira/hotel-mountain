@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SistemaHotelaria.View.Checkin;
-
+using System.Windows.Forms;
 
 namespace SistemaHotelaria.DAO
 {
@@ -16,6 +16,7 @@ namespace SistemaHotelaria.DAO
     {
         readonly SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["StringConexao"].ConnectionString);
         Check_in checkin = new Check_in();
+
 
         public void cadastrarCheckin(Check_in checkin)
         {
@@ -126,6 +127,33 @@ namespace SistemaHotelaria.DAO
                 return false;
             }
             
+        }
+
+        public DataTable listarCheckinCpf(String cpf)
+        {
+            try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "SELECT c.id, c.cpfHospede, q.numero, c.entrada, c.saida, c.dias FROM checkIn as c INNER JOIN quarto AS q ON idQuarto = q.id WHERE cpfHospede = " + "'" + cpf + "'";
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd.CommandText, con);
+
+                DataTable tabela = new DataTable();
+
+                da.Fill(tabela);
+
+                return tabela;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+            return null;
         }
 
     }

@@ -41,5 +41,10 @@ namespace SistemaHotelaria.View.Quarto
         private void btnAlterar_Click(object sender, EventArgs e)
         {
         }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            dgvQuartos.DataSource = quartoDAO.listarQuartoNumero(Convert.ToInt32(txtNumero.Text));
+        }
     }
 }

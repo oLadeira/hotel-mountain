@@ -245,5 +245,32 @@ namespace SistemaHotelaria.DAO
 
         }
 
+        public DataTable listarQuartoNumero(int numero)
+        {
+            try
+            {
+                con.Open();
+
+                cmd.CommandText = "SELECT * FROM quarto WHERE numero =" + "'" + numero + "'";
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd.CommandText, con);
+
+                DataTable tabela = new DataTable();
+
+                da.Fill(tabela);
+
+                return tabela;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+            return null;
+        }
+
     }
 }

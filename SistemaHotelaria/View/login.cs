@@ -79,5 +79,19 @@ namespace SistemaHotelaria
             */
         }
 
+        private void btnAcesso_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Usuário: root \nSenha: 123", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

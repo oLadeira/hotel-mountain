@@ -248,7 +248,7 @@ namespace SistemaHotelaria.DAO
             {
                 con.Open();
 
-                cmd.CommandText = "";
+                cmd.CommandText = "SELECT * FROM funcionario WHERE nome LIKE " + "'%" + nome + "%'";
 
                 SqlDataAdapter da = new SqlDataAdapter(cmd.CommandText, con);
                 DataTable tabela = new DataTable();

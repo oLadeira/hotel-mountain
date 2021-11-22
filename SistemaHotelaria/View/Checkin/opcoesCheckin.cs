@@ -44,9 +44,9 @@ namespace SistemaHotelaria.View.Checkin
             this.Close();
         }
 
-        private void btnExcluir_Click(object sender, EventArgs e)
+        private void btnPesquisar_Click(object sender, EventArgs e)
         {
-
+            dgvCheckin.DataSource = checkinDAO.listarCheckinCpf(txtCpfPesquisa.Text);
         }
     }
 }

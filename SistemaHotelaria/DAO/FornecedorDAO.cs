@@ -229,7 +229,32 @@ namespace SistemaHotelaria.DAO
 
         }
 
+        public DataTable listarFornecedorNome(String nome)
+        {
+            try
+            {
+                con.Open();
 
+                cmd.CommandText = "SELECT * FROM fornecedor WHERE nomeFantasia LIKE " + "'%" + nome + "%'";
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd.CommandText, con);
+
+                DataTable tabela = new DataTable();
+
+                da.Fill(tabela);
+
+                return tabela;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+            return null;
+        }
 
 
 

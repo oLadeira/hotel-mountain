@@ -29,5 +29,10 @@ namespace SistemaHotelaria.View.Checkout
         {
             dgvCheckOut.DataSource = checkOutDAO.listarCheckOut();
         }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            dgvCheckOut.DataSource = checkOutDAO.listarCheckoutCpf(txtCpf.Text);
+        }
     }
 }

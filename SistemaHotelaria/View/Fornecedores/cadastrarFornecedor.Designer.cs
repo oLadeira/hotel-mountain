@@ -36,7 +36,6 @@ namespace SistemaHotelaria.View.Fornecedores
             this.label2 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtCnpj = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -48,18 +47,19 @@ namespace SistemaHotelaria.View.Fornecedores
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
+            this.txtCnpj = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtCnpj);
             this.groupBox1.Controls.Add(this.mskTelefone);
             this.groupBox1.Controls.Add(this.cmbCategoria);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtEmail);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.txtCnpj);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txtEndereco);
             this.groupBox1.Controls.Add(this.label5);
@@ -111,9 +111,9 @@ namespace SistemaHotelaria.View.Fornecedores
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(5, 180);
+            this.txtEmail.Location = new System.Drawing.Point(10, 180);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(382, 26);
+            this.txtEmail.Size = new System.Drawing.Size(377, 26);
             this.txtEmail.TabIndex = 37;
             // 
             // label8
@@ -125,14 +125,6 @@ namespace SistemaHotelaria.View.Fornecedores
             this.label8.Size = new System.Drawing.Size(49, 20);
             this.label8.TabIndex = 43;
             this.label8.Text = "CNPJ";
-            // 
-            // txtCnpj
-            // 
-            this.txtCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCnpj.Location = new System.Drawing.Point(462, 106);
-            this.txtCnpj.Name = "txtCnpj";
-            this.txtCnpj.Size = new System.Drawing.Size(377, 26);
-            this.txtCnpj.TabIndex = 35;
             // 
             // label6
             // 
@@ -246,6 +238,15 @@ namespace SistemaHotelaria.View.Fornecedores
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
+            // txtCnpj
+            // 
+            this.txtCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCnpj.Location = new System.Drawing.Point(462, 106);
+            this.txtCnpj.Mask = "00,000,000/0000-99";
+            this.txtCnpj.Name = "txtCnpj";
+            this.txtCnpj.Size = new System.Drawing.Size(378, 26);
+            this.txtCnpj.TabIndex = 53;
+            // 
             // cadastrarFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -273,7 +274,6 @@ namespace SistemaHotelaria.View.Fornecedores
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtCnpj;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtEndereco;
         private System.Windows.Forms.Label label5;
@@ -286,5 +286,6 @@ namespace SistemaHotelaria.View.Fornecedores
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.MaskedTextBox mskTelefone;
+        private System.Windows.Forms.MaskedTextBox txtCnpj;
     }
 }

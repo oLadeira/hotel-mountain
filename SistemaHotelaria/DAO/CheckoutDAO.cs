@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace SistemaHotelaria.DAO
 {
@@ -159,7 +160,34 @@ namespace SistemaHotelaria.DAO
             }
             
         }
-        
+
+        public DataTable listarCheckoutCpf(String cpf)
+        {
+            try
+            {
+                con.Open();
+
+                cmd.CommandText = "SELECT * FROM checkOut WHERE cpfHosped =" + "'" + cpf + "'";
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd.CommandText, con);
+
+                DataTable tabela = new DataTable();
+
+                da.Fill(tabela);
+
+                return tabela;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+            return null;
+        }
+
 
     }
 }
